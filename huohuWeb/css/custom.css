@@ -1,0 +1,75 @@
+/*   
+Theme Name: Crevision
+Theme URI: http://www.jozoor.com
+Description: Crevision Theme for corporate and creative sites, responsive and clean layout, more than color skins, Fully Customizable, Comprehensive Theme Options and more..
+Author: Jozoor Team
+Author URI: http://www.jozoor.com
+Version: 1.3.1
+*/
+
+
+/* ====================================== Custom CSS Code =================================================*/
+
+/* you can add any custom css code for any class, id, tags and anything here, it will be active.. */
+
+/* new code */
+.tagcloud a, .popular-tags a {
+	font-size:13px !important;
+}
+
+/* remove highlight in forms or any element from default browsers */
+* { outline: none;}
+
+.icon-box span {
+    margin-top: 1px;
+}
+
+.flex-container  {
+    display: none;
+}
+
+img.client-pic {
+    margin: 22px 0 0 0;
+}
+
+ul.team li img {
+    min-height: 231px;
+}
+
+.big-tooltips .colorTip{
+	/* This class is assigned to the color tip span by jQuery */
+	display:none;
+	position:absolute;	
+	left:49%;
+	top:26px;
+	font-size:12px;
+	font-style:normal;
+	line-height:2;
+	text-align:left;
+	white-space: normal !important;
+    min-width:250px !important;
+    cursor: default;
+    z-index: 1000;
+}
+
+.big-tooltips .pointyTip, .big-tooltips .pointyTipShadow{
+	/* Setting a thick transparent border on a 0x0 div to create a triangle */
+	border:6px solid transparent;
+	top:-6px;
+	height:0;
+	left:49.5%;
+	margin-left:-6px;
+	position:absolute;
+	width:0;
+}
+
+.big-tooltips .pointyTipShadow{
+	/* The shadow tip is 1px larger, so it acts as a border to the tip */
+	border-width:7px;
+	top:-8px;
+	margin-left:-7px;
+}
+
+.big-tooltips .pointyTip{ border-bottom-color:#333; border-top: 0;}
+.big-tooltips .pointyTipShadow{ border-bottom-color:#111; border-top: 0;}
+
