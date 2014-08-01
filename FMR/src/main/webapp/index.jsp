@@ -1,0 +1,1 @@
+<% response.sendRedirect("/FMR/ftl/index.do"); %>
