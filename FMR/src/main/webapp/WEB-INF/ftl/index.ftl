@@ -62,7 +62,6 @@ body{
 
 }
 .right{
-    background-color: silver; 
     border: 1px #4e667d solid;
     color: #FFFFFB; 
     display: block; 
