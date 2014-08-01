@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<TITLE>职位选择</TITLE>
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+<script language="JavaScript" src="js/date-picker_ex.js"></script>
+<script language="JavaScript" src="js/ut.js"></script>
+</HEAD>
+
+<BODY>
+<BR><BR>
+  <table class=csstable align=center width="85%" id="role">
+    <tr>
+      <td  align = left >所属组织
+		<INPUT  TYPE="text" readonly size=10 name='updptname'>
+	  	  <INPUT class=cssbutton TYPE="button" value='...' onclick="openWindow();">
+	  </td>
+      <td  align = left >职位名称
+      <input  type="text" name="username"></td>
+      <td align = left >      
+	  <input class=button name="submit2" type="button" value ='查询' onclick=showTbl();>
+      </td>
+    </tr>
+  </table>
+<BR><BR>
+	<FORM METHOD=POST name="form2">
+		<TABLE class="csstable" width="85%" border="0" align="center">
+			<TR class=tabletitle >
+			  <TD align="left" nowrap>职位列表</TD>
+			</TR>
+		</table>
+		<TABLE class="csstable" width="85%" border="0" align="center">
+			<TR class=tabletitle >
+			  <TD width="19%"><input type="checkbox" name="selectAll" onClick="selectClick(document.form2);">全选</TD>
+			  <TD nowrap>职位名称</TD>
+			  <TD  nowrap>所属组织</TD>
+			</TR>
+
+			<TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=1></TD>
+   			    <TD width="30%">市场支持专员</TD>
+				<TD width="51%">市场营销部</TD>
+			</TR>
+			<TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=2></TD>
+  			    <TD>华东区销售经理</TD>
+				<TD>华东区分销部</TD>
+			</TR>
+            <TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=3></TD>
+  			    <TD width="30%">市场支持专员</TD>
+				<TD width="51%">市场营销部</TD>
+			</TR>
+			<TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=4></TD>
+			    <TD>华东区销售经理</TD>
+				<TD>华东区分销部</TD>
+			</TR>
+            <TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=5></TD>
+  			    <TD width="30%">市场支持专员</TD>
+				<TD width="51%">市场营销部</TD>
+			</TR>
+			<TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=6></TD>
+			    <TD>华东区销售经理</TD>
+				<TD>华东区分销部</TD>
+			</TR>
+            <TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=7></TD>
+			    <TD width="30%">市场支持专员</TD>
+				<TD width="51%">市场营销部</TD>
+			</TR>
+			<TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=8></TD>
+		  	    <TD>华东区销售经理</TD>
+				<TD>华东区分销部</TD>
+			</TR>
+            <TR class=csstr>
+				<TD><INPUT TYPE="checkbox" NAME="PostID" value=9></TD>
+			    <TD width="30%">市场支持专员</TD>
+				<TD width="51%">市场营销部</TD>
+			</TR>
+		</TABLE>
+	<TABLE width="85%" border="0" align="center" class=tblopt>
+			<TR>
+				<TD width="30%"><input name="submit2" type="submit"  class=BUTTON value="确定" onClick="window.close();"><input name="submit2" type="submit"  class=BUTTON value="取消" onClick="window.close();"></TD>
+				<TD width="51%"></TD>
+				<TD width="19%"></TD>
+			</TR>
+		</TABLE>
+   </FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	document.form2.style.display='none';
+	
+	function showTbl(){
+	document.form2.style.display='inline';
+	}
+
+	function openWindow(){
+		window.open("departtree.html");
+	}
+	
+	function selectClick(obj){
+		for(var i=0;i<obj.PostID.length;i++){
+			obj.PostID[i].checked=obj.selectAll.checked;
+		}    
+	}
+
+-->
+</SCRIPT>
+</BODY>
+</HTML>

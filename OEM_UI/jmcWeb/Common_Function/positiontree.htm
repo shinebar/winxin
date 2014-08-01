@@ -1,0 +1,47 @@
+<HTML xmlns:mydbtree> 
+	<HEAD> 
+	 <?IMPORT NAMESPACE="mydbtree" IMPLEMENTATION="treeview.htc"?> 
+	 <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<title>Dealer on line</title>
+</head>
+
+<SCRIPT language="JavaScript">
+	function selectNode(id,name){
+		parent.opener.document.getElementById('up_possiton').value= name;
+		window.close();
+	}
+</script>
+<body style='	FONT-SIZE: 12px; 
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	BACKGROUND-COLOR: #E4E4E4;
+'>
+<table width ="100%" >
+<tr>
+    <td width="100%">&nbsp;
+			<mydbtree:treeview id="menuree" systemImagesPath="../Images">
+		       <mydbtree:treenode Text="职位选择" imageurl="../images/root.gif" Expanded="true" TreeNodeSrc='<TREENODES>
+		       		
+<treenode Text="总经理" navigateurl="javascript:selectNode(&apos;20000001&apos;,&apos;总经理&apos;)">
+
+<treenode Text="销售经理" navigateurl="javascript:selectNode(&apos;20000017&apos;,&apos;销售经理&apos;)">
+    <treenode Text="销售顾问" navigateurl="javascript:selectNode(&apos;20000115&apos;,&apos;销售顾问&apos;)"/>
+</treenode>
+<treenode Text="展厅经理" navigateurl="javascript:selectNode(&apos;20000015&apos;,&apos;展厅经理&apos;)">
+	<treenode Text="展厅顾问" navigateurl="javascript:selectNode(&apos;20000088&apos;,&apos;展厅顾问&apos;)"/>
+	<treenode Text="展厅助理" navigateurl="javascript:selectNode(&apos;20000087&apos;,&apos;展厅助理&apos;)"/>
+</treenode>
+
+
+</treenode></TREENODES>'>
+	          </mydbtree:treenode>
+		  	</mydbtree:treeview> 
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
+

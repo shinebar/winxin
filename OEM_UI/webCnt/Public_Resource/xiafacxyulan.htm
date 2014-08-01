@@ -1,0 +1,716 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<script type="text/javascript" src="../../js/web/common.js"></script>
+<script type="text/javascript" src="../../js/jslib/ProvinceCity.js"></script>
+<title>明细汇总查询</title>
+<style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+</head>
+<body>
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;明细汇总查询</div>
+<form method="POST" name="form2" action="">
+  <table class="table_query" width="95%" align="center">
+    <tr>
+      <td width="25%" height="29" align="right">选择车系：</td>
+      <td width="25%">
+		<select>
+		     <option>全选
+			 <option>牧马人
+			 <option>指南者2.4
+		  </select>
+	  </td>
+
+      <td width="25%" height="29" align="right">大区：</td>
+      <td width="25%">
+		<select>
+			 <option>全部
+			 <option>北大区
+		  </select>
+	  </td>
+    </tr>
+	<tr>
+	  <td align="right" class="table_info"> 年月：</td>
+     <!-- <td  align="left" class="table_info"><input type="text" readonly="readonly" size="8" name="start_date" value="2014-05-15" />
+          <input name="button" type="button" class="time_ico" onclick="showcalendar(event, 'start_date', false);" value="" />
+       </td> -->
+	   <td>
+		<select>
+		     <option>2013
+			 <option selected>2014
+		  </select>
+		  -
+		  <select>
+		     <option>1
+			 <option >2
+			  <option>3
+			  <option>4
+			  <option selected>5
+			  <option>6
+			  <option>7
+			  <option>8
+			  <option>9
+			  <option>10
+			  <option>11
+			  <option>12
+		  </select>
+	   </td>
+	</tr>
+    <tr>
+	  <td align="center" colspan=4>
+		<input name="button32" type="button" class="normal_btn" onclick="showTable2();" value="汇总查询" />
+		<input name="button32" type="button" class="normal_btn" onclick="showTable3();" value="明细查询" />
+		<input name="button32" type="button" class="normal_btn" onclick="showTable4();" value="车系明细查询" />&nbsp;
+		<input name="button32" type="button" class="normal_btn" onclick=";" value="下载" />
+      </td>
+    </tr>
+  </table>
+</FORM>
+<FORM name="FRM2">
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th width="74" rowspan='1'><pre>区域</pre></th>
+	  <th colspan='1'rowspan='1'><pre>批售目标</pre></th>
+      <th colspan='1' rowspan='1'><pre>上月结转</pre></th>      
+	  <th colspan='1' rowspan='1'><pre>全国池</pre></th>
+	  <th colspan='1' rowspan='1'><pre>区域池</pre></th>
+	  <th colspan='1' rowspan='1'><pre>期货（一次批发）</pre></th>
+	  <th colspan='1' rowspan='1'><pre>本次分配</pre></th>
+    </tr>
+	<tr class="table_list_row1" bgcolor='#f08080'>
+		<td>北大区</td>
+		<td>14</td>
+		<td>6</td>
+		<td></td>
+		<td></td>
+		<td></td>
+
+		<td>6</td>
+		
+    </tr>
+	<tr class="table_list_row1" bgcolor='#00ced1'>
+		<td>东大区</td>
+		<td>8</td>
+		<td>3</td>
+		<td></td>
+		<td></td>
+		<td></td>
+
+		<td>4</td>
+		
+    </tr>
+	<tr class="table_list_row1" bgcolor='#00FF99'>
+		<td>西大区</td>
+		<td>6</td>
+		<td>4</td>
+		<td></td>
+		<td></td>
+		<td></td>
+
+		<td>3</td>
+		
+    </tr>
+	<tr class="table_list_row1" bgcolor='#3399FF'> 
+		<td>南大区</td>
+		<td>38</td>
+		<td>11</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>7</td>
+    </tr>
+	
+	<tr class="table_list_row1" bgcolor='#FF9999'>
+		<td>全国</td>
+		<td>66</td>
+		<td>24</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>20</td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <div class="page_info">
+		
+  </div>	
+</FORM>
+
+<FORM name="FRM3">
+	<table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th colspan='1'rowspan='1'><pre>车系</pre></th>
+	  <th width="74" rowspan='1'><pre>区域/经销商</pre></th>
+	   <th width="74" rowspan='1'><pre>经销商代码</pre></th>
+	  <th colspan='1'rowspan='1'><pre>Dealer target</pre></th>
+      <th colspan='1' rowspan='1'><pre>上月结转</pre></th>      
+	  <th colspan='1' rowspan='1'><pre>资源池</pre></th>
+	  <th colspan='1' rowspan='1'><pre>1st Allocate</pre></th>
+	  <th colspan='1' rowspan='1'><pre>2nd Allocate</pre></th>
+	  <th colspan='1' rowspan='1'><pre>3rd Allocate</pre></th>
+	  <th colspan='1' rowspan='1'><pre>4th Allocate</pre></th>
+	  <th colspan='1' rowspan='1'><pre>Gap</pre></th>
+    </tr>
+	
+	<tr class="table_list_row1">
+	    <td rowspan=7 bgcolor='red'>牧马人</td>
+		<td>北京汇杰伟业</td>
+		<td>33123</td>
+		<td>6</td>
+		<td>3</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>3</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京中进百旺</td>
+		<td>33156</td>
+		<td>9</td>
+		<td>4</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>5</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京港龙基业</td>
+		<td>33102</td>
+		<td>5</td>
+		<td>1</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>4</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#B3B5B4">
+		<td>北一区</td>
+		<td></td>
+		<td>20</td>
+		<td>8</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>12</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>呼市中进百旺</td>
+		<td>20484</td>
+		<td>5</td>
+		<td>2</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>3</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#B3B5B4">
+		<td>北四区</td>
+		<td></td>
+		<td>5</td>
+		<td>2</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>3</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>北大区</td>
+		<td></td>
+		<td>25</td>
+		<td>10</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>15</td>
+		
+    </tr>
+	<tr class="table_list_row1">
+	    <td rowspan=7 bgcolor='#e9967a'>指南者2.4</td>
+		<td>北京汇杰伟业</td>
+		<td>33123</td>
+		<td>12</td>
+		<td>3</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>9</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京中进百旺</td>
+		<td>33156</td>
+		<td>13</td>
+		<td>4</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>9</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京港龙基业</td>
+		<td>33102</td>
+		<td>5</td>
+		<td>1</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>4</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#B3B5B4">
+		<td>北一区</td>
+	    <td></td>
+		<td>30</td>
+		<td>8</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>22</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>呼市中进百旺</td>
+		<td>20484</td>
+		<td>7</td>
+		<td>2</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>5</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#B3B5B4">
+		<td>北四区</td>
+		<td></td>
+		<td>7</td>
+		<td>2</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>5</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>北大区</td>
+		<td></td>
+		<td>37</td>
+		<td>10</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>27</td>
+		
+    </tr>
+	<tr class="table_list_row1">
+	    <td rowspan=7 bgcolor='#7fffd4'>300C</td>
+		<td>北京汇杰伟业</td>
+		<td>33123</td>
+		<td>12</td>
+		<td>3</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>9</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京中进百旺</td>
+		<td>33156</td>
+		<td>13</td>
+		<td>4</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>9</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京港龙基业</td>
+		<td>33102</td>
+		<td>5</td>
+		<td>1</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>4</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#B3B5B4">
+		<td>北一区</td>
+	    <td></td>
+		<td>30</td>
+		<td>8</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>22</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>呼市中进百旺</td>
+		<td>20484</td>
+		<td>7</td>
+		<td>2</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>5</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#B3B5B4">
+		<td>北四区</td>
+		<td></td>
+		<td>7</td>
+		<td>2</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>5</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>北大区</td>
+		<td></td>
+		<td>37</td>
+		<td>10</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>27</td>
+		
+    </tr>
+	<tr class="table_list_row1" bgcolor='#FF9999'>
+		<td></td>
+		<td>Total</td>
+		<td></td>
+		<td>99</td>
+		<td>30</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>69</td>
+    </tr>
+  </table>
+</FORM>
+
+<FORM name="FRM4">
+	<table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th colspan='1'rowspan='2'><pre>车系</pre></th>
+	  <th  rowspan='2'><pre>车款</pre></th>
+	   <th width="74" colspan='6' rowspan=1><pre>颜色</pre></th>
+    </tr>
+	<tr class="tabletitle">
+	    <th rowspan=1>皓白标准漆</th>
+		<th>流沙金标准漆</th>
+		<th>珊瑚红珠光漆</th>
+		<th>藏地绿标准漆</th>
+		<th>极光绿标准漆</th>
+		<th>岩虾红标准漆</th>
+
+    </tr>
+	<tr class="table_list_row1">
+	    <td rowspan=12 bgcolor='red'>牧马人</td>
+		<td>牧马人3.6L 罗宾汉四门版</td>
+		<td>5</td>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>
+		<td>7</td>
+		<td>0</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>牧马人3.6L 罗宾汉两门版</td>
+		<td>5</td>
+		<td>0</td>
+		<td>7</td>
+		<td>8</td>
+		<td>0</td>
+		<td>0</td>
+
+
+    </tr>
+	<tr class="table_list_row1">
+		<td>牧马人3.6L 撒哈拉四门版（选装轮圈）</td>
+		<td>5</td>
+		<td>6</td>
+		<td>0</td>
+		<td>8</td>
+		<td>17</td>
+		<td>0</td>
+
+    </tr>
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>北大区</td>
+		<td>15</td>
+		<td>12</td>
+		<td>14</td>
+		<td>24</td>
+		<td>24</td>
+		<td>0</td>
+    </tr>
+		<tr class="table_list_row1">
+		<td>牧马人3.6L 罗宾汉四门版</td>
+		<td>0</td>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>
+		<td>7</td>
+		<td>0</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>牧马人3.6L 罗宾汉两门版</td>
+		<td>5</td>
+		<td>0</td>
+		<td>7</td>
+		<td>8</td>
+		<td>0</td>
+		<td>12</td>
+
+
+
+    </tr>
+	<tr class="table_list_row1">
+		<td>牧马人3.6L 撒哈拉四门版（选装轮圈）</td>
+		<td>6</td>
+		<td>6</td>
+		<td>0</td>
+		<td>8</td>
+		<td>17</td>
+		<td>1</td>
+
+
+    </tr>
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>南大区</td>
+		<td>11</td>
+		<td>12</td>
+		<td>14</td>
+		<td>24</td>
+		<td>24</td>
+		<td>13</td>
+    </tr>
+		<tr class="table_list_row1">
+		<td>牧马人3.6L 罗宾汉四门版</td>
+		<td>0</td>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>
+		<td>7</td>
+		<td>0</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>牧马人3.6L 罗宾汉两门版</td>
+		<td>5</td>
+		<td>0</td>
+		<td>7</td>
+		<td>8</td>
+		<td>0</td>
+		<td>12</td>
+
+
+
+    </tr>
+	<tr class="table_list_row1">
+		<td>牧马人3.6L 撒哈拉四门版（选装轮圈）</td>
+		<td>6</td>
+		<td>6</td>
+		<td>0</td>
+		<td>8</td>
+		<td>17</td>
+		<td>1</td>
+
+
+    </tr>
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>西大区</td>
+		<td>11</td>
+		<td>12</td>
+		<td>14</td>
+		<td>24</td>
+		<td>24</td>
+		<td>13</td>
+    </tr>
+  </table>
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th colspan='1'rowspan='2'><pre>车系</pre></th>
+	  <th  rowspan='2'><pre>车款</pre></th>
+	   <th width="74" colspan='4' rowspan=1><pre>颜色</pre></th>
+    </tr>
+	<tr class="tabletitle">
+		<th>流沙金标准漆</th>
+		<th>岩虾红标准漆</th>
+		<th>匹兹堡灰标准漆</th>
+		<th>玛瑙红</th>
+    </tr>
+	<tr class="table_list_row1">
+	    <td rowspan=9 bgcolor='#00FF99'>指南者2.4</td>
+		<td>指南者2.4蛇行珍藏版</td>
+		<td>1</td>
+		<td>7</td>
+		<td>10</td>
+		<td>20</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>指南者2.4运动版</td>
+		<td>0</td>
+		<td>0</td>
+		<td>14</td>
+		<td>13</td>
+    </tr>
+	
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>北大区</td>
+		<td>1</td>
+		<td>7</td>
+		<td>24</td>
+		<td>33</td>
+    </tr>
+		<tr class="table_list_row1">
+		<td>指南者2.4蛇行珍藏版</td>
+		<td>4</td>
+		<td>1</td>
+		<td>8</td>
+		<td>11</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>指南者2.4运动版</td>
+		<td>0</td>
+		<td>5</td>
+		<td>6</td>
+		<td>9</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>东大区</td>
+		<td>4</td>
+		<td>6</td>
+		<td>14</td>
+		<td>20</td>
+    </tr>
+		<tr class="table_list_row1">
+		<td>指南者2.4蛇行珍藏版</td>
+		<td>7</td>
+		<td>0</td>
+		<td>13</td>
+		<td>8</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>指南者2.4运动版</td>
+		<td>0</td>
+		<td>12</td>
+		<td>19</td>
+		<td>4</td>
+    </tr>
+	<tr class="table_list_row1" bgcolor="#0099CC">
+		<td>西大区</td>
+		<td>7</td>
+		<td>12</td>
+		<td>32</td>
+		<td>12</td>
+    </tr>
+  </table>
+  <table width="118%" class="table_list" style="border-bottom:0px solid #DAE0EE">
+	<tr>
+		<td align="center" width='33%'>
+			<input type='button' class="normal_btn" onclick='show1();' value='保存'/>&nbsp;&nbsp;
+			<input type='button' class="normal_btn" onclick=';' value='下载'/>&nbsp;&nbsp;
+			<input type='button' class="normal_btn" onclick='show2();' value='取消'/>
+		</td>
+	
+	</tr>
+  </table>
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+		
+			function OpenDealer(){
+		window.open("../common_function/dealersingle_frame_index.htm", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+	function OpenWindow(){
+
+	window.open("../departtree.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+	document.FRM2.style.display = "none";
+	document.FRM3.style.display = "none";
+	document.FRM4.style.display = "none";
+
+	function showTable2(){	
+		document.FRM2.style.display = "inline";
+		document.FRM3.style.display = "none";
+		document.FRM4.style.display = "none";
+	}
+	
+	function showTable3(){	
+		document.FRM3.style.display = "inline";
+		document.FRM2.style.display = "none";
+		document.FRM4.style.display = "none";
+	}
+
+	function showTable4(){	
+		document.FRM3.style.display = "none";
+		document.FRM2.style.display = "none";
+		document.FRM4.style.display = "inline";
+	}
+	
+		function submitconfirm()
+	{
+		if(confirm("确定要修改参数吗？")){
+			
+		}
+	}
+		function OpenWindow2(){
+		window.open("../Inventory/inventoryquery_vchldtl.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+			function OpenMaterial() {
+		window.open("../Common_Function/ProSelmore_frame_index.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");	
+	}
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

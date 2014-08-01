@@ -1,0 +1,517 @@
+<html>
+<head>
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+</head>
+
+<script language="javascript">
+// Updated by Chong.Chen in 2006.5.26 --Begin
+	function selall(obj){
+	     var dealer = obj.dealer;
+	     if (dealer.length==null) {
+	     	obj.dealer.checked=obj.allselect.checked;
+	     } else {
+			 for(i=0;i<dealer.length;i++){
+			  	obj.dealer[i].checked=obj.allselect.checked;
+			 }
+		 }
+	}
+// Updated by Chong.Chen in 2006.5.26 --End
+
+function Windclose(dpt){
+	    parent.window.close();
+}
+function clickCheck(){
+	frm.dealerID.value = "";
+	frm.dealerName.value = "";
+	frm.orgName.value = "";
+	if(frm.dealerIDStr.length!=null){
+		for(var i=0;i<frm.dealerIDStr.length;i++){
+			var e=frm.dealerIDStr[i];
+			if(e.checked==true){
+				if(frm.dealerID.value==null||frm.dealerID.value==""){
+					frm.dealerID.value =   e.value;
+					frm.dealerCode.value = frm.dealerCodeStr[i].value;
+					frm.dealerName.value = frm.dealerNameStr[i].value;
+					frm.orgName.value = frm.orgNameStr[i].value;
+				} else {
+					frm.dealerID.value =  frm.dealerID.value +","+e.value;
+					frm.dealerCode.value = frm.dealerCode.value+","+ frm.dealerCodeStr[i].value;
+					frm.dealerName.value = frm.dealerName.value+","+ frm.dealerNameStr[i].value;
+					frm.orgName.value = frm.orgName.value+","+ frm.orgNameStr[i].value;
+				}
+			}
+		}
+	} else {
+		if(frm.dealerIDStr.checked==true){
+			frm.dealerID.value = frm.dealerIDStr.value;
+			frm.dealerCode.value = frm.dealerCodeStr.value;
+			frm.dealerName.value = frm.dealerNameStr.value;
+			frm.orgName.value = frm.orgNameStr.value;
+		}
+	}			
+}
+//统计已选择代理商数量 liuyajun@2005/10/10
+function writesum(obj) {
+	var c=(obj.checked==true)?1:-1;
+	document.all.sum.innerHTML=parseInt(document.all.sum.innerHTML) + parseInt(c);
+}
+</script>
+<!-- Modified by Liu Yajun -->
+<!--以下不改-->
+<body onload='return window_onresize()' 
+	onresize="return window_onresize()">
+<FORM  METHOD=POST  name="frm1" target=_self>
+<table class="csstable" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td>&nbsp;</td><td nowrap class="tabletitle" valign="middle" align=left height="20">按照代理商代码选择</td>
+	</tr>
+	<tr>
+	  <td>&nbsp;</td>
+	  <td align=left nowrap>
+	  <textarea name="dealerCode" id=dealer_code rows="2" cols="30"  onBlur="vinToUpper(this)"></textarea>
+	  <input name="submit" type="submit" class=cssbutton value="确定">
+
+	</td>
+	</tr>
+</table>
+</FORM>
+
+<FORM METHOD=POST ACTION="" name="frm">
+<DIV id="dlist" align=center style="OVERFLOW: auto; WIDTH: 100%;height:290px">
+  <table class="csstable" width="100%" border="0">
+    <tr class="tabletitle">
+      <td nowrap>选择</td>
+      <td nowrap>代理商代码</td>
+      <td nowrap>代理商名称</td>
+      <td nowrap>代理商类型</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S923002">
+          <input type="hidden" name="dealerIdStr" value="10000473"></td>
+      <td height="18" width="151">11000003</td>
+      <td width="331">江西江铃进出口有限责任公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723001">
+          <input type="hidden" name="dealerIdStr" value="10000474"></td>
+      <td height="18">1405101A</td>
+      <td>辽宁全顺江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723009">
+          <input type="hidden" name="dealerIdStr" value="10000475"></td>
+      <td height="18">1405202A</td>
+      <td>大连立扬汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723010">
+          <input type="hidden" name="dealerIdStr" value="10000476"></td>
+      <td height="18">1406102A</td>
+      <td>大连立扬汽车销售有限公司长春分公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723012">
+          <input type="hidden" name="dealerIdStr" value="10000477"></td>
+      <td height="18">1407102A</td>
+      <td>大庆江福汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723013">
+          <input type="hidden" name="dealerIdStr" value="10000478"></td>
+      <td height="18">1407103A</td>
+      <td>黑龙江省天拓恒丰汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723014">
+          <input type="hidden" name="dealerIdStr" value="10000479"></td>
+      <td height="18">1511101A</td>
+      <td>安徽江铃汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723015">
+          <input type="hidden" name="dealerIdStr" value="10000480"></td>
+      <td height="18">1511102A</td>
+      <td>安徽省宏顺汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723016">
+          <input type="hidden" name="dealerIdStr" value="10000481"></td>
+      <td height="18">1514101A</td>
+      <td>山东江铃全顺汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723017">
+          <input type="hidden" name="dealerIdStr" value="10000482"></td>
+      <td height="18">1514103A</td>
+      <td>潍坊金源江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723018">
+          <input type="hidden" name="dealerIdStr" value="10000483"></td>
+      <td height="18">1514107A</td>
+      <td>淄博鲁中江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723019">
+          <input type="hidden" name="dealerIdStr" value="10000484"></td>
+      <td height="18">1514108A</td>
+      <td>青岛六和汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S723020">
+          <input type="hidden" name="dealerIdStr" value="10000485"></td>
+      <td height="18">1514109A</td>
+      <td>济宁江铃全顺汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S915008">
+          <input type="hidden" name="dealerIdStr" value="10000486"></td>
+      <td height="18">1514109B</td>
+      <td>东营市善能商贸有限责任公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S922003">
+          <input type="hidden" name="dealerIdStr" value="10000487"></td>
+      <td height="18">1514110A</td>
+      <td>烟台江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722002">
+          <input type="hidden" name="dealerIdStr" value="10000488"></td>
+      <td height="18">1514113A</td>
+      <td>临沂宝铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722005">
+          <input type="hidden" name="dealerIdStr" value="10000489"></td>
+      <td height="18">1108101A</td>
+      <td>上海江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722032">
+          <input type="hidden" name="dealerIdStr" value="10000490"></td>
+      <td height="18">1108102A</td>
+      <td>上海科达汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722017">
+          <input type="hidden" name="dealerIdStr" value="10000491"></td>
+      <td height="18">1108202A</td>
+      <td>上海九华汽车实业有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722021">
+          <input type="hidden" name="dealerIdStr" value="10000492"></td>
+      <td height="18">1108203D</td>
+      <td>上海雄威汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722023">
+          <input type="hidden" name="dealerIdStr" value="10000493"></td>
+      <td height="18">1109101A</td>
+      <td>南京钟山江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722026">
+          <input type="hidden" name="dealerIdStr" value="10000494"></td>
+      <td height="18">1109102A</td>
+      <td>上海科达汽车销售服务有限公司徐州分公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722027">
+          <input type="hidden" name="dealerIdStr" value="10000495"></td>
+      <td height="18">1109103A</td>
+      <td>无锡市江铃汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722028">
+          <input type="hidden" name="dealerIdStr" value="10000496"></td>
+      <td height="18">1109104A</td>
+      <td>南通市江铃汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722029">
+          <input type="hidden" name="dealerIdStr" value="10000497"></td>
+      <td height="18">1109105A</td>
+      <td>扬州顺铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722030">
+          <input type="hidden" name="dealerIdStr" value="10000498"></td>
+      <td height="18">1109106A</td>
+      <td>常熟贺骏汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S715007">
+          <input type="hidden" name="dealerIdStr" value="10000499"></td>
+      <td height="18">1109204A</td>
+      <td>苏州贺骏汽车贸易有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S722031">
+          <input type="hidden" name="dealerIdStr" value="10000500"></td>
+      <td height="18">1109205A</td>
+      <td>常州江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S822008">
+          <input type="hidden" name="dealerIdStr" value="10000501"></td>
+      <td height="18">1109207A</td>
+      <td>昆山贺骏汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721006">
+          <input type="hidden" name="dealerIdStr" value="10000502"></td>
+      <td height="18">1110100A</td>
+      <td>宁波江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721007">
+          <input type="hidden" name="dealerIdStr" value="10000503"></td>
+      <td height="18">1110101A</td>
+      <td>浙江江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721008">
+          <input type="hidden" name="dealerIdStr" value="10000504"></td>
+      <td height="18">1110105A</td>
+      <td>浙江台州江铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721015">
+          <input type="hidden" name="dealerIdStr" value="10000506"></td>
+      <td height="18">1110107A</td>
+      <td>红旭集团股份公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721019">
+          <input type="hidden" name="dealerIdStr" value="10000507"></td>
+      <td height="18">1110108A</td>
+      <td>义乌市昌铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721025">
+          <input type="hidden" name="dealerIdStr" value="10000509"></td>
+      <td height="18">1110109A</td>
+      <td>浙江金华顺铃汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S921003">
+          <input type="hidden" name="dealerIdStr" value="10000510"></td>
+      <td height="18">1110115A</td>
+      <td>台州江铃全顺汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S921002">
+          <input type="hidden" name="dealerIdStr" value="10000512"></td>
+      <td height="18">1110117A</td>
+      <td>衢州凯铃汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S921013">
+          <input type="hidden" name="dealerIdStr" value="10000513"></td>
+      <td height="18">1110118A</td>
+      <td>宁波丰顺汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S921017">
+          <input type="hidden" name="dealerIdStr" value="10000515"></td>
+      <td height="18">1113105A</td>
+      <td>福州江铃全顺汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721016">
+          <input type="hidden" name="dealerIdStr" value="10000516"></td>
+      <td height="18">1113106A</td>
+      <td>厦门江铃全顺汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721022">
+          <input type="hidden" name="dealerIdStr" value="10000518"></td>
+      <td height="18">1113107A</td>
+      <td>泉州全顺汽车销售服务有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721023">
+          <input type="hidden" name="dealerIdStr" value="10000519"></td>
+      <td height="18">1112100A</td>
+      <td>江西江铃专用车辆厂</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721013">
+          <input type="hidden" name="dealerIdStr" value="10000505"></td>
+      <td height="18">1112101A</td>
+      <td>江西江铃汽车集团改装车有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721024">
+          <input type="hidden" name="dealerIdStr" value="10000508"></td>
+      <td height="18">1401101A</td>
+      <td>北京福铃汽车技术发展有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721026">
+          <input type="hidden" name="dealerIdStr" value="10000511"></td>
+      <td height="18">1401106A</td>
+      <td>北京京铃顺汽车销售有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S921015">
+          <input type="hidden" name="dealerIdStr" value="10000514"></td>
+      <td height="18">1402102A</td>
+      <td>河北文盛汽车贸易有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+    <tr class="csstr">
+      <td><input type="checkbox" name="dealer">
+          <input type="hidden" name="dealerNameStr" value="S721018">
+          <input type="hidden" name="dealerIdStr" value="10000517"></td>
+      <td height="18">1402103A</td>
+      <td>唐山文盛汽车贸易有限公司</td>
+      <td nowrap>10141001</td>
+    </tr>
+  </table>
+</div>
+
+<table class="tblopt" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr class=tabletitle>
+	   <!--<td colspan="4"  valign="middle" height="20">选择代理商</td>-->   
+	   <td width="5%" align="center"><input type="checkbox" name="allselect" onClick="selall(this.form);"></td>
+       <td width="5%" align="left" nowrap>全选</td>
+       <td  align="left" nowrap width="95%" valign=middle>
+       <input type="button" class=cssbutton name="ok2" value="确定" onClick="Windclose(1);">
+      &nbsp;<input class=cssbutton type="button" name="ok3" value="清空" onClick="Windclose(0);">
+      &nbsp;共有&nbsp;<font color=red>160</font>&nbsp;家代理商；已选择&nbsp;<font color=red id="sum">0</font>&nbsp;家
+      </td>
+    </tr>
+</table>
+
+</FORM> 
+
+<script>
+<!--
+//验证代理商代码输入框是否为空
+function check_code() {
+		var codeOrName = document.frm1.dealerCode.value;
+
+		if(codeOrName == null || codeOrName.trim() == "") {
+			alert("代理商代码或简称不能为空");
+			return false;
+		}
+
+		codeOrName = codeOrName.replace(/\，/g, ",").trim();
+		document.frm1.dealerCode.value = codeOrName;
+}
+//动态调整代理商列表高度
+function window_onresize() {
+	var tSize=24+5;
+	var body_back=document.body.clientHeight-130;
+	var dlistH=0;
+	if (body_back>tSize) {
+		if ((24+2)*216+5<body_back) {
+			dlistH=(24+2)*216+5;
+		} else {
+			dlistH=body_back;
+		}
+	} else {
+		dlistH=tSize;
+	}
+	document.all.dlist.style.height=dlistH;
+}
+
+//-->
+</script>
+
+</body>
+</html>

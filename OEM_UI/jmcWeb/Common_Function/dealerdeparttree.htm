@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<title>销售组织选择</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+</head>
+<script language="javascript">
+function Windclose(dpt){
+		if(dpt==0){
+		parent.opener.document.all.DPTNAME.value='';}
+		if(dpt==1){
+		parent.opener.document.all.DPTNAME.value='浦西营业一分部';}
+		if(dpt==2){
+		parent.opener.document.all.DPTNAME.value='浦西营业一分部';}
+		if(dpt==3){
+		parent.opener.document.all.DPTNAME.value='浦西营业二分部';}
+		if(dpt==4){
+		parent.opener.document.all.DPTNAME.value='浦西营业三分部';}
+		if(dpt==5){
+		parent.opener.document.all.DPTNAME.value='浦西营业四分部';}
+		if(dpt==6){
+		parent.opener.document.all.DPTNAME.value='浦东第一展厅';}
+		parent.window.close();
+}
+</script>
+<body >
+<BR><BR>
+ <table class="csstable" align=center width="90%" border="0" cellspacing="0" cellpadding="0">
+	<tr class=tabletitle>
+	   <td colspan="4"  valign="middle" height="20">选择组织</td>
+    </tr>
+</table>
+ <table class="csstable" align=center width="90%" border="0">
+	<tr class="tabletitle">
+	  <td width="9%" align="left">选择			      </td>
+		<td width="19%"  align="left">管理组织</td>
+		<td width="34%" align="left">组织名称称</td>
+		<td width="27%"  align="left">组织代码</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left"><input type="radio" name="dealer" onClick="Windclose(2);"></td>
+		<td width="20%" >销售部</td>
+		<td width="32%" >浦西营业一分部</td>
+		<td width="15%" >DPT001</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left"><input type="radio" name="dealer" onClick="Windclose(3);"></td>
+		<td width="20%" >销售部</td>
+		<td width="32%" >浦西营业二分部</td>
+		<td width="15%" >DPT002</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left"><input type="radio" name="dealer" onClick="Windclose(4);"></td>
+		<td width="20%" >浦西营业一分部</td>
+		<td width="32%" >浦西营业三分部</td>
+		<td width="15%" >DPT001</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left">			      
+		<input type="radio" name="dealer"onClick="Windclose(5);"></td>
+		<td width="20%" >浦西营业一分部</td>
+		<td width="32%" >浦西营业四分部</td>
+		<td width="15%" >DPT002</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left"><input type="radio" name="dealer" onClick="Windclose(6);"></td>
+		<td width="20%" >浦西营业二分部</td>
+		<td width="32%" >浦东第一展厅</td>
+		<td width="15%" >DPT003</td>
+	</tr>
+ </table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SysViewMenu</title>
+<link rel="StyleSheet"type="text/css" href="../style/dtree.css"/>
+<script type="text/javascript" src="../js/jslib/dtree.js"></script>
+<script type="text/javascript" src="../js/jslib/prototype.js"></script>
+
+</head>
+<body style="background-color:#FFF; margin:0px; padding:0px;" onload="">
+	<div style=" margin:2px;">
+	<script type="text/javascript">
+
+		d = new dTree('d');
+		d.add(0,-1,'','','','');
+		//d.add(6,0,'<img src="../img/h.gif"></img>&nbsp;工厂通报查看','../webCnt/carSell/carInfoPublic/carInfoPublicQuery.html','车辆信息发布','inIframe');
+		d.add(8,0,'本地通告管理','');
+			d.add(81,8,'<img src="../img/h.gif"></img>&nbsp;通告管理','../webCnt/carSell/sellQuery/sellQuerySearch.html','通告管理','inIframe');	
+d.add(82,8,'<img src="../img/h.gif"></img>&nbsp;通告查看','../webCnt/carSell/sellQuery/sellQuerySearch.html','通告查看','inIframe');
+d.add(83,8,'<img src="../img/h.gif"></img>&nbsp;通告类别维护','../webCnt/carSell/sellQuery/sellQuerySearch.html','通告类别维护','inIframe');
+		document.write(d);
+		d.closeAll();
+		d.o(1);
+
+	</script>
+	</div>
+</body>
+</html>

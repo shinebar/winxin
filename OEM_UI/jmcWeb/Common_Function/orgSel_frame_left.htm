@@ -1,0 +1,54 @@
+<HTML xmlns:mydbtree> 
+	<HEAD> 
+	 <?IMPORT NAMESPACE="mydbtree" IMPLEMENTATION="treeview.htc"?> 
+	 <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<title>Dealer on line</title>
+</head>
+
+<SCRIPT language="JavaScript">
+	function selectNode(id,name){
+		parent.opener.document.getElementById('updptname').value= name;
+		window.close();
+	}
+</script>
+<body style='	FONT-SIZE: 12px; 
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	BACKGROUND-COLOR: #E4E4E4;
+'>
+<table width ="100%" >
+<tr>
+    <td width="100%">&nbsp;
+			<mydbtree:treeview id="menuree" systemImagesPath="../Images">
+		       <mydbtree:treenode Text="销售组织选择" imageurl="../images/root.gif" Expanded="true" TreeNodeSrc='<TREENODES>
+		       		
+<treenode Text="JMC" navigateurl="javascript:selectNode(&apos;20000001&apos;,&apos;JMC&apos;)">
+
+
+<treenode Text="东北区" navigateurl="javascript:selectNode(&apos;20000115&apos;,&apos;东一区&apos;)"/>
+<treenode Text="东一区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东二区&apos;)"/>
+<treenode Text="东二区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="东三区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="中区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="南区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="西北区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="西南区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="华北区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="西北区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="中区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="出口" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="改装厂" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="批售" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+<treenode Text="其它" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;东三区&apos;)"/>
+
+</treenode></TREENODES>'>
+	          </mydbtree:treenode>
+		  	</mydbtree:treeview> 
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

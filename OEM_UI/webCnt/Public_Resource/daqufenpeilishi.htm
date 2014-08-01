@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<script type="text/javascript" src="../../js/web/common.js"></script>
+<script type="text/javascript" src="../../js/jslib/ProvinceCity.js"></script>
+<title>资源下发历史查询(大区)</title>
+<style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+</head>
+<body>
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;资源下发历史查询(大区)</div>
+<form method="POST" name="form2" action="">
+  <table class="table_query" width="95%" align="center">
+    <tr>
+	  <td width="25%" height="29" align="right">小区：</td>
+      <td width="25%">
+		<select>
+			 <option>全部
+			 <option>北一区
+			 <option>北四区
+		  </select>
+	  </td>
+      <td width="25%" height="29" align="right">选择车系：</td>
+      <td width="25%">
+		<select>
+			 <option>指南者2.4
+			 <option>牧马人
+		  </select>
+	  </td>
+    </tr>
+	    <tr>
+	  <td width="25%" height="29" align="right">颜色：</td>
+      <td width="25%">
+		<select>
+			 <option>全部
+			 <option>亮银金属漆
+			 <option>森林绿珠光漆
+			 <option>皓白标准漆
+			 <option>矿石灰金属漆
+		  </select>
+	  </td>
+      <td width="25%" height="29" align="right">数量：</td>
+      <td width="25%">
+		<input type='text' value />
+	  </td>
+    </tr>
+    <tr>
+	  <td></td><td></td>
+	  <td align="left" rowspan='2'>
+		<input name="button32" type="button" class="normal_btn" onclick="showTable2();" value="查询" />
+      </td>
+    </tr>
+  </table>
+</FORM>
+<FORM name="FRM2">
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th width="74" colspan=1><pre>小区</pre></th>
+      <!--<th width="74" colspan=1><pre>牧马人3.6L 罗宾汉四门版</pre></th> -->
+      <th width="74" colspan=2><pre>指南者2.4豪华版</pre></th>
+      <th width="74" colspan=3><pre>指南者2.4运动版</pre></th>      
+    </tr>
+    <tr class="table_list_row1">
+	    <td></td>
+	<!--	<td>亮银金属漆</td> -->
+		<td>亮银金属漆</td>
+		<td>森林绿珠光漆</td>
+		<td>亮银金属漆</td>
+		<td>皓白标准漆</td>
+		<td>矿石灰金属漆</td>
+    </tr>
+	<tr class="table_list_row2">
+	    <td></td>
+	<!--	<td>63</td> -->
+		<td>20</td>
+		<td>31</td>
+		<td>11</td>
+		<td>21</td>
+		<td>20</td>
+    </tr>
+	<tr class="table_list_row1">
+	    <td>北一区</td>
+	<!--	<td><input type='text' value='0'/></td> -->
+		<td>1</td>
+		<td>3</td>
+		<td>2</td>
+		<td>5</td>
+		<td>4</td>
+    </tr>
+	<tr class="table_list_row2">
+	    <td>北四区</td>
+	<!--	<td><input type='text' value='0'/></td> -->
+		<td>2</td>
+		<td>5</td>
+		<td>4</td>
+		<td>7</td>
+		<td>9</td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  
+	<table>
+	   <tr>
+		<td width="10%" align="center">
+			<input name="button32" type="button" class="normal_btn" onclick=";" value="通过" />
+			<input name="button32" type="button" class="normal_btn" onclick=";" value="拒绝" />
+		</td>
+	   </tr>
+	   
+	</table>
+	
+</FORM>
+
+<FORM name="FRM3">
+
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+		
+			function OpenDealer(){
+		window.open("../common_function/dealersingle_frame_index.htm", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+	function OpenWindow(){
+
+	window.open("../departtree.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+	document.FRM2.style.display = "none";
+	document.FRM3.style.display = "none";
+	
+	function showTable2(){	
+		document.FRM2.style.display = "inline";
+		document.FRM3.style.display = "none";
+	}
+	
+	function showTable3(){	
+		document.FRM3.style.display = "inline";
+		document.FRM2.style.display = "none";
+	}
+	
+		function submitconfirm()
+	{
+		if(confirm("确定要修改参数吗？")){
+			
+		}
+	}
+		function OpenWindow2(){
+		window.open("../Inventory/inventoryquery_vchldtl.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+			function OpenMaterial() {
+		window.open("../Common_Function/ProSelmore_frame_index.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");	
+	}
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

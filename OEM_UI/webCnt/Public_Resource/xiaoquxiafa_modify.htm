@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<script type="text/javascript" src="../../js/web/common.js"></script>
+<script type="text/javascript" src="../../js/jslib/ProvinceCity.js"></script>
+<title>资源分配(小区)</title>
+<style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+</head>
+<body>
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;资源分配(小区)</div>
+<div class="navigation" align="center" size="+1">&nbsp;经销商:北京汇杰&nbsp;&nbsp;&nbsp;&nbsp;车系:WRANGLER/牧马人3.6L 撒哈拉两门版</div>
+<div width="500px" height="300px" align="center" style="margin-right:400px;">
+<table class="table_list" style="border-bottom:1px solid #DAE0EE;margin-left:200px;">
+	<tr class="table_list_row2">
+		<td>颜色</td>
+		<td>数量</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>烈焰红</td>
+		<td><input type='text' class="long_btn" style="background:white" value="1"></input></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>醇黑</td>
+		<td><input type='text' class="long_btn" style="background:white" value="14"></input></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>亮银金属漆</td>
+		<td><input type='text' class="long_btn" style="background:white" value="6"></input></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>矿石灰金属漆</td>
+		<td><input type='text' class="long_btn" style="background:white" value="8"></input></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>汇总</td>
+		<td>29</td>
+    </tr>
+  </table>
+  </div>
+  <br>
+  <table width="118%" class="table_list" style="border-bottom:0px solid #DAE0EE">
+	<tr>
+		<td align="center" width='33%'>
+			<input type='button' class="normal_btn" onclick='save();' value='保存'/>&nbsp;&nbsp;
+			<input type='button' class="normal_btn" onclick='back();' value='取消'/>
+		</td>
+	
+	</tr>
+  </table>
+
+<SCRIPT LANGUAGE="JavaScript">
+function save(){	
+		if(confirm("是否确定保存？")){
+			window.location.reload('xiaoquxiafa.htm');
+		}
+	}
+
+	function back(){	
+		window.location.reload('xiaoquxiafa.htm');	
+	}
+</SCRIPT>
+</BODY>
+</HTML>

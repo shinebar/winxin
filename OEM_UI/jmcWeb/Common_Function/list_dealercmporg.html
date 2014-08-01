@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<title>Dealer on line</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link rel="stylesheet" href="../css/left.css">
+<script src='../js/myftiens5.js'></script>
+<SCRIPT language="JavaScript">
+	function DptName(dpt){
+		if(dpt==1){
+		opener.document.all.DPTNAME.value='市场营销部';}
+		if(dpt==2){
+		opener.document.all.DPTNAME.value='华东区营业部';}
+		if(dpt==3){
+		opener.document.all.DPTNAME.value='华东区_申城地区';}
+		if(dpt==4){
+		opener.document.all.DPTNAME.value='华东区_江苏地区';}
+		if(dpt==5){
+		opener.document.all.DPTNAME.value='华南区营业部';}
+		if(dpt==6){
+		opener.document.all.DPTNAME.value='华南_广州地区';}
+		if(dpt==7){
+		opener.document.all.DPTNAME.value='华南_福建地区';}
+
+		window.close();
+	}
+</script>
+</head>
+
+<body style='	FONT-SIZE: 12px; 
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	BACKGROUND-COLOR: #E4E4E4;
+'>
+<table width ="100%" >
+<tr>
+    <td width="10%">&nbsp;</td>
+    <td width="90%">&nbsp;
+<SCRIPT language="JavaScript">
+				foldersTree1 = gFld("<a onclick='DptName(1);'>市场营销部", "",  "-999",  1,  1)
+
+						group1_0 = insFld(foldersTree1, gFld("<a onclick='DptName(2);'>华东区营业部</a>", "", "-999", 0, 0))
+
+								insDoc(group1_0, gMyLnk("main", "<a onclick='DptName(3);'>华东区_申城地区</a>", "", "-999", 0, 0))
+
+								insDoc(group1_0, gMyLnk("main", "<a onclick='DptName(4);'>华东区_江苏地区</a>", "", "-999", 0, 0))
+
+						group1_1 = insFld(foldersTree1, gFld("<a onclick='DptName(5);'>华南区营业部</a>", "", "-999", 0, 0))
+
+								insDoc(group1_1, gMyLnk("main", "<a onclick='DptName(6);'>华南_广州地区</a>", "", "-999", 0, 0))
+
+								insDoc(group1_1, gMyLnk("main", "<a onclick='DptName(7);'>华南_福建地区</a>", "", "-999", 0, 0))
+</script>
+
+<script>
+
+		function iniTreeName(){
+
+			foldersTree1.initialize(0, 0, "");
+			foldersTree1.display();
+		}
+		initializeDocumentNoCheckBox();
+
+</script>
+
+</body>
+</html>

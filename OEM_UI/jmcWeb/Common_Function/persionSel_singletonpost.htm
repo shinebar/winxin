@@ -1,0 +1,157 @@
+<html>
+<HEAD><TITLE>职位维护</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GB2312">
+<LINK href="../css/style.css" type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript src="../js/date-picker_ex.js"></SCRIPT>
+<SCRIPT language=JavaScript src="../js/ut.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+
+
+	function deleterole(id)
+	{
+		if(confirm("确定要删除吗？")){
+		}
+	}
+	function CloseWindow()
+	{
+		parent.window.close();
+	}
+
+-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<br>
+<BR>
+<FORM name=FRM method=post> 
+<TABLE class=csstable width="95%" align=center border=0>
+<TBODY>
+<TR>
+
+<TD><div align="center">姓名: 
+  <INPUT size=10 name="name" style="width:60%"> 
+</div></TD>
+<TD align=left><div align="center">
+  <INPUT class=cssbutton type=button value=查询 name=button3 onclick=showTbl();> 
+</div></TD></TR>
+</TBODY>
+</TABLE>
+</FORM>
+<FORM name=FRM1 method=post>
+  <TABLE class=csstable width="95%" align=center>
+<TBODY>
+<TR class=tabletitle>
+<TD width="15%"><div align="center">选择</div></TD>
+<td width="35%"  >职位</td>
+<td width="35%"  >姓名</td>
+<td width="15%"  ><div align="center">状态</div></td>
+</TR>
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','张为红');">
+</div></TD>
+<td width="35%"  >总经理</td>
+<td width="35%"  >张为红</td>
+<td width="15%" ><div align="center">有效</div></td>
+</TR>
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','王弘扬');">
+</div></TD>
+<td width="35%"  >销售顾问</td>
+<td width="35%"  >王弘扬</td>
+<td width="15%"  ><div align="center">有效</div></td>
+</TR>
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','陈国强');">
+</div></TD>
+<td width="35%"  >销售助理</td>
+<td width="35%"  >陈国强</td>
+<td width="15%"  ><div align="center">有效</div></td>
+</TR>
+
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','林文彤');">
+</div></TD>
+<td width="35%"  >销售经理</td>
+<td width="35%"  >林文彤</td>
+<td width="15%"  ><div align="center">有效</div></td>
+</TR>
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','叶倩');">
+</div></TD>
+<td width="35%"  >销售经理</td>
+<td width="35%"  >叶倩</td>
+<td width="15%"  ><div align="center">有效</div></td>
+</TR>
+
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','张琳');">
+</div></TD>
+<td width="35%"  >展厅顾问</td>
+<td width="35%"  >张琳</td>
+<td width="15%"  ><div align="center">有效</div></td>
+</TR>
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','郑为');">
+</div></TD>
+<td width="35%"  >展厅顾问</td>
+<td width="35%"  >郑为</td>
+<td width="15%"  ><div align="center">有效</div></td>
+</TR>
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','吴觅雪');">
+</div></TD>
+<td width="35%"  >展厅顾问</td>
+<td width="35%"  >吴觅雪</td>
+<td width="15%"  ><div align="center">有效</div></td>
+</TR>
+
+
+<TR class=csstr>
+<TD width="5%"><div align="center">
+  <input type="radio" name="postid" onClick="selectuser('','李立芬');">
+</div></TD>
+<td width="35%"  >展厅顾问</td>
+<td width="35%"  >李立芬</td>
+<td width="15%"  ><div align="center">失效</div></td>
+</TR>
+</TBODY>
+</TABLE>
+
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.FRM1.style.display='none';
+
+	function showTbl()
+	{
+		document.FRM1.style.display='inline';
+	}
+
+	 function selectClick(obj) {
+        for(var i =0; i<obj.postid.length;i++) {
+            obj.postid[i].checked=obj.selectAll.checked;
+        }
+    }
+	
+	function selectuser(id,name){
+		parent.opener.document.getElementById('uname').value= name;
+		CloseWindow();
+		//window.close();
+	}
+
+!-->
+</SCRIPT>
+
+
+</BODY>
+</html>

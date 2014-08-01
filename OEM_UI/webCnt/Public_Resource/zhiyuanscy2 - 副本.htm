@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<script type="text/javascript" src="../../js/web/common.js"></script>
+<script type="text/javascript" src="../../js/jslib/ProvinceCity.js"></script>
+<title>资源分配上传预览</title>
+<style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+</head>
+<body>
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;资源分配上传预览</div>
+<div class="navigation" style="font-weight:bold;" size="+1">&nbsp;本次共上传<font color=blue>20</font>台 已分配<font color=blue>20</font>台</div>
+<FORM name="FRM2">
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th width="74" rowspan='1'><pre>区域</pre></th>
+	  <th colspan='1'rowspan='1'><pre>批售目标</pre></th>
+      <th colspan='1' rowspan='1'><pre>上月结转</pre></th>      
+	  <th colspan='1' rowspan='1'><pre>本次分配</pre></th>
+	  <th colspan='1' rowspan='1'>调整</th>
+    </tr>
+	<tr class="table_list_row1" bgcolor='#f08080'>
+		<td>北大区</td>
+		<td>14</td>
+		<td>6</td>
+		<td>6</td>
+		<td><input type='button' class="normal_btn" value="调整"></input></td>
+    </tr>
+	<tr class="table_list_row1" bgcolor='#00ced1'>
+		<td>东大区</td>
+		<td>8</td>
+		<td>3</td>
+		<td>4</td>
+		<td><input type='button' class="normal_btn" value="调整"></input></td>
+    </tr>
+	<tr class="table_list_row1" bgcolor='#00FF99'>
+		<td>西大区</td>
+		<td>6</td>
+		<td>4</td>
+		<td>3</td>
+		<td><input type='button' class="normal_btn" value="调整"></input></td>
+    </tr>
+	<tr class="table_list_row1" bgcolor='#3399FF'> 
+		<td>南大区</td>
+		<td>38</td>
+		<td>11</td>
+		<td>7</td>
+		<td><input type='button' class="normal_btn" value="调整"></input></td>
+    </tr>
+	
+	<tr class="table_list_row1" bgcolor='#FF9999'>
+		<td>全国</td>
+		<td>66</td>
+		<td>24</td>
+		<td>20</td>
+		<td></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <table width="118%" class="table_list" style="border-bottom:0px solid #DAE0EE">
+	<tr>
+		<td align="center" width='33%'>
+			<input type='button' class="normal_btn" onclick='save();' value='保存'/>&nbsp;&nbsp;
+			<input type='button' class="normal_btn" onclick=';' value='下载'/>&nbsp;&nbsp;
+			<input type='button' class="normal_btn" onclick='back();' value='取消'/>
+		</td>
+	
+	</tr>
+  </table>
+
+</FORM>
+</BODY>
+</HTML>
+<SCRIPT LANGUAGE="JavaScript">
+	function save(){	
+		if(confirm("是否确定保存？")){
+			alert('保存成功');
+			window.location.reload('zhiyuansc.htm');
+		}
+	}
+
+	function back(){	
+		if(confirm("是否确定取消？")){
+			window.location.reload('zhiyuansc.htm');
+		}
+	}
+</SCRIPT>

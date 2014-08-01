@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<script type="text/javascript" src="../../js/web/common.js"></script>
+<script type="text/javascript" src="../../js/jslib/ProvinceCity.js"></script>
+<title>资源分配上传预览</title>
+<style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+</head>
+<body>
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;资源分配上传预览</div>
+<div class="navigation" style="font-weight:bold;" size="+1">&nbsp;本次共上传<font color=blue>200</font>台 已分配<font color=blue>200</font>台</div>
+<FORM name="FRM2">
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th width="74" rowspan='2'><pre>经销商/区域</pre></th>
+	  <th colspan='5'rowspan='1'><pre>牧马人3.6L 撒哈拉两门版</pre></th>
+    </tr>
+	 <tr class="tabletitle">
+
+		<th>烈焰红</th>
+		<th>醇黑</th>
+		<th>亮银金属漆</th>
+		<th>矿石灰金属漆</th>
+		<th>调整</th>
+    </tr> 
+    <tr class="table_list_row1">
+		<td>北京汇杰伟业</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+		<td>2</td>
+		<td><input type='button' class="normal_btn"value="调整" onclick="modify()"></input></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北京中进百旺</td>
+		<td>3</td>
+		<td>4</td>
+		<td>2</td>
+		<td>21</td>
+		<td><input type='button' class="normal_btn"value="调整" onclick="modify()"></input></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京港龙基业</td>
+		<td>0</td>
+		<td>1</td>
+		<td>3</td>
+		<td>12</td>
+		<td><input type='button' class="normal_btn"value="调整" onclick="modify()"></input></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北一区</td>
+		<td>5</td>
+		<td>8</td>
+		<td>9</td>
+		<td>35</td>
+		<td></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>呼市中进百旺</td>
+		<td>5</td>
+		<td>2</td>
+		<td>3</td>
+		<td>5</td>
+		<td><input type='button' class="normal_btn"value="调整" onclick="modify()"></input></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北四区</td>
+		<td>5</td>
+		<td>2</td>
+		<td>3</td>
+		<td>5</td>
+		<td></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北大区</td>
+		<td>10</td>
+		<td>10</td>
+		<td>12</td>
+		<td>40</td>
+		<td></td>
+    </tr>
+  </table>
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th width="74" rowspan='2'><pre>经销商/区域</pre></th>
+	  <th colspan='5'rowspan='1'><pre>指南者2.4豪华版</pre></th>
+    </tr>
+	 <tr class="tabletitle">
+
+		<th>烈焰红</th>
+		<th>亮银金属漆</th>
+		<th>矿石灰金属漆</th>
+		<th>调整</th>
+    </tr> 
+    <tr class="table_list_row1">
+		<td>北京汇杰伟业</td>
+		<td>2</td>
+		<td>4</td>
+		<td>2</td>
+		<td><input type='button' class="normal_btn"value="调整" onclick="modify()"></input></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北京中进百旺</td>
+		<td>3</td>
+		<td>2</td>
+		<td>21</td>
+		<td><input type='button' class="normal_btn"value="调整" onclick="modify()"></input></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京港龙基业</td>
+		<td>0</td>
+		<td>3</td>
+		<td>12</td>
+		<td><input type='button' class="normal_btn"value="调整" onclick="modify()"></input></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北一区</td>
+		<td>5</td>
+		<td>9</td>
+		<td>35</td>
+		<td></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>呼市中进百旺</td>
+		<td>5</td>
+		<td>3</td>
+		<td>5</td>
+		<td><input type='button' class="normal_btn"value="调整" onclick="modify()"></input></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北四区</td>
+		<td>5</td>
+		<td>3</td>
+		<td>5</td>
+		<td></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北大区</td>
+		<td>10</td>
+		<td>12</td>
+		<td>40</td>
+		<td></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  
+</FORM>
+
+<table width="118%" class="table_list" style="border-bottom:0px solid #DAE0EE">
+	<tr>
+		<td align="center" width='33%'>
+			<input type='button' class="normal_btn" onclick='save();' value='保存'/>&nbsp;&nbsp;
+			<input type='button' class="normal_btn" onclick=';' value='下载'/>&nbsp;&nbsp;
+			<input type='button' class="normal_btn" onclick='back();' value='取消'/>
+		</td>
+	
+	</tr>
+  </table>
+<SCRIPT LANGUAGE="JavaScript">
+function save(){	
+		if(confirm("是否确定保存？")){
+			window.location.reload('zhiyuansc.htm');
+		}
+	}
+
+	function back(){	
+		if(confirm("是否确定取消？")){
+			window.location.reload('zhiyuansc.htm');
+		}
+	}
+	function modify(){	
+		window.location.reload('zhiyuanscy3_modify.htm');
+	}
+</SCRIPT>
+</BODY>
+</HTML>

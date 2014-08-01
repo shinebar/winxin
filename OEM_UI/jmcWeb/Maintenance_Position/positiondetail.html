@@ -1,0 +1,125 @@
+<html>
+<HEAD>
+<TITLE>职位维护－职位修改</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+<script language="JavaScript" src="../js/date-picker_ex.js"></script>
+<script language="JavaScript" src="../js/ut.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function OpenWindow(){
+
+	//window.open("roleadd.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<table width="103%" border="0" cellspacing="0" cellpadding="0" class="cssTitle">
+          <tr> 
+            <td width="7%"></td><td height="48" class="zi01">[职位维护－职位资料]</td>
+          </tr>
+</table><BR><BR>
+
+<form name="FRM" method="post" action="positionmantain.html">
+  <BR>
+  <table class=csstable width="85%" align=center>
+  	<tr> 
+      <td class=datatitle width="16%"  >所属组织：</td>
+      <td class=datadetail width="16%" colspan="2" > 市场营销部 </td>
+    </tr>
+    <tr> 
+      <td class=datatitle width="16%" >职位名称：</td>
+      <td class=datadetail width="16%" colspan="2" > 华东区市场总监  </td>
+    </tr>
+    <TR> 
+      <td class=datatitle width="16%">职位状态：</td>
+      <td class=datadetail width="16%" colspan="2"> 有效   </td>
+    </TR>
+    <TR> 
+      <td class=datatitle width="16%">备注：</td>
+      <td class=datadetail width="16%"> 代理商   </td>
+      <td align="left" width="48%">
+		<input class=button  name="submit" type="button"onClick="location='positionmodify.html';" value ='修改资料'>&nbsp;
+        <input class=button  name="submit" type="button"onClick="location='positionmantain.html';" value ='删除'>&nbsp; 
+		<input class=button name="button2" type="button" onClick="location='positionmantain.html';" value="返回">      </td>
+    </TR>
+</table>
+</form>
+   <table align=center width="85%" id="role" style='background-color:transparent;'>
+     <tr >
+        <td class= tabletitle align = "left" width="14%" onMouseOver="this.bgColor='#ffffff';" onMouseOut="this.bgColor='#CBDAE4';"><a href="javascript:showRole();">角色列表</a></td>
+        <td  class= tabletitle width="14%" align = "left"  onMouseOver="this.bgColor='#ffffff';" onMouseOut="this.bgColor='#CBDAE4';"><a href="javascript:showUser();">用户列表</a></td>
+    </tr>
+   </table>
+   
+  <div id="roles">
+  <table class=csstable align=center width="85%" id="rolelist">
+    <tr class= tabletitle>
+    <td  colspan="3" align = left > 角色列表       </td>
+    </tr>
+  </table>
+  <table class=csstable align=center width="85%" id="rolelist">
+    <tr class = tabletitle>
+      <td >角色编号</td>
+      <td >角色名称</td>
+    </tr>
+    <tr class = csstr>
+      <td  >MonthlyTargetInquiry</td>
+      <td  >销售计划查询</td>
+    </tr>
+    <tr class = csstr>
+      <td  >MonthlyDemandApply</td>
+      <td  >月需求计划提报</td>
+    </tr>
+    <tr class = csstr>
+      <td  >RoleMaintain</td>
+      <td  >职位维护</td>
+    </tr>
+ </table>
+ </div>
+ 
+<div id="user">
+<table class=csstable align=center width="85%" id="userlist">
+    <tr class= tabletitle>
+      <td  colspan="3" align = left > 用户列表       </td>
+    </tr>
+  </table>
+  <table class=csstable align=center width="85%" id="userlist">
+       <tr class=tabletitle> 
+	      <td width="10%"  >用户名</td>
+		  <td width="59%"  >职位</td>
+		  <td width="9%"  >姓名</td>	
+    </tr>
+    <tr class=csstr>
+      <td  >张为红</td> 
+      <td  >华东区市场总监(市场营销部)，华东区销售经理（销售部)</td>
+      <td  >张为红</td>
+    </tr>
+ </table>
+</div>
+
+  <div id="Business_Scope"></div>
+
+ <script language="javascript">
+    user.style.display="none";
+	Business_Scope.style.display="none";
+    
+    function showUser() {
+    roles.style.display="none";
+    user.style.display="inline"; 
+
+    }
+    
+    function showRole() {
+    user.style.display="none";
+    roles.style.display="inline";
+
+    }
+	
+
+</script>
+
+</BODY>
+</html>

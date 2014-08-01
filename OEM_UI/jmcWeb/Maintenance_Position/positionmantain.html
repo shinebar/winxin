@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<title>职位维护</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+    .style1
+    {
+        height: 22px;
+    }
+    -->
+</style>
+<SCRIPT language=JavaScript>
+<!--
+
+
+	function deleterole(id)
+	{
+		if(confirm("确定要删除吗？")){
+		}
+	}
+	function OpenWindow(){
+
+	window.open("../Common_Function/departtree.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<div class="wbox">
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;当前位置： 系统数据管理 &gt; 权限管理 &gt;职位维护</div>
+
+    <div id="queryResult" style="display: inline;">
+<table class="table_query" border="0">
+    <tr>
+      <TD class="table_query_2Col_label_5Letter"  nowrap="nowrap">所属组织:  </TD>
+	  <td class="table_query_2Col_input" nowrap="nowrap"><INPUT size=10 name=updptname class="middle_txt" readonly="true"> 
+                <INPUT onClick="OpenWindow();" type=submit value="..." class=normal_btn> </TD>
+		<TD  class="table_query_2Col_label_4Letter">职位名称：</TD>      
+      <td class="table_query_2Col_input" nowrap="nowrap"><INPUT size=10 name=name class="middle_txt"> </TD>
+	</TR>
+	<tr>
+		<td class="table_query_input" nowrap="nowrap" colspan="4" align="center"><INPUT type=button class=normal_btn value="查 询" name=button3 onclick=showTbl();>&nbsp;
+    	<INPUT class=normal_btn type=button value="新 增" name=Submit4 onClick="location.replace('positionadd.html');" > </TD></TR>
+</TABLE>
+<br />
+<FORM name="FRM1" method=post>
+<table class=table_list style="border-bottom:1px solid #DAE0EE">
+    <tr class=tabletitle> 
+	      <th >所属组织</TD>
+		<Th>职位名称</TD>
+		<Th>职位状态</TD>
+		<Th>操作</Th>
+	</TR>
+	<tr class="table_list_row1"> 
+      <td >市场营销部</TD>
+		<TD><A href="positiondetail.html">华东区市场专员</A></TD>
+		<TD>有效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a>
+		</TD>
+	</TR>
+	<tr class="table_list_row1"> 
+      <td >市场营销部</TD>
+		<TD><A href="positiondetail.html">华东区市场总监助理</A></TD>
+		<TD>有效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a>
+		</TD>
+	</TR>
+	<tr class="table_list_row1"> 
+      <td >市场营销部</TD><TD><A href="positiondetail.html">华东区市场总监</A></TD>
+		<TD>有效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a>
+				</TD>
+	</TR>	
+	<tr class="table_list_row1"> 
+      <td >销售部</TD>
+		<TD><A href="positiondetail.html">华东区销售经理</A></TD>
+		<TD>有效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a></TD>
+	</TR>
+	<tr class="table_list_row1"> 
+      <td >销售部</TD>
+		<TD><A href="positiondetail.html">华东区销售经理助理</A></TD>
+		<TD>失效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a>
+		  </TD>
+	</TR>	
+	<tr class="table_list_row1"> 
+      <td >市场营销部</TD>
+		<TD><A href="positiondetail.html">西南区市场专员</A></TD>
+		<TD>有效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a></TD>
+	</TR>
+	<tr class="table_list_row1"> 
+      <td >市场营销部</TD>
+		<TD><A href="positiondetail.html">西南区市场总监助理</A></TD>
+		<TD>有效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a></TD>
+	</TR>
+	<tr class="table_list_row1"> 
+      <td >市场营销部</TD><TD><A href="positiondetail.html">西南区市场总监</A></TD>
+		<TD>有效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a></TD>
+	</TR>	
+	<tr class="table_list_row1"> 
+      <td >销售部</TD>
+		<TD><A href="positiondetail.html">西南区销售经理</A></TD>
+		<TD>有效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a> 
+		</TD>
+	</TR>
+	<tr class="table_list_row1"> 
+      <td >销售部</TD>
+		<TD><A href="positiondetail.html">西南区销售经理助理</A></TD>
+		<TD>失效</TD>
+		<TD><a href="positionmodify.html" target="_self">[修改]</a>
+		</TD>
+	</TR>
+</TABLE>
+&nbsp;<br/>
+<div class="page_info">
+		<b class="page_info_title">总数：200</b>
+		<a href="#">上一页</a>
+		<a href="#">1</a>	
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<a href="#">6</a>
+		<a href="#">7</a>
+		<a href="#">8</a>
+		<a href="#">9</a>
+		<a href="#">10</a>
+		<a href="#">..200</a>
+		<a href="#">下一页</a>
+		<input class="mini_txt" type="text" />
+	</div>
+</div>
+</div>
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.FRM1.style.display='none';
+
+	function showTbl()
+	{
+		document.FRM1.style.display='inline';
+	}
+!-->
+</SCRIPT>
+
+
+</BODY>
+</html>

@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<script type="text/javascript" src="../../js/web/common.js"></script>
+<script type="text/javascript" src="../../js/jslib/ProvinceCity.js"></script>
+<title>资源分配冻结</title>
+<style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+</head>
+<body>
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;资源分配冻结</div>
+<form method="POST" name="form2" action="">
+  <table class="table_query" width="95%" align="center">
+    <tr>
+      <td width="25%" height="29" align="right">大区：</td>
+      <td>
+		<select>
+			 <option>全部
+			 <option>北大区
+			 <option>南大区
+			 <option>西大区
+		  </select>
+	  </td>
+     <td width="5%" height="29" align="right">小区：</td>
+      <td>
+		<select>
+		     <option>全部
+			 <option>北一区
+			 <option>北四区
+		  </select>
+	  </td>
+	</tr>
+	 <tr>
+	  <td  width="25%" align="right">经销商：</td>
+      <td><input name="updptname" size="16" readonly="readonly" />
+        <input name='dlbtn' type="BUTTON" class="mark_btn" onClick="OpenDealer()" value="...">
+	  </td>
+	  <td  width="5%" align="right">状态：</td>
+      <td>
+		<select>
+		     <option>全部
+			 <option>有效
+			 <option>无效
+		  </select>
+	  </td>
+	</tr>
+    <tr>
+	  <td align="center" colspan=4 >
+		<input name="button32" type="button" class="normal_btn" onclick="showTable2();" value="查询" />
+		<input name="button32" type="button" class="normal_btn" onclick=";" value="下载" />
+      </td>
+    </tr>
+  </table>
+</FORM>
+<FORM name="FRM2">
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th>经销商代码</th>
+	  <th>经销商名称</th>
+	  <th>品牌</th>
+	  <th>车系</th>
+	  <th>车款</th>
+	  <th>年款</th>
+	  <th>颜色</th>
+	  <th>状态</th>
+	  <th>操作</th>
+    </tr>
+    <tr class="table_list_row1">
+		<td>33123</td>
+		<td>北京汇杰</td>
+		<td>JEEP</td>
+		<td>指南者 2.0</td>
+		<td>指南者2.4都市版</td>
+		<td>2013</td>
+		<td>珊瑚红水晶珠光漆</td>
+		<td>有效<input type='radio' name='b' checked/>&nbsp;&nbsp;无效: <input type='radio' name='b'/></td>
+		<td><input type="button" value="明细" onclick="modify()" class="normal_btn"/></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>33102</td>
+		<td>北京港龙基业</td>
+		<td>JEEP</td>
+		<td>自由客，牧马人</td>
+		<td>自由客2.4蛇行珍藏版，牧马人3.6L 摩崖版，牧马人极地版</td>
+		<td>2013，2014</td>
+		<td>醇黑标准漆，极地蓝珠光漆，科罗拉多橙标准漆</td>
+		<td>有效<input type='radio' name='b1' checked/>&nbsp;&nbsp;无效: <input type='radio' name='b1'/></td>
+		<td><input type="button" value="明细" onclick="modify()" class="normal_btn"/></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>33125</td>
+		<td>上海名创</td>
+		<td>JEEP</td>
+		<td>自由客</td>
+		<td>自由客2.4蛇行珍藏版</td>
+		<td>2013，2014</td>
+		<td>醇黑标准漆</td>
+		<td>有效<input type='radio' name='b2' checked/>&nbsp;&nbsp;无效: <input type='radio' name='b2'/></td>
+		<td><input type="button" value="明细" onclick="modify()" class="normal_btn"/></td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>10036</td>
+		<td>义乌九通</td>
+		<td>JEEP</td>
+		<td>自由客，牧马人</td>
+		<td>自由客2.4蛇行珍藏版，牧马人极地版</td>
+		<td>2014</td>
+		<td>醇黑标准漆，极地蓝珠光漆</td>
+		<td>有效<input type='radio' name='b3' checked/>&nbsp;&nbsp;无效: <input type='radio' name='b3'/></td>
+		<td><input type="button" value="明细" onclick="modify()" class="normal_btn"/></td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>10048</td>
+		<td>株洲宝盛</td>
+		<td>JEEP</td>
+		<td>牧马人</td>
+		<td>牧马人3.6L 摩崖版，牧马人极地版</td>
+		<td>2013，2014</td>
+		<td>醇黑标准漆</td>
+		<td>有效<input type='radio' name='b4' checked/>&nbsp;&nbsp;无效: <input type='radio' name='b4'/></td>
+		<td><input type="button" value="明细" onclick="modify()" class="normal_btn"/></td>
+    </tr>
+	<tr class="table_list_row2" style="color:gray;">
+		<td>10054</td>
+		<td>河南涌鑫</td>
+		<td>JEEP</td>
+		<td>自由光</td>
+		<td>自由光2.0豪华版</td>
+		<td>2014</td>
+		<td>黑色</td>
+		<td>有效<input type='radio' name='b5' />&nbsp;&nbsp;无效: <input type='radio' name='b5' checked/></td>
+		<td><input type="button" value=" 明细 " onclick="modify()" class="normal_btn" /></td>
+    </tr>
+	<tr class="table_list_row1" style="color:gray;">
+		<td>10059</td>
+		<td>湘潭九福</td>
+		<td>JEEP</td>
+		<td>自由光</td>
+		<td>自由光2.0豪华版</td>
+		<td></td>
+		<td></td>
+		<td>有效<input type='radio' name='b6' />&nbsp;&nbsp;无效: <input type='radio' name='b6' checked/></td>
+		<td><input type="button" value=" 明细 " onclick="modify()" class="normal_btn" /></td>
+    </tr>
+	<tr class="table_list_row2" style="color:gray;">
+		<td>10050</td>
+		<td>广西金斯源</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>有效<input type='radio' name='b7' />&nbsp;&nbsp;无效: <input type='radio' name='b7' checked/></td>
+		<td><input type="button" value=" 明细 " onclick="modify()" class="normal_btn" /></td>
+    </tr>
+  </table>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+		
+			function OpenDealer(){
+		window.open("../common_function/dealersingle_frame_index.htm", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+	function OpenWindow(){
+
+	window.open("../departtree.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+	document.FRM2.style.display = "none";
+	document.FRM3.style.display = "none";
+	
+	function showTable2(){	
+		document.FRM2.style.display = "inline";
+		document.FRM3.style.display = "none";
+	}
+	
+	function showTable3(){	
+		document.FRM3.style.display = "inline";
+		document.FRM2.style.display = "none";
+	}
+	
+		function submitconfirm()
+	{
+		if(confirm("确定要修改参数吗？")){
+			
+		}
+	}
+		function OpenWindow2(){
+		window.open("../Inventory/inventoryquery_vchldtl.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+			function OpenMaterial() {
+		window.open("../Common_Function/ProSelmore_frame_index.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");	
+	}
+	function modify(){
+		window.location.reload('xiafacx2_modify.htm');
+	}
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

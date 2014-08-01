@@ -1,0 +1,216 @@
+<html>
+<HEAD>
+<TITLE>整车产品组类别维护</TITLE>
+
+<link href="../css/style.css" type="text/css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+</HEAD>
+<script language="javascript">
+	function selall(obj){
+		var pkg = obj.pkg;
+			 for(i=0;i<pkg.length;i++){
+			  obj.pkg[i].checked=obj.allselect.checked;
+			 }
+	}
+	function selectConfirm(id,name){
+	    window.parent.opener.document.getElementById('ccar_type').value='8座中顶普通车银灰-03款(JX6461D-M/HG/S)';
+		parent.window.close();
+	}
+</script>
+<BODY>
+
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[产品组树型选择]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE> 
+
+
+<BR>
+<BR>
+<form method="post" name = "FRM">
+
+
+	<TABLE class=csstable width="95%" align=center>
+		<TR align=left class=csstable>
+		  <TD width="10%" nowrap align="right">系列：</TD>
+		  <td width="14%"><select> 
+					<option>全部</option>		  
+		  			<option>顺达</option> 
+		  			<option>凯运08</option> 
+		  			<option>凯锐窄体</option> 
+		  			<option>凯锐宽体</option> 
+		  			<option>凯威</option> 																				
+		  </select>	</td>
+		  <TD width="12%" nowrap align="right">发动机型号：</TD>
+		  <td width="14%"><select> 
+					<option>全部</option>		  
+		  			<option>4JB1</option> 
+		  			<option>CY4D115</option> 
+		  			<option>YC4E140</option> 																				
+		  </select>	</td>
+		  <TD width="11%" nowrap align="right">额定载质量：</TD>
+		  <td width="15%"><select> 
+					<option>全部</option>		  
+	  			<option>0-1T</option> 
+		  			<option>1-2T</option> 
+		  			<option>2-3T</option> 	
+		  			<option>3-4T</option> 
+		  			<option>4-5T</option> 																									
+		  </select>	</td>	
+		  <TD width="9%" nowrap align="right">排放标准：</TD>
+		  <td width="15%"><select> 
+					<option>全部</option>		  
+	  			<option>国二</option> 
+		  			<option>国三</option> 																									
+		  </select>	</td>		  	  
+	  </TR>
+		<TR align=left class=csstable>
+		  <TD width="10%" nowrap align="right">轴距：</TD>
+		  <td width="14%"><select> 
+				<option>全部</option>		  
+		  			<option>2490</option> 
+		  			<option>3360</option> 
+		  			<option>4500</option> 
+		  			<option>4750</option> 																			
+		  </select>	</td>
+		  <TD width="12%" nowrap align="right">驾驶室：</TD>
+		  <td width="14%"><select> 
+					<option>全部</option>		  
+	  			<option>单排</option> 
+		  			<option>双排</option> 
+		  			<option>排半</option> 																				
+		  </select>	</td>
+		  <TD width="11%" nowrap align="right">总质量：</TD>
+		  <td width="15%"><select> 
+					<option>全部</option>		  
+		  			<option>1-2T</option> 
+		  			<option>2-3T</option> 	
+		  			<option>3-4T</option> 
+		  			<option>4-5T</option> 																									
+		  </select>	</td>	
+		  <TD width="9%" nowrap align="right">车辆分类：</TD>
+		  <td width="15%"><select> 
+					<option>全部</option>		  
+	  			<option>栏板车</option> 
+		  			<option>厢货车</option> 
+	  			<option>自卸车</option> 
+		  			<option>半挂牵引</option> 
+	  			<option>专用车</option> 																																			
+		  </select>	</td>		  	  
+	  </TR>	  
+		<TR align=left class=csstable>
+		  <TD width="10%" nowrap align="right">车内娱乐设备：</TD>
+		  <td width="14%"><select> 
+					<option>全部</option>		  
+		  			<option>单碟CD</option> 
+		  			<option>收放机</option> 																				
+		  </select>	</td>
+		  <TD width="12%" nowrap align="right">轮胎：</TD>
+		  <td width="14%"><select> 
+					<option>全部</option>		  
+		  			<option>钢丝台</option> 
+		  			<option>真空胎</option> 
+		  			<option>斜交胎</option> 																				
+		  </select>	</td>
+		  <TD width="11%" nowrap align="right">内饰：</TD>
+		  <td width="15%"><select> 
+					<option>全部</option>		  
+	  			<option>仿桃木</option> 
+		  			<option>钛银</option> 																									
+		  </select>	</td>	
+		  <TD width="9%" nowrap align="right">排气制动：</TD>
+		  <td width="15%"><select> 
+					<option>全部</option>		  
+	  			<option>气刹</option> 
+		  			<option>油刹</option> 																									
+		  </select>	</td>		  	  
+	  </TR>	  	  
+	<TR align=left class=csstable>
+		  <TD width="10%" nowrap align="right" >车头颜色：</TD>
+		  <td width="14%"><select> 
+					<option>全部</option>		  
+		  			<option>顺达</option> 
+		  			<option>凯运08</option> 
+		  			<option>凯锐窄体</option> 
+		  			<option>凯锐宽体</option> 
+		  			<option>凯威</option> 																				
+		  </select>	</td>
+		   <TD nowrap colspan=1 align="right" >产品代码： </TD>
+		   <td>
+		     <input type='text'  name='code'  id='702865'  size='16'  maxlength='10' >
+</td>
+<td colspan=1 align="right">
+产品名称：
+</td>
+<td>
+		  <input type='text'  name='name'  id='603912'  size='16'  maxlength='10' >
+
+      </td>
+		  <td align=right colspan=2>
+		  <input type="button" class='cssbutton' name="Submit4"  value="查 询">	    </TD>
+	  	  
+	  </TR>	  	  	  
+	<!--  <TR align=left class=csstable>
+	    <TD nowrap>产品代码 <input type='text'  name='code'  id='702865'  size='16'  maxlength='10' >
+
+产品名称
+		  <input type='text'  name='name'  id='603912'  size='16'  maxlength='10' >
+
+
+		  <input type="button" class='button' name="Submit4"  value="查询">	    </TD>
+		  </TR> -->
+	</TABLE>
+</form>
+<form name="vafrm">
+<TABLE class=csstable width="95%" align=center>
+	<tr class="tabletitle">
+	  <td width="65"  align="left"><input type="checkbox" name="allselect" onClick="selall(this.form);">      </td>
+		<td >产品组代码</td>
+		<td >产品组名称</td>
+	</tr>
+
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19" width="252">JX6461D-M/HG/S</td>
+			<td width="596">8座中顶普通车银灰-03款</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461D-M/HG/T</td>
+			<td>8座中顶普通车特种色03款</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461D-M/HG/W</td>
+			<td>8座中顶普通车白色-03款</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461D-M/HGB/B</td>
+			<td>8座中顶普通车蓝色-快欧</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461D-M/HGB/R</td>
+			<td>8座中顶普通车红色-快欧</td>
+		</TR>
+</TABLE>
+<TABLE class=csstable align=center width="95%">
+  <TR>
+    <td  align="center"><input type="button" class=cssbutton name="ok22" value="确 定" onClick="selectConfirm();">
+        <input type="button" name="ok32" class=cssbutton value="清 空" onClick="selectConfirm();"></td>
+  </TR>
+</TABLE>
+</form>
+</BODY>
+</html>
+

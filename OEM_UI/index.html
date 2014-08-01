@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chrysler Frame</title>
+<link type="text/css" rel="stylesheet" href="style/system.css" />
+<link type="text/css" rel="stylesheet" href="style/diaCnt.css" />
+<script type="text/javascript" src="js/jslib/prototype.js"></script>
+<script type="text/javascript" src="js/web/web.js"></script>
+<script type="text/javascript" src="js/jslib/dialog.js"></script>
+<script>
+	if( window.top.document != document ){
+		window.top.document.location=document.location.href;
+	}   
+</script>
+</head>
+<body onclick="aa()">
+<div class="main_container" ondblclick="hideBox()"> 
+	<!--########## Logo & 退出 部分 ##########====-->
+	<div style="margin:0px 20px 0px 20px;">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr> 
+			<td width="160" valign="middle" align="center"><img src="img/Chrysler.jpg" height="33" width="411"/></td>
+			<td valign="middle" nowrap="nowrap" >
+			<div class="global_set">
+				<ul>
+					<li>
+					<!-- =====================================BEGIN 隐藏部分 ================================== -->
+						<div class="box" id="box" style="display:none;width:180px;position:absolute;">
+							<iframe height="200" width="100%" frameborder="0" style="position:absolute;"></iframe>
+							<div class="box_head" style="position:relative; cursor:pointer" onclick="hideBox()">
+							<span id="boxTitle" class="left">信 息</span>	    								
+							<span class="right">
+								<a class="roll" href="javascript:void(0)" onclick="hideBox();">&nbsp;</a>
+							</span>
+							<div style="clear:both"></div>
+						</div> 								
+						<div class="box_content" style="position:relative; height:233px;">
+							<div style="margin:5px; border-bottom:1px solid #CCC;">	    								
+								<a href="#" onclick="toPsn()" style="float:right"></a>
+								<div style="clear:both"></div>
+							</div>
+							<div style="padding:10px; " id="__box__">
+							</div>
+						</div>
+					</div>	
+					<!-- =====================================END 隐藏部分 ================================== -->
+									
+						<!--<img src="img/L4.gif" />-->
+						<!--<a id="back" href="javascript:void(0)" onclick="cancelBubble(event);showBox2('back');">回访<strong>(5)</strong></a>-->
+						<!--<input id="back" class="spc_btn" type="text" onblur="vvv(event,this)" onclick="showBox2('back');" onmouseover="showUnline(this)" onmouseout="hideUnline(this)" value="回访" readonly="true" /><strong>(5)</strong>-->
+					</li>
+					<li><!--<img src="img/L3.gif" />-->
+						<!--<a id="wait" href="#" onclick="showBox2('wait')">审批<strong>(3)</strong></a>-->
+						<!--<input id="wait" class="spc_btn" type="text" onblur="vvv(event,this)" onclick="showBox2('wait');" onmouseover="showUnline(this)" onmouseout="hideUnline(this)" value="审批" readonly="true" /><strong>(3)</strong>-->
+					</li>
+					<li><!--<img src="img/L2.gif" />-->
+						<!--<a id="do" href="#" onclick="showBox2('do')">待办<strong>(2)</strong></a>-->
+						<!--<input id="do" class="spc_btn" type="text" onblur="vvv(event,this)" onclick="showBox2('do');" onmouseover="showUnline(this)" onmouseout="hideUnline(this)" value="待办" readonly="true" /><strong>(2)</strong>-->
+						
+					</li>
+					<li>|</li>
+					<li><a style="color:#CC6600" href="#">退 出</a></li>
+				</ul>
+				<div style="clear:both;"></div>
+			</div>
+			<div style="float:right;"><img src="img/a_1.jpg" height="30" width="300"/></div>
+		    </td>
+		</tr> 
+	</table>
+
+	<!--########## 横向菜单 部分 ##########====-->	
+	<table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" >
+		<tr > 
+			<td width="163" valign="middle">
+				<div class="global_welcome" valign="middle">欢迎您,李强! </div>
+			</td> 
+			<td colspan="2" align="left" valign="middle" style="background-color:#08327e; margin:0px; padding:0px;"> 
+				<div class="global_menu"> 
+					<!--<a href="menu/vistorMenu.html" target="menuIframe" onclick="openSildBar()">来电来访</a> 
+					<a href="menu/carPurchaseMenu.html" target="menuIframe" onclick="openSildBar()">车辆收购</a> 
+					<a href="menu/dightManagerMenu.html" target="menuIframe" onclick="openSildBar()">车辆整备</a> 
+					<a href="menu/authMenu.html" target="menuIframe" onclick="openSildBar()">车辆认证</a>
+					<a href="menu/storageManagerMenu.html" target="menuIframe" onclick="openSildBar()">库存管理</a> 
+					<a href="menu/carSellMenu.html" target="menuIframe" onclick="openSildBar()">车辆销售</a> 
+					<a href="menu/carManagerMenu.html" target="menuIframe" onclick="openSildBar()">车辆管理</a>
+					<a href="menu/customerManageMenu.html" target="menuIframe" onclick="openSildBar()">客户管理</a>
+					<a href="menu/psnInfoMenu.html" target="menuIframe" onclick="openSildBar()">个人信息</a>
+					<a href="menu/sysMngMenu.html" target="menuIframe" onclick="openSildBar()">系统管理</a> 
+					<a href="menu/reportMenu.html" target="menuIframe" onclick="openSildBar()">业务报表</a>-->
+					<a href="menu/OEMSalesMenu.html" target="menuIframe" onclick="openSildBar()">整车销售</a>
+					<!--<a href="menu/psnInfoMenu.html" target="menuIframe" onclick="openSildBar()">个人信息</a>
+
+					<a href="menu/noticeMenu.html" target="menuIframe" onclick="openSildBar()">通知通告</a>
+					
+					<a href="menu/customerManageMenu.html" target="menuIframe" onclick="openSildBar()">客户管理</a> 
+					<a href="menu/claimMenu.html" target="menuIframe" onclick="openSildBar()">售后服务管理</a> 
+					<a href="menu/partMenu.html" target="menuIframe" onclick="openSildBar()">配件管理</a> 
+					<a href="menu/stocksMenu.html" target="menuIframe" onclick="openSildBar()">财务管理</a> 
+					
+					<a href="menu/salesOrderMenu.html" target="menuIframe" onclick="openSildBar()">公共信息管理</a> 
+					<a href="menu/marketActionMenu.html" target="menuIframe" onclick="openSildBar()">报表管理</a> 
+					<a href="menu/orderMenu.html" target="menuIframe" onclick="openSildBar()">系统数据管理</a> 
+					<!--a href="menu/dealerWholeSaleMenu.html" target="menuIframe" onclick="openSildBar()">经销商批售</a> 
+					<a href="menu/financialMenu.html" target="menuIframe" onclick="openSildBar()">财务管理</a> 
+					<a href="menu/reportMenu.html" target="menuIframe" onclick="openSildBar()">报表管理</a> 
+					<a href="menu/baseDataMenu.html" target="menuIframe" onclick="openSildBar()">基础信息维护</a-->				  </div>
+			</td>
+		</tr> 
+	</table> 
+	<!--################################################################################====--> 
+	<table id="test" width="100%" height="100%" cellspacing="1" cellpadding="0" border="0">
+		<tr><td colspan="3" height="3"></td></tr>
+		<tr> 
+			<!--##########左边菜单 部分 ##########--> 
+			<td id="sideBar"  valign="top">
+				
+				<table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td>
+							<iframe id="menuIframe" name="menuIframe" src="menu/vistorMenu.html" width="160" height="100%" frameborder="0" scrolling="auto" style="overflow-x:hidden;overflow-y:visible;" ></iframe>						</td>
+					</tr>
+					<tr>
+						<td id="quick_link" valign="top">
+							<div class="quick_link_box">
+								<br />
+								<a href="webCnt/carPurchase/carEvaluate/carHistorySearch.html" target="inIframe">车辆档案查询</a>
+								<a href="webCnt/carSell/sellQuery/sellQuerySearch.html" target="inIframe">可售车辆查询</a>
+								<a href="webCnt/customerManager/customerArchives/customerArchivesSearch.html" target="inIframe">客户档案查询</a>
+								<a href="webCnt/carPurchase/marketSearch/marketSearch.html" target="inIframe">车辆行情查询</a>
+								<a href="webCnt/carPurchase/psnTask/psnTaskList.html" target="inIframe" >个人任务清单</a>							</div>						</td>
+					</tr>
+				</table>			</td> 
+			<td id="arrow" width="12" onmouseout="styleBack(this)" onmouseover="styleChange(this)" onclick="showSildBar()" style="border-left:1px solid #CCC;cursor:pointer;">
+				<img style="display:none;" id="ImgArrow" border="0" title="展开/折叠" name="ImgArrow" />			</td> 
+
+		  <td valign="top"><iframe id="inIframe" name="inIframe" src="webCnt/Plan/Target/targetmonth_import1.htm" width="100%" height="650" scrolling="yes" style="overflow-x:hidden;overflow-y:visible;" frameborder="0"></iframe></td> 
+		</tr>
+		<tr>
+		  <td id="sideBar"  valign="top">&nbsp;</td>
+		  <td id="arrow" onmouseout="styleBack(this)" onmouseover="styleChange(this)" onclick="showSildBar()" style="border-left:1px solid #CCC;cursor:pointer;">&nbsp;</td>
+		  <td valign="top">&nbsp;</td>
+	  </tr> 
+	</table> 
+	</div>
+</div> 
+</body>
+</html>
+
+<script>
+	/*--------------------------------------Resize效果------------------------------------*/
+
+	function common(){
+		$('inIframe').height = eval(document.body.offsetHeight - 78);
+		var length = ($('inIframe').height - 20);
+		$('menuIframe').height = eval(length)*0.7;
+		$('quick_link').height = eval(length)*1/3;
+	}
+	
+	window.onresize = function(){
+		 common();
+	}
+	
+	window.onload = function(){
+		 common();
+		 /*window.frames["inIframe"].document.body.onclick=function(){
+		 	hideBox();
+		 }*/
+	}
+	
+	function toPsn() {
+		$("inIframe").src = "webCnt/carPurchase/psnTask/psnTaskList.html";
+	}
+
+	function getposition(obj) {
+		var r = new Array();
+		r['x'] = obj.offsetLeft;
+		r['y'] = obj.offsetTop;
+		while(obj = obj.offsetParent) {
+		   r['x'] += obj.offsetLeft;
+		   r['y'] += obj.offsetTop;
+		}
+		return r;
+	}
+	
+	function vvv(event,obj) {
+
+		var p = getposition(document.getElementById('box'));
+
+	   var tempa = parseInt(p['x']) + parseInt($('box').style.width);
+	   var tempb = parseInt(p['y']) + parseInt($('box').getHeight());
+
+	   var st = false;
+	   if(event.clientX > p['x'] && event.clientX < tempa && event.clientY > p['y'] && event.clientY < tempb) {
+			st = true;
+			obj.focus();
+	   }
+	   if(!st) {
+			hideBox();
+	   }
+	}
+
+	function showUnline(obj){
+		obj.style.textDecoration='underline';
+	}
+	function hideUnline(obj){
+		obj.style.textDecoration='none';
+	}
+	function showBox2(id) {
+
+		if(document.all){
+			$('box').style.marginLeft = '-28px';
+		}else{
+			$('box').style.marginLeft = '-16px';
+		}
+		
+		$('box').style.marginTop = '20px';
+
+		$('box').show();
+		$('boxTitle').innerHTML = $(id).value;
+		if(id == "back") {
+			$('__box__').innerHTML = "<table class='tb_list' border='0' style='border:none' > \
+										<th>时间</th> \
+										<th>类型</th> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-15 17:00&nbsp;&nbsp;&nbsp;&nbsp;收购意向</a></td> \
+										</tr> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-15 10:00&nbsp;&nbsp;&nbsp;&nbsp;客户关怀</a></td> \
+										</tr> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-15 09:00&nbsp;&nbsp;&nbsp;&nbsp;销售意向</a></td> \
+										</tr> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-14 14:00&nbsp;&nbsp;&nbsp;&nbsp;客户关怀</a></td> \
+										</tr> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-13 11:00&nbsp;&nbsp;&nbsp;&nbsp;收购意向</a></td> \
+										</tr> \
+									</table>";
+		} else if(id == "wait") {
+			$('__box__').innerHTML = "<table class='tb_list' border='0' style='border:none' > \
+										<th>时间</th> \
+										<th>类型</th> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-15 11:27&nbsp;&nbsp;&nbsp;&nbsp;收购协议</a></td> \
+										</tr> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-14 13:00&nbsp;&nbsp;&nbsp;&nbsp;调入</a></td> \
+										</tr> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-14 09:30&nbsp;&nbsp;&nbsp;&nbsp;销售订单</a></td> \
+										</tr> \
+									</table>";
+		} else if(id == "do") {
+			$('__box__').innerHTML = "<table class='tb_list' border='0' style='border:none' > \
+										<th>时间</th> \
+										<th>类型</th> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-15 15:20&nbsp;&nbsp;&nbsp;&nbsp;整备记录</a></td> \
+										</tr> \
+										<tr> \
+											<td colspan='2'><a href='#' onclick='toPsn()'>06-13 14:50&nbsp;&nbsp;&nbsp;&nbsp;出库</a></td> \
+										</tr> \
+									</table>";
+		}
+	}
+
+</script>

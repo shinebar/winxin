@@ -1,0 +1,121 @@
+
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"> 
+<title> : 江铃代理商信息系统[总公司用户] - 发往地查询</title>
+</head>  
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+ 
+  
+<body> 
+
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[收车地址确认]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE>
+<BR><BR>
+
+  <TABLE class='csstable' width="95%" align='center' border=0>
+		<tr> 	
+			<td ALIGN="right" width="35%" nowrap>代理商：
+				<input type="text" name="dealer" size="10">&nbsp;<input type="button" name="button2" value="..." class="cssbutton">
+			</td>  
+			<td align=center width="50%">	
+				<input class="cssbutton" type="submit"  value="查 询" onclick='showTable()' >&nbsp;
+                <input  class="cssbutton" type="reset"  value="重 置" >		
+				
+			</td>
+		</tr> 
+
+ </table>
+
+<br>
+<form name='form2' method='post'>
+  <TABLE class=csstable width="95%" align=center border=0>
+	<tr class=tabletitle> 
+		<td><input type="checkbox" name="selectall"></td>
+		<td>代理商</td>
+		<td> 代码  </td>
+		<td> 收发往地点名称  </td>
+		<td> 联系人  </td>
+		<td > 电话  </td>
+		<td > 传真/电传  </td> 
+		<td > 地址  </td>
+		<td > 邮政编码  </td>
+		<td > 是否常用  </td>
+		<td > 维护名称  </td>
+		<td > 角色名称  </td>
+		<td > 详细信息  </td>
+	</tr> 
+<tr   class='csstr' >
+	<td><input type="checkbox" name="box1"></td>
+	<td  >武汉威汉</td>
+	<td >TKC00005 </td>
+	<td >四川 </td>
+	<td >联系人 </td> 
+	<td >电话1 </td>   
+	<td >&nbsp; </td>  
+	<td >地址 </td>  
+	<td >430070 </td>  
+	
+		<td align='left'><b>不常用</b></td>
+	
+	<td >朱松林 </td>  
+	<td >专营代理 </td>  	
+        <td>		     <INPUT type=button value="明 细" name=Add id=buttoninsert  class="cssbutton"
+						onClick="location.href='receive_address_view.htm'" ></td>	
+</tr>	 
+
+<tr   class='csstr' >
+	<td><input type="checkbox" name="box2"></td>
+	<td  >武汉威汉</td>
+	<td >TKC00007 </td>
+	<td >上海 </td>
+	<td >联系人 </td> 
+	<td >12333333333 </td>   
+	<td >&nbsp; </td>  
+	<td >地址 </td>  
+	<td >439999 </td>  
+	
+		<td align='left'><b>不常用</b></td>
+	
+	<td >朱松林 </td>  
+	<td >专营代理 </td>  	
+        <td>		     <INPUT type=button value="明 细" name=Add id=buttoninsert  class="cssbutton"
+						onClick="location.href='receive_address_view.htm'" ></td>	
+</tr>	 
+ </table>
+ <table class="csstable" width="95%" align="center">
+ 	<tr>
+		<td align="right" width="40%">
+			是否是发车区域：
+		</td>
+		<td align="left" width="15%">
+			<select name="istrans">
+				<option value="1">是</option>
+				<option value="2">否</option>
+			</select>
+		</td>
+		<td>
+			<input type="button" value="确 定" name="ok" class="cssbutton">
+		</td>
+	</tr>
+ </table>
+</form>
+   <SCRIPT LANGUAGE="JavaScript">
+<!--
+	document.form2.style.visibility = "hidden";
+
+	function showTable(){
+		document.form2.style.visibility = "visible";
+	}
+//-->
+</SCRIPT>
+  
+
+</body>
+
+</html>

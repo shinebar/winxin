@@ -1,0 +1,77 @@
+<HTML xmlns:mydbtree> 
+	<HEAD> 
+	 <?IMPORT NAMESPACE="mydbtree" IMPLEMENTATION="treeview.htc"?> 
+	 <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<title>Dealer on line</title>
+</head>
+
+<SCRIPT language="JavaScript">
+	function selectNode(id,name){
+		parent.opener.document.getElementById('updptname').value= name;
+		window.close();
+	}
+</script>
+<body style='	FONT-SIZE: 12px; 
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	BACKGROUND-COLOR: #E4E4E4;
+'>
+<table width ="100%" >
+<tr>
+    <td width="100%">&nbsp;
+			<mydbtree:treeview id="menuree" systemImagesPath="../Images">
+		       <mydbtree:treenode Text="销售组织选择" imageurl="../images/root.gif" Expanded="true" TreeNodeSrc='<TREENODES>
+		       		
+<treenode Text="JMC销售有限公司" navigateurl="javascript:selectNode(&apos;20000001&apos;,&apos;JMC销售有限公司&apos;)">
+
+<treenode Text="A1东一区" navigateurl="javascript:selectNode(&apos;20000017&apos;,&apos;A1东北区&apos;)">
+<treenode Text="11吉黑小区" navigateurl="javascript:selectNode(&apos;20000115&apos;,&apos;11吉黑小区&apos;)"/>
+<treenode Text="12辽宁小区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;12辽宁小区&apos;)"/>
+</treenode>
+<treenode Text="A2东二区" navigateurl="javascript:selectNode(&apos;20000015&apos;,&apos;A2东部区&apos;)">
+<treenode Text="21上海小区" navigateurl="javascript:selectNode(&apos;20000088&apos;,&apos;21上海小区&apos;)"/>
+<treenode Text="22浙江小区" navigateurl="javascript:selectNode(&apos;20000087&apos;,&apos;22浙江小区&apos;)"/>
+<treenode Text="23江苏小区" navigateurl="javascript:selectNode(&apos;20000086&apos;,&apos;23江苏小区&apos;)"/>
+<treenode Text="24山东小区" navigateurl="javascript:selectNode(&apos;20000085&apos;,&apos;24山东小区&apos;)"/>
+</treenode>
+<treenode Text="A3东三区" navigateurl="javascript:selectNode(&apos;20000017&apos;,&apos;A3北部区&apos;)">
+<treenode Text="31北京小区" navigateurl="javascript:selectNode(&apos;20000116&apos;,&apos;31北京小区&apos;)"/>
+<treenode Text="32天津小区" navigateurl="javascript:selectNode(&apos;20000115&apos;,&apos;32天津小区&apos;)"/>
+</treenode>
+<treenode Text="A4南区" navigateurl="javascript:selectNode(&apos;20000017&apos;,&apos;A4南部区&apos;)">
+<treenode Text="41华南小区" navigateurl="javascript:selectNode(&apos;20000116&apos;,&apos;41华南小区&apos;)"/>
+<treenode Text="42中南小区" navigateurl="javascript:selectNode(&apos;20000115&apos;,&apos;42中南小区&apos;)"/>
+<treenode Text="43东南小区" navigateurl="javascript:selectNode(&apos;20000114&apos;,&apos;43东南小区&apos;)"/>
+</treenode>
+<treenode Text="A5西北区" navigateurl="javascript:selectNode(&apos;20000015&apos;,&apos;A5西部区&apos;)">
+<treenode Text="51西南小区" navigateurl="javascript:selectNode(&apos;20000088&apos;,&apos;51西南小区&apos;)"/>
+<treenode Text="52西北小区" navigateurl="javascript:selectNode(&apos;20000087&apos;,&apos;52西北小区&apos;)"/>
+</treenode>
+<treenode Text="A6西南区" navigateurl="javascript:selectNode(&apos;20000015&apos;,&apos;A5西部区&apos;)">
+<treenode Text="51西南小区" navigateurl="javascript:selectNode(&apos;20000088&apos;,&apos;51西南小区&apos;)"/>
+<treenode Text="52西北小区" navigateurl="javascript:selectNode(&apos;20000087&apos;,&apos;52西北小区&apos;)"/>
+</treenode>
+<treenode Text="A7中区" navigateurl="javascript:selectNode(&apos;20000015&apos;,&apos;A5西部区&apos;)">
+<treenode Text="51西南小区" navigateurl="javascript:selectNode(&apos;20000088&apos;,&apos;51西南小区&apos;)"/>
+<treenode Text="52西北小区" navigateurl="javascript:selectNode(&apos;20000087&apos;,&apos;52西北小区&apos;)"/>
+</treenode>
+<treenode Text="A8华北区" navigateurl="javascript:selectNode(&apos;20000015&apos;,&apos;A5西部区&apos;)">
+<treenode Text="51西南小区" navigateurl="javascript:selectNode(&apos;20000088&apos;,&apos;51西南小区&apos;)"/>
+<treenode Text="52西北小区" navigateurl="javascript:selectNode(&apos;20000087&apos;,&apos;52西北小区&apos;)"/>
+</treenode>
+<treenode Text="A9东区" navigateurl="javascript:selectNode(&apos;20000015&apos;,&apos;A5西部区&apos;)">
+<treenode Text="51西南小区" navigateurl="javascript:selectNode(&apos;20000088&apos;,&apos;51西南小区&apos;)"/>
+<treenode Text="52西北小区" navigateurl="javascript:selectNode(&apos;20000087&apos;,&apos;52西北小区&apos;)"/>
+</treenode>
+<treenode Text="大用户部门" navigateurl="javascript:selectNode(&apos;20000017&apos;,&apos;大用户部门&apos;)"/>
+</treenode></TREENODES>'>
+	          </mydbtree:treenode>
+		  	</mydbtree:treeview> 
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

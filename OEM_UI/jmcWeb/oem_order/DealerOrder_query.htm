@@ -1,0 +1,362 @@
+<HTML>
+<HEAD>
+<TITLE>销售订单查询</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link href="../css/calendar-blue2.css"   type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../js/calendar.js"></script>
+<script type="text/javascript" src="../js/calendar-zh.js"></script>
+<script type="text/javascript" src="../js/calendar-setup.js"></script>
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+<script language="JavaScript" src="../js/ut.js"></script>
+<script>
+  function openVIN(){
+  window.open('../Dealer_VHCL_Order/vincode.htm','d','width=400px,height=300px,left=200,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes');
+  }
+  function OpenWindow_org(){
+		window.open("../Common_Function/departtree.html", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+</script>
+</HEAD>
+
+<BODY>
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[销售订单查询]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE> 
+<BR>
+<form method="POST" name="form2" action="">
+
+
+  <table class="csstable" align=center width="95%">
+	 <tr>
+      <td width="19%" align="right" nowrap><INPUT class="nobgcolor"
+				type="radio" checked="checked" name="materialType" value="1"
+				onclick="">
+       选择产品组：</td><td width="35%" align="left" nowrap > <input type='text' id='ccar_type' readonly /> 
+<INPUT class="cssbutton" id=button2   onClick="javascript:window.open('../Common_Function/ProSelmore_frame_index.htm','d','width=770px,height=420px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')" type=button value='...' name='button2'></td>
+    	<TD width="13%" align="right" nowrap>选择代理商：</td>
+			<td width="33%" align="left" nowrap>         
+	          <input type="text" name="parentOrgName" id="Code0001" size="20" readonly="true" value=""/>
+      <input class=cssbutton type="button"name="dealerbtn" value="..." onClick="OpenWindow();" /></td>
+   </TR> 
+   <TR>
+        <TD width="19%"  align="right" nowrap><INPUT class="nobgcolor"
+				type="radio" name="materialType" value="2"
+				onclick="">&nbsp;&nbsp;&nbsp;选择车型：</td><td align="left" nowrap>     <input type='text' id='ccar_type' readonly /> 
+<INPUT class="cssbutton" id=button2   onClick="javascript:window.open('../Common_Function/ProSelmore_frame_index.htm','d','width=770px,height=420px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')" type=button value='...' name='button2'></TD>
+   
+   
+   		
+   
+			<td align="right" nowrap>片区：</td>
+			<td align="left"><select name="select">
+                <option>全部</option>
+                <OPTION VALUE="出口">出口</OPTION>
+                <OPTION VALUE="东北">东北</OPTION>
+                <OPTION VALUE="东二区">东二区</OPTION>
+                <OPTION VALUE="东三区">东三区</OPTION>
+                <OPTION VALUE="东一区">东一区</OPTION>
+                <OPTION VALUE="改装厂">改装厂</OPTION>
+                <OPTION VALUE="华北">华北</OPTION>
+                <OPTION VALUE="南区">南区</OPTION>
+                <OPTION VALUE="批售">批售</OPTION>
+                <OPTION VALUE="西北区">西北区</OPTION>
+                <OPTION VALUE="西南区">西南区</OPTION>
+                <OPTION VALUE="中区">中区</OPTION>
+              </select>
+            </td>
+   </tr>
+ <tr>
+      <td align="right" nowrap>订单确认日期：</td>
+      <td align="left">
+	<input id='submit_date1' size="10" readonly name=submit_date12>        &nbsp;<img src="../images/cal_date_picker.gif"  id="ENABLE_DATE_BTN"  title="Date selector" width="15" height="12" style="cursor: pointer;">
+          <script type="text/javascript">
+			 Calendar.setup({
+	        	inputField     :    "submit_date1",     // id of the input field
+	        	ifFormat       :    "%Y-%m-%d",      // format of the input field
+	        	button         :    "ENABLE_DATE_BTN",  // trigger for the calendar (button ID)
+				showsTime      :    true,    
+	        	align          :    "Tl",           // alignment (defaults to "Bl")
+	        	singleClick    :    true,
+	       	        step           :    1    
+	   		 }); 
+	   	          </script>
+	
+	
+      --- <INPUT id='submit_date2' size="10" readOnly name=submit_date1> 
+	 &nbsp;<img src="../images/cal_date_picker.gif"  id="ENABLE_DATE_BTN2"  title="Date selector" width="15" height="12" style="cursor: pointer;">
+          <script type="text/javascript">
+			 Calendar.setup({
+	        	inputField     :    "submit_date2",     // id of the input field
+	        	ifFormat       :    "%Y-%m-%d",      // format of the input field
+	        	button         :    "ENABLE_DATE_BTN2",  // trigger for the calendar (button ID)
+				showsTime      :    true,    
+	        	align          :    "Tl",           // alignment (defaults to "Bl")
+	        	singleClick    :    true,
+	       	        step           :    1    
+	   		 }); 
+	   	          </script></td>
+       <td align="right" nowrap>业务模式：</td>
+      <td align="left"><select name="select">
+        <option selected>全部</option>
+        <option value="2000" >正票车[Z]</option>
+        <option value="2001">FAFC额度[F]</option>
+        <option value="2001">固定额度[Y1]</option>  
+        <option value="2001">临时额度[Y3]</option>  
+        <option value="2001">促销额度[Y2]</option>  				
+      </select></td>
+   </tr>
+
+    <tr >
+           <td align="right" nowrap>订单类型：</td>
+      <td align="left"><select name="order_type" onChange="order_change();">
+        <option selected>全部</option>
+        <option value="2000" >A类车订单</option>
+        <option value="2002">SVO订单</option>	
+      </select></td>	
+      <td align="right" nowrap>订单状态：</td>
+      <td align="left"><select name="select2">
+          <option selected>全部</option>
+          <option value="2000" >未确认</option>
+          <option value="2001">已确认</option>
+               <option value="2001">已取消</option> 
+      </select></td>
+    </tr>
+      <script>
+   		    		       document.getElementById("88888").style.display="none";
+			   		       document.getElementById("99999").style.display="none";
+   		 function order_change(){
+           if(form1.order_type.value==2002 || form1.order_type.value==2003){
+		       document.getElementById("88888").style.display="";
+			   		       document.getElementById("99999").style.display="";
+		 
+		 }else{
+		    		       document.getElementById("88888").style.display="none";
+			   		       document.getElementById("99999").style.display="none";
+		 }
+		 }
+   
+   </script>	
+	   <tr>
+	    <td colspan="4" align="center" nowrap><input name="button2" type=button class="cssbutton" onClick="showTable1();" value="汇总查询">
+          <input name="button2" type=button class="cssbutton" onClick="showTable2();" value="明细查询">
+          <input name="button2" type=button class="cssbutton" onClick="OpenAls();"value="下载"></td>
+    </TR>
+  </table>
+</form>
+  <form  name='FRM1' >
+    <table width="95%" align="center" class=csstable>
+    <tr align="center" class="tabletitle">
+      <td nowrap>产品代码</td>
+      <td nowrap>产品名称</td>
+      <td nowrap>订单类型</td>
+      <td nowrap>确认数量</td>  
+      <td nowrap>发运数量</td>
+    </tr>
+    <tr  class="csstr">
+      <td width="124">JX6461DC-M/HX/WD</td>
+      <td width="324">8座中顶超豪华车白色-气囊</td>
+      <td >常规</td>
+      <TD nowrap><div align="right">3</div></TD>
+      <TD nowrap align='right'>3</TD>
+    </tr>
+    <tr  class="csstr">
+      <td>JX6461DC-M/HXB/B</td>
+      <td>8座中顶超豪华车蓝色-快欧</td>
+      <td >常规</td>
+      <TD nowrap><div align="right">3</div></TD>
+      <TD align="right" nowrap>3</TD>
+    </tr>
+    <tr  class="csstr">
+      <td>JX6461DC-M/HXB/R</td>
+      <td>8座中顶超豪华车红色-快欧</td>
+      <td >常规</td>
+      <TD nowrap><div align="right">3</div></TD>
+      <TD align="right" nowrap>3</TD>
+    </tr>
+    <tr  class="tabletotal">
+      <td>&nbsp;</td>
+      <td>全顺超豪华中顶8座-欧II</td>
+      <td >&nbsp;</td>
+      <TD align="right" nowrap>9</TD>
+      <TD align="right" nowrap>3</TD>
+    </tr>
+    <tr  class="csstr">
+      <td width="124">JX6461DC-M/HXB/S</td>
+      <td width="324">8座中顶超豪华银灰色-快欧</td>
+      <td >常规</td>
+      <TD nowrap><div align="right">3</div></TD>
+      <TD align="right" nowrap>3</TD>
+    </tr>
+    <tr  class="csstr">
+      <td>JX6461DC-M/HXB/T</td>
+      <td>8座中顶超豪华特种色-快欧</td>
+      <TD nowrap>常规</TD>
+      <TD nowrap><div align="right">3</div></TD>
+      <TD align="right" nowrap>3</TD>
+    </tr>
+    <tr  class="csstr">
+      <td>JX6461DC-M/HXB/W</td>
+      <td>8座中顶超豪华车白色-快欧</td>
+      <TD nowrap class="csstr">常规</TD>
+      <TD nowrap class="csstr"><div align="right">3</div></TD>
+      <TD align="right" nowrap class="csstr">3</TD>
+    </tr>
+    <tr  class="csstr">
+      <td nowrap class="tabletotal">&nbsp;</td>
+      <td nowrap class="tabletotal">全顺12座普通型特种车</td>
+      <td align="right" nowrap class="tabletotal">&nbsp;</td>
+      <td align="right" nowrap class="tabletotal">9</td>
+      <td align="right" nowrap class="tabletotal">3</td>
+    </tr>
+    
+    <tr class=tblsummary>
+      <td nowrap></td>
+      <td nowrap></td>
+      <td nowrap></td>
+      <td align="right" nowrap>18</td>
+      <td align="right" nowrap>18</td>
+    </tr>
+  </table>
+  </form>
+  <form name = 'FRM2'> 
+    <table width="95%" align="center" class=csstable>
+    <tr align=center class="tabletitle">
+      <td width="4%" nowrap>区域</td>
+      <td width="7%" nowrap>代理商代码</td>
+      <td width="10%" nowrap>代理商简称</td>
+      <td width="7%"   nowrap  >订单提报号</td>
+      <td width="4%"   nowrap  >品牌</td>
+      <td width="14%"   nowrap  >车型</td>
+      <td width="8%"   nowrap  >提报日期</td>
+      <td width="9%"   nowrap >订单类型</td>
+      <td width="7%"   nowrap >订单状态</td>
+      <td width="8%"  >提报数</td>
+      <td width="7%"  >确认数</td>
+      <td width="7%"  >备料数</td>
+      <td width="8%"  >发运数</td>
+    </tr>
+    <tr class="csstr" >
+      <td align="left" >东北区</td>
+      <td align="left" >FTB001</td>
+      <td align="left" > 鹤岗市鑫达</td>
+      <td><a href="dealer_order_view.htm"> JY901013</a></td>
+      <TD>全顺</TD>
+      <TD>8中普白4正欧</TD>
+      <TD>2006-10-28</TD>
+      <td >A类车订单</td>
+      <td >未确认</td>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">0</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">0</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">0</a></div></TD>
+    </tr>
+    <tr class="csstr" >
+      <td align="left" >东北区</td>
+      <td align="left" >FTB002</td>
+      <td align="left" > 哈尔滨一汽森华</td>
+      <td><a href="dealer_order_view.htm">JY901014</a></td>
+      <TD>全顺</TD>
+      <TD>8中普白国三5</TD>
+      <TD>2006-10-28</TD>
+      <td >A类车订单</td>
+      <td >已确认</td>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+    </tr>
+    <tr class="csstr" >
+      <td align="left" >东北区</td>
+      <td align="left" >FTB003</td>
+      <td align="left" >大庆世腾</td>
+      <td><a href="dealer_order_view.htm">JY901015</a></td>
+      <TD>全顺</TD>
+      <TD>8中普白国三柴油深TCI</TD>
+      <TD>2006-10-28</TD>
+      <td >SVO订单</td>
+      <td >已确认</td>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+    </tr>
+    
+    <tr class="csstr" >
+      <td align="left" >东北区</td>
+      <td align="left" >FTB004</td>
+      <td align="left" >黑龙江运通俊业</td>
+      <td><a href="dealer_order_view.htm">JY901016</a></td>
+      <TD>全顺</TD>
+      <TD>8中普红国三柴油TCI</TD>
+      <TD>2006-10-28</TD>
+      <TD nowrap>SVO订单</TD>
+      <TD nowrap>已确认</TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">13</a></div></TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">13</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">13</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">13</a></div></TD>
+    </tr>
+    <tr class="csstr" >
+      <td align="left" >东北区</td>
+      <td align="left" >FTB005</td>
+      <td align="left" >黑龙江博远</td>
+      <td><a href="dealer_order_view.htm">JY901017</a></td>
+      <TD>全顺</TD>
+      <TD>8中普红国三柴油TCI</TD>
+      <TD>2006-10-28</TD>
+      <TD nowrap>SVO订单</TD>
+      <TD nowrap>已确认</TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">3</a></div></TD>
+    </tr>
+    <tr class="csstr" >
+      <td align="left" >东北区</td>
+      <td align="left" >FTB006</td>
+      <td align="left" >同兴广达</td>
+      <td><a href="dealer_order_view.htm">JY901018</a></td>
+      <TD>全顺</TD>
+      <TD>8中普红国三柴油TCI</TD>
+      <TD>2006-10-28</TD>
+      <TD nowrap>SVO订单</TD>
+      <TD nowrap>已确认</TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">13</a></div></TD>
+	  <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">13</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">13</a></div></TD>
+      <TD nowrap><div align="right"><a href="#" onClick="javascript:window.open('DealerOrder_query_dtl.htm','d','width=600px,height=300px,left=90,top=100,status=yes,toolbar=no,location=no,directories=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes')">13</a></div></TD>
+    </tr>
+  </table>
+  <table class=csstable width="95%" align="center" border=0>
+    <tr>
+      <td width="65%"><font class=frontpage>第 1 页 / 共 10 页</font></td>
+      <td><font class=frontpage> <a href="#">首 页</a>| <a href="#">上一页</a>| <a href="#">下一页</a>| <a href="#">尾 页</a></font></td>
+      <td align="left"><font class=frontpage>
+        <input type="text" value="" size="3">
+        <a href="#">GO</a></font></td>
+    </tr>
+  </table>
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	document.FRM1.style.display='none';
+	document.FRM2.style.display='none';
+	function OpenWindow(){
+		window.open("../Common_Function/DealerSel_frame_index.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	function showTable1(){
+		document.FRM1.style.display='inline';
+		document.FRM2.style.display='none';
+	}		
+	function showTable2(){
+		document.FRM1.style.display='none';
+		document.FRM2.style.display='inline';
+	}
+-->
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<script type="text/javascript" src="../../js/web/common.js"></script>
+<script type="text/javascript" src="../../js/jslib/ProvinceCity.js"></script>
+<title>资源分配查询(大区)</title>
+<style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+</head>
+<body>
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;资源分配查询(大区)</div>
+<form method="POST" name="form2" action="">
+  <table class="table_query" width="95%" align="center">
+    <tr>
+      <td width="20%" height="29" align="right">选择车系：</td>
+      <td>
+		<select>
+			 <option>全部
+			 <option>牧马人
+			 <option>指南者2.4
+		  </select>
+	  </td>
+	  <td width="15%" height="29" align="right">小区：</td>
+      <td>
+		<select>
+		     <option>全部
+			 <option>北一区
+			 <option>北四区
+		  </select>
+	  </td>
+	 
+    </tr>
+	 <tr>
+
+	  <td align="right">经销商：</td>
+      <td align="left" nowrap="nowrap"><input name="updptname" size="16" readonly="readonly" />
+        <input name='dlbtn' type="BUTTON" class="mark_btn" onClick="OpenDealer()" value="...">
+	  </td>
+		<td align="right" class="table_info">分配日期：</td>
+      <td  align="left" class="table_info"><input type="text" readonly="readonly" size="8" name="start_date" value="2014-05-15" />
+          <input name="button" type="button" class="time_ico" onclick="showcalendar(event, 'start_date', false);" value="" />
+       </td>
+	</tr>
+    <tr>
+     
+	  <td align="center" colspan=4>
+		<input name="button32" type="button" class="normal_btn" onclick="showTable2();" value="查询" />
+		<input name="button32" type="button" class="normal_btn" onclick=";" value="下载" />
+      </td>
+    </tr>
+  </table>
+</FORM>
+<FORM name="FRM2">
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th width="74" rowspan='2'><pre>经销商/小区</pre></th>
+	  <th colspan='2'rowspan='1'><pre>牧马人3.6L 撒哈拉两门版</pre></th>
+      <th colspan='2' rowspan='1'><pre>牧马人3.0L撒哈拉4门版</pre></th>      
+    </tr>
+	 <tr class="tabletitle">
+
+		<th>烈焰红</th>
+		<th>醇黑</th>
+		<th>亮银金属漆</th>
+		<th>矿石灰金属漆</th>
+    </tr> 
+    <tr class="table_list_row1">
+		<td>北京汇杰伟业</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+		<td>2</td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北京中进百旺</td>
+		<td>3</td>
+		<td>4</td>
+		<td>2</td>
+		<td>21</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京港龙基业</td>
+		<td>0</td>
+		<td>1</td>
+		<td>3</td>
+		<td>12</td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北一区</td>
+		<td>5</td>
+		<td>8</td>
+		<td>9</td>
+		<td>35</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>呼市中进百旺</td>
+		<td>5</td>
+		<td>2</td>
+		<td>3</td>
+		<td>5</td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北四区</td>
+		<td>5</td>
+		<td>2</td>
+		<td>3</td>
+		<td>5</td>
+    </tr>
+  </table>
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th width="74" rowspan='2'><pre>经销商/区域</pre></th>
+	  <th colspan='2'rowspan='1'><pre>指南者2.4豪华版</pre></th>
+      <th colspan='2' rowspan='1'><pre>指南者2.4运动版</pre></th>      
+    </tr>
+	 <tr class="tabletitle">
+
+		<th>烈焰红</th>
+		<th>亮银金属漆</th>
+		<th>矿石灰金属漆</th>
+    </tr> 
+    <tr class="table_list_row1">
+		<td>北京汇杰伟业</td>
+		<td>2</td>
+		<td>4</td>
+		<td>2</td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北京中进百旺</td>
+		<td>3</td>
+		<td>2</td>
+		<td>21</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>北京港龙基业</td>
+		<td>0</td>
+		<td>3</td>
+		<td>12</td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北一区</td>
+		<td>5</td>
+		<td>9</td>
+		<td>35</td>
+    </tr>
+	<tr class="table_list_row1">
+		<td>呼市中进百旺</td>
+		<td>5</td>
+		<td>3</td>
+		<td>5</td>
+    </tr>
+	<tr class="table_list_row2">
+		<td>北四区</td>
+		<td>5</td>
+		<td>3</td>
+		<td>5</td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  
+</FORM>
+
+<FORM name="FRM3">
+
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+		
+			function OpenDealer(){
+		window.open("../common_function/dealersingle_frame_index.htm", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+	function OpenWindow(){
+
+	window.open("../departtree.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+	document.FRM2.style.display = "none";
+	document.FRM3.style.display = "none";
+	
+	function showTable2(){	
+		document.FRM2.style.display = "inline";
+		document.FRM3.style.display = "none";
+	}
+	
+	function showTable3(){	
+		document.FRM3.style.display = "inline";
+		document.FRM2.style.display = "none";
+	}
+	
+		function submitconfirm()
+	{
+		if(confirm("确定要修改参数吗？")){
+			
+		}
+	}
+		function OpenWindow2(){
+		window.open("../Inventory/inventoryquery_vchldtl.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+			function OpenMaterial() {
+		window.open("../Common_Function/ProSelmore_frame_index.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");	
+	}
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

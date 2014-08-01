@@ -1,0 +1,133 @@
+
+<HTML>
+<HEAD>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+</HEAD>
+<BODY >
+
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+var sPrimaryCode  = ""
+var sPrimaryCode1 = ""
+var sPrimaryCode2 = ""
+
+function RadioClick(sRadioId){
+	//var sTotal, sPart;
+	
+	Object = eval(sRadioId);
+	sTotal = Object.value;
+	if((pos = sTotal.indexOf(",")) > 0){
+		sPrimaryCode = sTotal.substring(0, pos);
+		sPart = sTotal.substring(pos+1);
+		if((pos = sPart.indexOf(",")) > 0){
+			sPrimaryCode1 = sPart.substring(0, pos);
+			sPart = sPart.substring(pos+1);			
+			if((pos = sPart.indexOf(",")) > 0){
+				sPrimaryCode2 = sPart.substring(0, pos);				
+			}
+		}
+		//sPrimaryCode = sTotal.SubString(pos+1, pos);
+	}	
+	//alert(sPrimaryCode);
+}
+//-->
+</SCRIPT> 
+
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[系统参数管理]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE> 
+<BR>
+<TABLE BORDER=0 width='95%' class='csstable' align='center'>
+	  <TR class="csstr">
+	    <TD nowrap align="right">参数值：</TD>
+	    <TD><INPUT id=text1 name=ID value=""></TD>
+	    <TD nowrap align="right">参数说明：</TD>
+	    <TD><INPUT id=text2 name=Val value=""></TD>	
+		</TR>    
+	  <TR class="csstr">
+	    <TD nowrap align="right">参数类型：</TD>
+	    <TD>
+			<INPUT id=text9 name=Memo value=""
+			></TD>
+		<TD  align="right">
+			类型描述：		</TD>
+		<TD>
+				<input type="text" />
+		</TD>
+  </TR>
+	  <TR class="csstr">	
+		<TD align=center colspan="4">
+
+			<INPUT type="reset" class='cssbutton' value='新 增' id=reset1 name=reset1 onclick='history.back(-1)'>
+			<INPUT type="submit" class='cssbutton' value='返 回' id=submit1 name=submit1 onclick='history.back(-1)'>			
+		</TD>
+	</TR>   
+	</TABLE>
+	
+
+ 
+  
+
+
+</BODY>
+</HTML>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+function ButtonClick(sFlag){
+	var sLink
+	
+	if(sFlag == "Look"){
+		if(sPrimaryCode == ""){
+			alert("请选择要查看的记录");
+			return true;
+		}
+		window.open("SystemConent.asp?Flag=Look&ID=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		//alert("UserConent.asp?Flag=Look&GroupCode=" + sPrimaryCode);		
+	}
+	else if(sFlag == "Add"){
+		window.open("SystemConent.asp?Flag=Add&ID=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		return true;
+	}
+	else if(sFlag == "Update"){
+		if(sPrimaryCode == ""){
+			alert("请选择要修改的记录");
+			return false;
+		}
+		window.open("SystemConent.asp?Flag=Update&ID=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		return true;
+	}
+	else if(sFlag == "Delete"){
+		if(sPrimaryCode == ""){
+			alert("请选择要删除的记录");
+			return false;
+		}
+		if(window.confirm("真的要删除选中的记录吗?") == false){
+			return false;
+		}
+		sLink = "/jlxsgs/xtgl/SystemResult.asp" + "?Flag=Delete&ID=" + sPrimaryCode + "&PageNum=" + "1";
+		//alert(sLink);
+		window.navigate(sLink);
+		return true;
+	}
+	else if(sFlag == "Exit"){
+		if(window.confirm("你真的不想修改用户吗?")){			
+			window.parent.close();
+		}
+		return true;
+	}
+	else{
+		alert("请不要乱点好吗?");
+	}
+}
+//-->
+</SCRIPT>

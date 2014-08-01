@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<TITLE>组织类型选择</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+	function clickType(id){
+		frm.materialGroupTypeId.value = id;
+		frm.materialGroupId.value = '';
+		frm.action = "";
+	}
+	function clickGroup_mdl(id){
+		window.open("../Common_Function/ProductSearch_more_model.html", "mainFrame");
+	}
+	function clickGroup(id){
+		window.open("../Common_Function/ProductSearch_more_pkg.html", "mainFrame");
+	}
+
+</SCRIPT>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="../js/dtree.js"></script>
+<link href="../css/dtree.css"   type="text/css" rel="stylesheet">
+
+
+</HEAD>
+
+
+<SCRIPT language="JavaScript">
+	    d = new dTree('d');
+		d.add(0,-1,'产品组选择');
+		
+d.add('t10000000',0,'全顺','javascript:clickGroup(\'10000000\')');
+d.add('g10000001','t10000000','全顺客车系列','javascript:clickGroup(\'10000001\')'); 
+d.add('g10000002','t10000000','全顺卡车系列','javascript:clickGroup(\'10000001\')'); 
+
+d.add('g10000451','g10000001','全顺15座长轴高顶普通特种车','javascript:clickGroup(\'10000451\')'); 
+   d.add('g100004510','g10000451','全顺15座普通型高顶特种车','javascript:clickGroup(\'10000451\')'); 
+   d.add('g100004511','g10000451','长6中普白灰厢式运输车','javascript:clickGroup(\'10000451\')'); 
+   d.add('g100004512','g10000451','15座普中欧3囚车标配','javascript:clickGroup(\'10000451\')');    
+   
+d.add('g10000452','g10000001','全顺8座短轴中顶普通','javascript:clickGroup(\'10000452\')'); 
+   d.add('g100004520','g10000452','全顺8座中顶普通型欧II','javascript:clickGroup(\'10000452\')'); 
+   d.add('g100004521','g10000452','8座中顶普通','javascript:clickGroup(\'10000452\')'); 
+   d.add('g100004522','g10000452','短轴普通8座中顶06款','javascript:clickGroup(\'10000452\')');    
+
+d.add('g10000453','g10000001','10座低顶普通物流','javascript:clickGroup(\'10000451\')'); 
+d.add('g10000454','g10000001','10座中顶普通物流','javascript:clickGroup(\'10000452\')'); 
+d.add('g10000455','g10000001','长12座高顶普通','javascript:clickGroup(\'10000451\')'); 
+d.add('g10000456','g10000001','短6低顶物流','javascript:clickGroup(\'10000452\')'); 
+
+
+d.add('g10000457','g10000002','全顺后单胎改装','javascript:clickGroup(\'10000452\')'); 
+d.add('g10000458','g10000002','全顺后单胎整车','javascript:clickGroup(\'10000452\')'); 
+d.add('g10000459','g10000002','全顺后双胎二类','javascript:clickGroup(\'10000452\')'); 
+
+
+
+
+d.add('t20000000',0,'轻卡','javascript:clickGroup(\'10000000\')');
+d.add('g20000000','t20000000','N系列','javascript:clickGroup(\'10000000\')');
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		d.closeAll();
+		document.write(d);
+</SCRIPT >
+
+<BODY>
+<table class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+
+</table>
+<BR>
+<form method="post" name="frm" target="mainFrame">
+	<input type="hidden" name="materialGroupId" value="">
+	<input type="hidden" name="materialGroupTypeId" value="" >
+	<input type='hidden'  name='idBoxName'  id='188624'  value='prtgrpId' >
+
+	<input type='hidden'  name='selectType'  id='820904'  value='single' >
+
+	<input type='hidden'  name='nameBoxName'  id='566837'  value='prtgrpNm' >
+
+</form>
+</BODY>
+</HTML>

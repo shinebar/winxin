@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<script type="text/javascript" src="../../js/web/common.js"></script>
+<script type="text/javascript" src="../../js/jslib/ProvinceCity.js"></script>
+<title>付款方式变更申请</title>
+<style type="text/css">
+<!--
+.STYLE2 {font-size: 12px}
+-->
+</style>
+</head>
+<body>
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;付款方式变更申请</div>
+<form method="POST" name="form2" action="">
+  <table class="table_query" width="95%" align="center">
+    <tr>
+      <td width="15%" height="29" align="right">品牌：</td>
+      <td>
+		<select>
+			 <option>全部
+			 <option>JEEP
+		  </select>
+	  </td>
+     <td width="15%" height="29" align="right">车系：</td>
+      <td>
+		<select>
+		     <option>全部
+			 <option>牧马人
+		  </select>
+	  </td>
+	  <td  width="15%" align="right">车款：</td>
+      <td>
+		<select>
+		     <option>全部
+			 <option>牧马人3.6L 罗宾汉两门版
+		  </select>
+	  </td>
+	</tr>
+	 <tr>
+      <td width="15%" height="29" align="right">年款：</td>
+      <td>
+		<select>
+			 <option>全部
+			 <option>2014
+		  </select>
+	  </td>
+     <td width="15%" height="29" align="right">颜色：</td>
+      <td>
+		<select>
+		     <option>全部
+			 <option>醇黑标准漆
+		  </select>
+	  </td>
+	  <td  width="15%" align="right">内饰：</td>
+      <td>
+		<select>
+		     <option>全部
+			 <option>黑
+		  </select>
+	  </td>
+	</tr>
+	<tr>
+	<td  width="15%" align="right">VIN：</td>
+      <td>
+		<input>
+	  </td>
+	   <td  width="15%" align="right">审核状态：</td>
+      <td>
+		<select>
+		     <option>全部
+			 <option>审核中
+			 <option>审核通过
+			 <option>审核驳回
+		  </select>
+	  </td>
+	</tr>
+    <tr>
+	  <td align="center" colspan=6 >
+		<input name="button32" type="button" class="normal_btn" onclick="showTable2();" value="查询" />
+		<input name="button32" type="button" class="normal_btn" onclick=";" value="下载" />
+      </td>
+    </tr>
+  </table>
+</FORM>
+<FORM name="FRM2">
+  <table width="118%" class="table_list" style="border-bottom:1px solid #DAE0EE">
+    <tr align="center" class="tabletitle">
+	  <th>订单类型</th>
+	  <th>付款方式</th>
+	  <th>VIN</th>
+	  <th>品牌</th>
+	  <th>车系</th>
+	  <th>车款</th>
+	  <th>年款</th>
+	  <th>颜色</th>
+	  <th>内饰</th>
+	  <th>审核状态</th>
+	  <th>申请日期</th>
+	  <th>审核日期</th>
+	  <th>操作</th>
+    </tr>
+    <tr class="table_list_row1">
+		<td>指派</td>
+		<td>现金</td>
+		<td>1C4BJWCGXDL659628</td>
+		<td>JEEP</td>
+		<td>牧马人</td>
+		<td>牧马人3.6L 罗宾汉两门版</td>
+		<td>2013</td>
+		<td>藏地绿标准漆</td>
+		<td>绿</td>
+		<td>待审核</td>
+		<td>2014-12-12 12:00:00</td>
+		<td></td>
+		<td><input type="button" value="申请" onclick="modify()" class="normal_btn" disabled/></td>
+    </tr>
+	<tr class="table_list_row2">
+	 <tr class="table_list_row1">
+		<td>资源池</td>
+		<td>现金</td>
+		<td>1C4BJWEG5DL636111</td>
+		<td>JEEP</td>
+		<td>指南者 2.0</td>
+		<td>指南者2.0豪华版</td>
+		<td>2013</td>
+		<td>珊瑚红水晶珠光漆</td>
+		<td>深灰真皮</td>
+		<td>审核通过</td>
+		<td>2014-12-12 12:00:00</td>
+		<td>2014-12-12 12:00:01</td>
+		<td><input type="button" value="申请" onclick="modify()" class="normal_btn" disabled/></td>
+    </tr>
+	 <tr class="table_list_row1">
+		<td>指派</td>
+		<td>现金</td>
+		<td>1C4BJWCG0DL624368</td>
+		<td>JEEP</td>
+		<td>牧马人</td>
+		<td>牧马人3.6L 罗宾汉两门版</td>
+		<td>2013</td>
+		<td>藏地绿标准漆</td>
+		<td>绿</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td><input type="button" value="申请" onclick="modify()" class="normal_btn"/></td>
+    </tr>
+	 <tr class="table_list_row1">
+		<td>指派</td>
+		<td>现金</td>
+		<td>1C4BJWCGXDL659628</td>
+		<td>JEEP</td>
+		<td>牧马人</td>
+		<td>牧马人3.6L 罗宾汉两门版</td>
+		<td>2013</td>
+		<td>藏地绿标准漆</td>
+		<td>绿</td>
+		<td>审核驳回</td>
+		<td>2014-12-12 12:00:00</td>
+		<td>2014-12-12 12:00:01</td>
+		<td><input type="button" value="申请" onclick="modify()" class="normal_btn"/></td>
+    </tr>
+	 <tr class="table_list_row1">
+		<td>指派</td>
+		<td>现金</td>
+		<td>1C4BJWCGXDL659628</td>
+		<td>JEEP</td>
+		<td>牧马人</td>
+		<td>牧马人3.6L 罗宾汉两门版</td>
+		<td>2013</td>
+		<td>藏地绿标准漆</td>
+		<td>绿</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td><input type="button" value="申请" onclick="modify()" class="normal_btn"/></td>
+    </tr>
+  </table>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+		
+			function OpenDealer(){
+		window.open("../common_function/dealersingle_frame_index.htm", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+	function OpenWindow(){
+
+	window.open("../departtree.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+	document.FRM2.style.display = "none";
+	document.FRM3.style.display = "none";
+	
+	function showTable2(){	
+		document.FRM2.style.display = "inline";
+		document.FRM3.style.display = "none";
+	}
+	
+	function showTable3(){	
+		document.FRM3.style.display = "inline";
+		document.FRM2.style.display = "none";
+	}
+	
+		function submitconfirm()
+	{
+		if(confirm("确定要修改参数吗？")){
+			
+		}
+	}
+		function OpenWindow2(){
+		window.open("../Inventory/inventoryquery_vchldtl.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+	
+			function OpenMaterial() {
+		window.open("../Common_Function/ProSelmore_frame_index.htm", "", "width=700px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");	
+	}
+	function modify(){
+		if(confirm("确定申请更改付款方式？")){
+			alert("申请成功");
+		}
+	}
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

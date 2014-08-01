@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<title>角色维护</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+    .style1
+    {
+        height: 22px;
+    }
+    -->
+</style>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function deleterole(id)
+	{
+		if(confirm("确定要进行操作吗？")){
+		}
+	}
+	
+	function OpenWindow(){
+
+	window.open("departtree.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+//-->
+</SCRIPT>
+<BODY>
+<div class="wbox">
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;当前位置： 系统数据管理 &gt;组织管理&gt;公司维护</div>
+
+    <div id="queryResult" style="display: inline;">
+<form name="FRM" method="post" >
+   <table class="table_query" border="0">
+    <tr>
+      <TD class="table_query_3Col_label_6Letter"  nowrap="nowrap">公司代码: </TD>
+	  <td class="table_query_3Col_input" nowrap="nowrap"><input type="text" name="user_id" size="10" class="middle_txt"></TD>
+      <TD  class="table_query_3Col_label_6Letter">公司名称:</TD>      
+      <td class="table_query_3Col_input" nowrap="nowrap"><input type="text" name="name" size="10"  class="middle_txt"/></TD>
+
+
+    </TR>
+	<tr>
+		<td class="table_query_input" nowrap="nowrap" colspan="6" align="center">
+			<input  type="button" class=normal_btn value="查 询" name="button3" onClick=showTbl();>&nbsp;
+			<input class=normal_btn type="button" name="Submit4" value="新 增" onClick="location.replace('roleadd.html');"  >	
+		</td>		
+	</tr>
+  </TABLE>
+</form>
+
+<form name="FRM1" method="post">
+ <table class=table_list style="border-bottom:1px solid #DAE0EE">
+   <tr class=tabletitle> 
+     	<th >公司代码</th>
+		<th >公司简称</th>
+		<th >公司后缀</th>
+		<th >公司类型</th>
+		<th >公司状态</th>
+		<th >操作</th>
+    </tr>
+	
+    <tr class="table_list_row1"> 
+      <td><a href="cmpdetail.html">MG</a></td>
+      <td>浙江江铃汽车销售服务有限公司</td> 
+      <td>MG</td>
+      <td>代理商</td>
+      <td>有效</td> 
+      <td> 
+	  		<a href="cmpmodify.html" target="_self">[修改]</a>
+      </td>
+    </tr>
+	<tr class="table_list_row1"> 
+      <td><a href="cmpdetail.html">XXXX01</a></td>
+      <td>浙江康顺汽车有限公司</td> 
+      <td>XXX01</td>
+      <td>代理商</td>
+      <td>有效</td> 
+      <td> 
+	  		<a href="cmpmodify.html" target="_self">[修改]</a>
+      </td>
+    </tr>
+
+
+	<tr class="table_list_row1"> 
+	  <td><a href="cmpdetail.html">XXXX02</a></td>
+      <td>红旭集团股份公司</td> 
+      <td>XXX02</td>
+      <td>代理商</td>
+      <td>有效</td> 
+      <td> 
+      	<a href="cmpmodify.html" target="_self">[修改]</a> 
+	  </td>
+    </tr>
+
+	<tr class="table_list_row1">
+      <td><a href="cmpdetail.html">XXXX03</a></td>
+      <td>厦门江铃全顺汽车销售有限公司</td> 
+      <td>XXX02</td>
+      <td>代理商</td>
+      <td>失效</td> 
+      <td> 
+      <a href="cmpmodify.html" target="_self">[修改]</a>
+	  </td>
+    </tr>
+  </table>
+  
+&nbsp;<br/>
+<div class="page_info">
+		<b class="page_info_title">总数：200</b>
+		<a href="#">上一页</a>
+		<a href="#">1</a>	
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<a href="#">6</a>
+		<a href="#">7</a>
+		<a href="#">8</a>
+		<a href="#">9</a>
+		<a href="#">10</a>
+		<a href="#">..200</a>
+		<a href="#">下一页</a>
+		<input class="mini_txt" type="text" />
+  </div>
+
+</form>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.FRM1.style.display='none';
+
+	function showTbl()
+	{
+		document.FRM1.style.display='inline';
+	}
+!-->
+</SCRIPT>
+
+</BODY>
+</html>

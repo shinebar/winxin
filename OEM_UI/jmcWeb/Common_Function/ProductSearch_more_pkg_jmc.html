@@ -1,0 +1,114 @@
+<html>
+<HEAD>
+<TITLE>整车产品组类别维护</TITLE>
+
+<link href="../css/style.css" type="text/css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+</HEAD>
+<script language="javascript">
+	function selall(obj){
+		var pkg = obj.pkg;
+			 for(i=0;i<pkg.length;i++){
+			  obj.pkg[i].checked=obj.allselect.checked;
+			 }
+	}
+	function selectConfirm(id,name){
+		parent.window.close();
+	}
+</script>
+<BODY>
+
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[产品组树型选择]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE> 
+
+
+<BR>
+<BR>
+<form method="post" name = "FRM">
+
+
+	<TABLE class=csstable width="95%" align=center>	  	  
+	<TR align=left class=csstable>
+		 
+		   <TD width="17%" colspan=1 align="right" nowrap >产品代码： </TD>
+		   <td width="19%">
+      <input type='text'  name='code'  id='702865'  size='16'  maxlength='10' ></td>
+<td width="16%" colspan=1 align="right">
+产品名称：</td>
+<td width="24%">
+	  <input type='text'  name='name'  id='603912'  size='16'  maxlength='10' >      </td>
+		  <td width="24%" align=right>
+		  <input type="button" class='cssbutton' name="Submit4"  value="查 询">	    </TD>
+	  </TR>	  	  	  
+	<!--  <TR align=left class=csstable>
+	    <TD nowrap>产品代码 <input type='text'  name='code'  id='702865'  size='16'  maxlength='10' >
+
+产品名称
+		  <input type='text'  name='name'  id='603912'  size='16'  maxlength='10' >
+
+
+		  <input type="button" class='button' name="Submit4"  value="查询">	    </TD>
+		  </TR> -->
+	</TABLE>
+</form>
+<form name="vafrm">
+<TABLE class=csstable width="95%" align=center>
+	<tr class="tabletitle">
+	  <td  align="left"><input type="checkbox" name="allselect" onClick="selall(this.form);">      </td>
+		<td >产品组代码</td>
+		<td >产品组名称</td>
+	</tr>
+
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19" width="124">JX6461DC-M/AX/WD</td>
+			<td width="324">7座中顶超豪华车白色-气囊</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461DC-M/AXB/B</td>
+			<td>7座中顶超豪华车蓝色-快欧</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461DC-M/AXB/R</td>
+			<td>7座中顶超豪华车红色-快欧</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461DC-M/AXB/S</td>
+			<td>7座中顶超豪华银灰色-快欧</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461DC-M/AXB/T</td>
+			<td>7座中顶超豪华特种色-快欧</td>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="pkg"></td>
+			<td height="19">JX6461DC-M/AXB/W</td>
+			<td>7座中顶超豪华车白色-快欧</td>
+		</TR>
+</TABLE>
+<TABLE class=csstable align=center width="95%">
+  <TR>
+    <td  align="center"><input type="button" class=cssbutton name="ok22" value="确 定" onClick="selectConfirm();">
+        <input type="button" name="ok32" class=cssbutton value="清 空" onClick="selectConfirm();"></td>
+  </TR>
+</TABLE>
+</form>
+</BODY>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ReportMenu</title>
+<link rel="StyleSheet"type="text/css" href="../style/dtree.css"/>
+<script type="text/javascript" src="../js/jslib/dtree.js"></script>
+<script type="text/javascript" src="../js/jslib/prototype.js"></script>
+
+</head>
+<body style="background-color:#FFF; margin:0px; padding:0px;" onload="">
+	<div style=" margin:2px;">
+	<script type="text/javascript">
+		d = new dTree('d');
+		d.add(0,-1,'','','','','');
+		
+
+				d.add(711,0,'整车订单管理','','');			
+			  //d.add(711,71,'<img src="../img/h.gif"></img>&nbsp;安全库存设定','../webCnt/claimmanagement/dealerClaim/dealerClaimSearch.htm','','inIframe'); 
+			   d.add(2,711,'<img src="../img/h.gif"></img>&nbsp;特殊资源上传','../webCnt/Public_Resource/zhiyuansc2.htm','','inIframe'); 	
+			   d.add(712,711,'<img src="../img/h.gif"></img>&nbsp;资源分配上传','../webCnt/Public_Resource/zhiyuansc.htm','','inIframe'); 				
+				d.add(714,711,'<img src="../img/h.gif"></img>&nbsp;资源分配(大区)','../webCnt/Public_Resource/daquxiafa.htm','','inIframe');
+				d.add(715,711,'<img src="../img/h.gif"></img>&nbsp;资源分配(小区)','../webCnt/Public_Resource/xiaoquxiafa.htm','','inIframe');
+				d.add(716,711,'<img src="../img/h.gif"></img>&nbsp;资源分配审核(大区)','../webCnt/Public_Resource/daqushenpi.htm','','inIframe');
+				d.add(713,711,'<img src="../img/h.gif"></img>&nbsp;资源分配审核(OTD)','../webCnt/Public_Resource/otdshenpi.htm','','inIframe'); 			                
+			d.add(92,711,'<img src="../img/h.gif"></img>&nbsp;资源分配开关','../webCnt/Public_Resource/zhiyuankaiguan.htm','','inIframe');
+			d.add(921,711,'<img src="../img/h.gif"></img>&nbsp;资源分配查询','../webCnt/Public_Resource/xiafacx.htm','','inIframe');
+			d.add(3,711,'<img src="../img/h.gif"></img>&nbsp;资源分配查询(大区)','../webCnt/Public_Resource/xiafacx_2.htm','','inIframe');
+			d.add(4,711,'<img src="../img/h.gif"></img>&nbsp;资源分配查询(小区)','../webCnt/Public_Resource/xiafacx_3.htm','','inIframe');
+			d.add(923,711,'<img src="../img/h.gif"></img>&nbsp;明细汇总查询','../webCnt/Public_Resource/xiafacxyulan.htm','','inIframe');
+			d.add(1,711,'<img src="../img/h.gif"></img>&nbsp;资源分配冻结','../webCnt/Public_Resource/xiafacx2.htm','','inIframe');		
+			d.add(5,711,'<img src="../img/h.gif"></img>&nbsp;付款方式变更申请','../webCnt/Public_Resource/cancelOrder.htm','','inIframe');	
+			d.add(6,711,'<img src="../img/h.gif"></img>&nbsp;经销商撤单审核','../webCnt/Public_Resource/OrderAudit.htm','','inIframe');	
+		document.write(d);
+		d.closeAll();
+		d.o(1);
+	</script>
+	</div>
+</body>
+</html>	

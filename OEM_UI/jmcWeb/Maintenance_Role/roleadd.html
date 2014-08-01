@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<title>角色维护</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+    .style1
+    {
+        height: 22px;
+    }
+    -->
+</style>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function check(){
+		if(!isEmpty(FRM.author_code,"请输入角色代码。")){
+			return false;
+		}
+		else if(!isEmpty(FRM.author_name,"请输入角色名。")){
+			return false;
+		}
+		else{
+			 location.replace("rolemodify.html");
+			 }
+	}
+-->
+</SCRIPT>
+
+</HEAD>
+<BODY>
+<div class="wbox">
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;当前位置： 系统数据管理 &gt; 权限管理 &gt;角色维护</div>
+<div id="queryResult" style="display: inline;">
+<form name="FRM" method="post" action="rolemantain.html">
+  <table class="table_edit" border="0" id="myinfo">
+	  <th colspan="6"><img class="nav" src="../../img/subNav.gif" /> 角色信息</th>
+  	<tr> 
+      <td class="table_query_2Col_label_5Letter">角色代码：</td>
+      <td class="table_edit_2Col_input"  nowrap="nowrap"> 
+        <input type="text" name="author_code" class="middle_txt"><font class=font_notnull>*</font>
+      </td>
+	  <td class="table_query_2Col_label_5Letter"  nowrap="nowrap">
+			角色名称：</td>
+		<td class="table_edit_2Col_input"  nowrap="nowrap">
+			<input type="text" name="author_name" class="middle_txt">
+          <font class=font_notnull>*</font>
+		</td>
+    </tr>
+    <TR>
+      <td class="table_query_2Col_label_5Letter">角色类别：</td>
+      <td class="table_edit_2Col_input"><select name="select" class="short_sel" style="width: 130px;">
+        <option>车厂</option>
+        <option>代理商</option>
+      </select></td>
+      <td class="table_query_2Col_label_5Letter">角色状态：</td>
+      <td class="table_edit_2Col_input"> 
+		<SELECT NAME="" class="short_sel" style="width: 130px;">
+			<option> 有效</option>      
+			<option> 失效</option>      
+		</SELECT>
+		&nbsp;
+      </td>
+    </TR>
+    <tr> 
+        <td class="table_query_input" nowrap="nowrap" colspan="4" align="center">
+         <input class="normal_btn" type="button" name="Submit3" value="确定" onClick="location='rolemantain.html';">&nbsp;
+         <input class="normal_btn" name="button2" type="button" onClick="location='rolemantain.html';" value="返回"></td>
+    </tr>
+</table>
+</form>
+
+</BODY>
+</html>

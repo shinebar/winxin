@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="style/content.css" rel="stylesheet" type="text/css" />
+<link href="style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jslib/mootools.js"></script>
+<title>跳转页面不要删</title>
+<style type="text/css">
+    
+</style>
+</head>
+
+
+
+<body onload="loadpage()">
+<br/><br/><br/>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" id="msg" style="font-size:13px; color:#FF0000;" class="table_query_label">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" height="30px;"><input class="normal_btn" type="button" value="返 回" onclick="goBack();"/></td>
+      </tr>
+    </table>
+    
+</body>
+<script language="javascript">
+	var par = null;
+	var reurl = null;
+	var mymsg = null;
+	
+	function remyurl() {
+		window.location.href = reurl;
+	}
+	
+	function loadpage() {
+		par = getQuery('yname');
+		
+		if(par == 'addpi') {
+			mymsg = '保存收购意向成功';
+			reurl = 'webCnt/carPurchase/newPurchaseIntent/purchaseIntentSearch.html?show=true';
+		} else if(par == 'createyx') {
+			mymsg = '创建评估安排成功';
+			reurl = 'webCnt/carPurchase/newPurchaseIntent/purchaseIntentSearch.html?show=true';
+		} else if(par == 'modifyx') {
+			mymsg = '修改收购意向成功';
+			reurl = 'webCnt/carPurchase/modifPurchaseIntent/purchaseIntentModifSearch.html?show=true';
+		} else if(par == 'savegzjumx') {
+			mymsg = '保存跟踪记录明细成功';
+			reurl = 'webCnt/carPurchase/scoutPurchaseIntent/scoutPurchaseIntentSearch.html?show=true';
+		} else if(par == 'addxsyx') {
+			mymsg = '新增销售意向成功';
+			reurl = 'webCnt/carSell/newSellIntent/newSellIntentSearch.html?show=true';
+		} else if(par == 'createxsyx') {
+			mymsg = '创建销售意向成功';
+			reurl = 'webCnt/carSell/newSellIntent/newSellIntentSearch.html?show=true';
+		} else if(par == 'modifxsyx') {
+			mymsg = '修改销售意向成功';
+			reurl = 'webCnt/carSell/modifSellIntent/sellIntentModifSearch.html?show=true';
+		} else if(par == 'xsyxgzjl') {
+			mymsg = ' 销售意向跟踪记录保存成功';
+			reurl = 'webCnt/carSell/scoutSellIntent/scoutSellIntentSearch.html?show=true';
+		} else if(par == 'ybxss') {
+			mymsg = ' 一般销售订单新增成功';
+			reurl = 'webCnt/carSell/sellCar/addOrderForm.html?show=true';
+		} else if(par == 'pzxss') {
+			mymsg = ' 牌照销售订单新增成功';
+			reurl = 'webCnt/carSell/sellCar/addOrderForm.html?show=true';
+		} else if(par == 'rczpp') {
+			mymsg = ' 二次整备订单新增成功';
+			reurl = 'webCnt/carSell/sellCar/addOrderForm.html?show=true';
+		} else if(par == 'pfxss') {
+			mymsg = ' 批发销售订单新增成功';
+			reurl = 'webCnt/carSell/sellCar/addOrderForm.html?show=true';
+		} else if(par == 'ybxsddxg') {
+			mymsg = ' 一般销售订单修改成功';
+			reurl = 'webCnt/carSell/sellCar/mondifOrderFormSearch.html?show=true';
+		} else if(par == 'xsddshxg') {
+			mymsg = ' 销售订单审核修改成功';
+			reurl = 'webCnt/carSell/sellCar/auditingOrderFormSearch.html?show=true';
+		} else if(par == 'khghjlxz') {
+			mymsg = ' 客户关怀记录新增成功';
+			reurl = 'webCnt/customerManager/buyerSolicitude/solicitudeNoteSearch.html?show=true';
+		} else if(par == 'cpflsave') {
+			mymsg = ' 车牌分离成功';
+			reurl = 'webCnt/storageManager/plateManager/separateSearch.html?show=true';
+		} else if(par == 'cpzhsavee') {
+			mymsg = ' 车牌整合成功';
+			reurl = 'webCnt/storageManager/plateManager/conformitySearch.html?show=true';
+		} else if(par == 'xksbb') {
+			mymsg = ' 销售及客户信息上报成功';
+			reurl = 'webCnt/carSell/sellAttestCar/sellOrBuyerInfoSearch.html?show=true';
+		} else if(par == 'xskhsbqrr') {
+			mymsg = ' 销售及客户信息上报操作确认';
+			reurl = 'webCnt/carSell/sellAttestCar/sellOrBuyerInfoAffirmSearch.html?show=true';
+		} else if(par == 'xskhsbqbhh') {
+			mymsg = ' 操作被驳回!';
+			reurl = 'webCnt/carSell/sellAttestCar/sellOrBuyerInfoAffirmSearch.html?show=true';
+		}
+		
+		$('msg').setHTML(mymsg);
+		remyurl.delay(50000);
+	}
+	
+	function   getQuery(name)   
+         {   
+              var   reg   =   new   RegExp("(^|&)"+   name   +"=([^&]*)(&|$)");   
+              var   r   =   window.location.search.substr(1).match(reg);   
+              if   (r!=null)   return   unescape(r[2]);   return   null;   
+         }
+		 
+		 function goBack() {
+		 	window.history.go(-2);
+		 }
+</script>
+</html>

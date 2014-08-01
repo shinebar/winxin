@@ -1,0 +1,286 @@
+<HTML>
+<HEAD>
+<TITLE>配额查询</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+<link href="../css/calendar-blue2.css"   type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../js/calendar.js"></script>
+<script type="text/javascript" src="../js/calendar-zh.js"></script>
+<script type="text/javascript" src="../js/calendar-setup.js"></script>
+<script language="JavaScript" src="../js/ut.js"></script>
+<script type="text/javascript" src="../js/tablesort-nick.js"></script>
+
+
+
+	<style type="text/css">
+<!--
+.style4 {color: #0000FF}
+-->
+    </style>
+</HEAD>
+<BODY>
+
+  <table width="106%" border="0" cellspacing="0" cellpadding="0" class="cssTitle">
+                          <tr>
+							<td width="7%"></td>
+							<td height="48" class="zi01">[查找客户]</td>
+                          </tr>
+</table>
+  <FORM  name="form">
+    <TABLE align=center width="95%" class=csstable >
+
+      <TR class="tblopt">
+        <TD width="15%"><div align="right"><strong>客户姓名</strong></div></TD>
+        <TD width="3%">&nbsp;</TD>
+        <TD width="30%"><div align="left">
+            <input type="text" name="textfield23"  style="width:80%">
+        </div></TD>
+        <TD width="12%"><div align="right"><strong>联系电话</strong></div></TD>
+        <TD width="3%">&nbsp;</TD>
+        <TD width="33%"><div align="left">
+            <input type="text" name="textfield23"  style="width:80%">
+        </div></TD>
+        <TD width="4%"><input name="button43322233" type="button" class="cssbutton" onClick="show4();" value="查询"></TD>
+      </TR>
+    </TABLE>
+  </FORM>
+  <FORM  name="form4">
+    <TABLE align=center width="95%" class=csstable >
+      <thead>
+        <TR class="cssTitle" >
+          <TD width="11%" align="center" class="zi01"><div align="left">符合您查询条件的客户</div></TD>
+        </TR>
+      </thead>
+    </TABLE>
+    <table width="95%" border="0" class="csstable" align="center">
+      <tr class="cssTitle" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+        <td align="center" width="4%"><div align="center"><strong>选择</strong></div>        </td>
+        <td width="12%" nowrap class="tabletitle"><div align="center"><strong>客户名称</strong></div></td>
+        <td width="38%" nowrap class="tabletitle"><div align="center"><strong>联系电话</strong></div></td>
+        <td nowrap align="left" width="12%"><div align="center"><strong>所有人</strong></div></td>
+      </tr>
+      <tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+        <td align="center" width="4%"><input type="radio" name="dealerIDStr"  value="30000800"   onclick="selectCustomer('30000800','张先生')">
+            <input type="hidden" name="dealerCodeStr"  value="1001C00186">
+            <input type="hidden" name="dealerNameStr" value="榆林新大新（欧）">
+            <input type="hidden" name="orgNameStr"     value="欧马可西安市场部">        </td>
+        <td nowrap>张先生</td>
+        <td nowrap>13756160000</td>
+        <td nowrap align="left" width="12%">张琳</td>
+      </tr>
+      <tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+        <td align="center" width="4%"><input type="radio" name="dealerIDStr"  value="30001584"   onclick="selectCustomer('30000800','刘大宝')">
+            <input type="hidden" name="dealerCodeStr"  value="1001C00284">
+            <input type="hidden" name="dealerNameStr" value="陕西跨越（欧）">
+            <input type="hidden" name="orgNameStr"     value="欧马可西安市场部">        </td>
+        <td nowrap>刘大宝</td>
+        <td nowrap>15912340000</td>
+        <td nowrap align="left" width="12%">张琳</td>
+      </tr>
+      <tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+        <td align="center" width="4%"><input type="radio" name="dealerIDStr"  value="30000799"   onclick="selectCustomer('30000800','李先生')">
+            <input type="hidden" name="dealerCodeStr"  value="1001C00185">
+            <input type="hidden" name="dealerNameStr" value="延安元丰工贸（欧）">
+            <input type="hidden" name="orgNameStr"     value="欧马可西安市场部">        </td>
+        <td nowrap>李先生</td>
+        <td nowrap>13711223344</td>
+        <td nowrap align="left" width="12%">张琳</td>
+      </tr>
+      <tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+        <td align="center" width="4%"><input type="radio" name="dealerIDStr"  value="30001309"   onclick="selectCustomer('30001309','刘小姐')">
+            <input type="hidden" name="dealerCodeStr"  value="1001C00244">
+            <input type="hidden" name="dealerNameStr" value="呼和浩特畅溢（欧）">
+            <input type="hidden" name="orgNameStr"     value="欧马可银川市场部">        </td>
+        <td nowrap>刘小姐</td>
+        <td nowrap>12345678</td>
+        <td nowrap align="left" width="12%">张琳</td>
+      </tr>
+    </table>
+    <div align="center"></div>
+    <TABLE align=center width="95%" class=csstable id="stable"  style="display:none" >
+      <TR class="cssTitle" >
+        <TD colspan="3"><div align="left"><strong>销售成功分析</strong></div></TD>
+      </TR>
+      <TR class="tblopt">
+        <TD width="3%" rowspan="2"><div align="right"><strong>产品因素</strong></div></TD>
+        <TD width="7%"><div align="right">首要原因</div></TD>
+        <TD width="90%" class="datadetail"><div align="left">
+            <label style="width:80">
+            <input type="checkbox" name="checkbox32422224" value="checkbox">
+              英伦品牌 </label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox322422224" value="checkbox">
+              外形颜色</label>
+            <label style="width:80">
+            <input name="checkbox3222422224" type="checkbox" value="checkbox">
+              质量</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox32222322324" value="checkbox">
+              价格</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox322223222224" value="checkbox">
+              性能</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox322223222224" value="checkbox">
+              配置</label>
+            <input type="checkbox" name="checkbox232224" value="checkbox">
+          其它
+          <input type="text" name="textfield433224"  size="10">
+        </div></TD>
+      </TR>
+      <TR class="tblopt">
+        <TD width="6%" class="tblopt"><div align="right">次要原因</div></TD>
+        <TD width="91%" class="csstr"><div align="left">
+            <label style="width:80">
+            <input type="checkbox" name="checkbox324222222" value="checkbox">
+              英伦品牌 </label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox3224222222" value="checkbox">
+              外形颜色</label>
+            <label style="width:80">
+            <input name="checkbox32224222222" type="checkbox" value="checkbox">
+              质量</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox322223223222" value="checkbox">
+              价格</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox3222232222222" value="checkbox">
+              性能</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox3222232222222" value="checkbox">
+              配置</label>
+            <input type="checkbox" name="checkbox2322252" value="checkbox">
+          其它
+          <input type="text" name="textfield4332262"  size="10">
+        </div></TD>
+      </TR>
+      <TR class="tblopt">
+        <TD rowspan="2"><div align="right"><strong>销售因素</strong></div>
+            <div align="right"></div></TD>
+        <TD class="tblopt"><div align="right">首要原因</div></TD>
+        <TD class="csstr"><label style="width:80">
+          <input type="checkbox" name="checkbox324222233" value="checkbox">
+          客户意愿 </label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox3224222233" value="checkbox">
+              供货及时</label>
+            <label style="width:80">
+            <input name="checkbox32224222233" type="checkbox" value="checkbox">
+              促销政策</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox322223223233" value="checkbox">
+              按揭支持</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox3222232222233" value="checkbox">
+              服务满意</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox3222232222233" value="checkbox">
+              朋友推荐 </label>
+            <input type="checkbox" name="checkbox2322263" value="checkbox">
+          其它
+          <input type="text" name="textfield4332273"  size="10"></TD>
+      </TR>
+      <TR class="tblopt">
+        <TD class="tblopt"><div align="right">次要原因</div></TD>
+        <TD class="csstr"><label style="width:80">
+          <input type="checkbox" name="checkbox3242222322" value="checkbox">
+          客户意愿 </label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox32242222322" value="checkbox">
+              供货及时</label>
+            <label style="width:80">
+            <input name="checkbox322242222322" type="checkbox" value="checkbox">
+              促销政策</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox3222232232322" value="checkbox">
+              按揭支持</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox32222322222322" value="checkbox">
+              服务满意</label>
+            <label style="width:80">
+            <input type="checkbox" name="checkbox32222322222322" value="checkbox">
+              朋友推荐 </label>
+            <input type="checkbox" name="checkbox23222622" value="checkbox">
+          其它
+          <input type="text" name="textfield43322722"  size="10"></TD>
+      </TR>
+    </TABLE>
+    <TABLE align=center width="95%" class=csstable id="stable2"  style="display:none" >
+      <TR class="cssTitle" >
+        <TD colspan="3"><div align="left"><strong>销售失败分析</strong></div></TD>
+      </TR>
+      <TR class="tblopt">
+        <TD rowspan="2"><div align="right"><strong>首要原因</strong></div></TD>
+        <TD>&nbsp;</TD>
+        <TD class="datadetail"><div align="left">
+            <input type="checkbox" name="checkbox32422223332" value="checkbox">
+          购买竞品
+          <input type="text" name="textfield4332273232"  size="10">
+          <input type="checkbox" name="checkbox322422223332" value="checkbox">
+          网内竞争
+          <input type="text" name="textfield4332273332"  size="10">
+          </label>
+        </div></TD>
+      </TR>
+      <TR class="tblopt">
+        <TD class="tblopt">&nbsp;</TD>
+        <TD class="csstr"><div align="left">
+            <input name="checkbox3222422223332" type="checkbox" value="checkbox">
+          产品风格
+          <input type="checkbox" name="checkbox32222322323332" value="checkbox">
+          产品价格
+          <input type="checkbox" name="checkbox322223222223332" value="checkbox">
+          放弃购车
+          <input type="checkbox" name="checkbox322223222223332" value="checkbox">
+          品牌不认同
+          <input type="checkbox" name="checkbox232226332" value="checkbox">
+          其它
+          <input type="text" name="textfield433227352"  size="10">
+        </div></TD>
+      </TR>
+      <TR class="tblopt">
+        <TD width="4%" rowspan="2"><div align="right"><strong>次要原因</strong></div></TD>
+        <TD width="5%">&nbsp;</TD>
+        <TD width="91%" class="datadetail"><div align="left">
+            <input type="checkbox" name="checkbox32422223332" value="checkbox">
+          购买竞品
+          <input type="text" name="textfield4332273232"  size="10">
+          <input type="checkbox" name="checkbox322422223332" value="checkbox">
+          网内竞争
+          <input type="text" name="textfield4332273332"  size="10">
+          </label>
+        </div></TD>
+      </TR>
+      <TR class="tblopt">
+        <TD width="5%" class="tblopt">&nbsp;</TD>
+        <TD width="91%" class="csstr"><div align="left">
+            <input name="checkbox3222422223332" type="checkbox" value="checkbox">
+          产品风格
+          <input type="checkbox" name="checkbox32222322323332" value="checkbox">
+          产品价格
+          <input type="checkbox" name="checkbox322223222223332" value="checkbox">
+          放弃购车
+          <input type="checkbox" name="checkbox322223222223332" value="checkbox">
+          品牌不认同
+          <input type="checkbox" name="checkbox232226332" value="checkbox">
+          其它
+          <input type="text" name="textfield433227352"  size="10">
+        </div></TD>
+      </TR>
+    </TABLE>
+</FORM>
+<BR>
+<script language="javascript">
+	document.form4.style.display="none";
+
+	function show4(){
+		document.form4.style.display="inline";
+	}
+	
+	function selectCustomer(id,name){
+		parent.opener.document.getElementById('cname').value= name;
+		window.close();
+	}
+</script>
+</BODY>
+</HTML>

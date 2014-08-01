@@ -1,0 +1,84 @@
+<html>
+<HEAD>
+<TITLE>整车产品组类别维护</TITLE>
+
+<link href="../css/style.css" type="text/css" rel="stylesheet">
+
+</HEAD>
+<script language="javascript">
+function selall(obj){
+var dearler = obj.dealer;
+	 for(i=0;i<dearler.length;i++){
+	  obj.dealer[i].checked=obj.allselect.checked;
+	 }
+}
+	function selectConfirm(id,name){
+		parent.opener.document.getElementById('upmtlgrpname').value= name;
+		parent.window.close();
+	}
+</script>
+<BODY>
+<table class="cssTitle" width="103%" border="0" cellspacing="0"
+	cellpadding="0">
+	<tr>
+		<td width="7%"></td>
+		<td class="zi01" height="48">[产品组树型选择]</td>
+	</tr>
+</table>
+<BR>
+<BR>
+<form method="post" name = "FRM">
+	<TABLE class=csstable width="95%" align=center>
+		<TR align=left class=csstable>
+			<TD nowrap>产品代码 <input type='text'  name='code'  id='977801'  size='16'  maxlength='10' >
+			产品名称
+			<input type='text'  name='name'  id='326032'  size='16'  maxlength='10' >
+
+			<input type="button" class=button onClick="ShowTbl();" name="Submit4"  value="查询">
+		</TD>
+      </TR>
+	</TABLE>
+</form>
+
+<form name="vafrm">
+<TABLE class=csstable width="95%" align=center>
+	<tr class="tabletitle">
+	  <td  align="left"><input type="checkbox" name="allselect" onClick="selall(this.form);">
+      </td>
+		<td >产品组代码</td>
+		<td >产品组名称</td>
+
+	</tr>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="dealer"></td>
+			<td>8E20AH--US-7A34</td>
+			<TD>奥迪 AUDI A4 1.8T CVT非OBD-米色织物</TD>
+		</TR>
+	
+		<TR class="csstr">
+		  <td align="left"><input type="checkbox" name="dealer"></td>
+			<td>8E20AH--TN-8A70</td>
+			<TD>奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-TN米色内饰</TD>
+		</TR>
+	
+</TABLE>
+<TABLE class=tblopt align=center width="95%">
+  <TR>
+    <td width="40%"><input type="button" class=BUTTON name="ok22" value="确定" onClick="selectConfirm(1,dealer);">
+        <input class=BUTTON type="button" name="ok32" value="清空" onClick=""></td>
+  </TR>
+</TABLE>
+</form>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+	document.vafrm.style.display='none';
+	function ShowTbl(){
+		document.vafrm.style.display='inline';
+	}
+</SCRIPT>
+
+</BODY>
+</html>
+

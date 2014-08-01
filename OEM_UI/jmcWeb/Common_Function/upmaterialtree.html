@@ -1,0 +1,692 @@
+<HTML>
+<HEAD>
+<TITLE>组织类型选择</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="../js/dtree.js"></script>
+<link href="../css/dtree.css"   type="text/css" rel="stylesheet">
+
+<SCRIPT LANGUAGE="JavaScript">
+	function clickType(id){
+		//top.frames["mainFrame"].document.FRM.code.value = 'id';
+		// top.frames["mainFrame"].document.vafrm.style.display='none';
+		//top.frames["mainFrame"].document.vafrm2.style.display='online';
+	}
+	function clickGroup(id){
+		window.close();
+	}
+
+</SCRIPT>
+</HEAD>
+
+
+<BODY>
+<table class="cssTitle" width="103%" border="0" cellspacing="0"
+	cellpadding="0">
+	<tr>
+		<td width="7%"></td>
+		<td class="zi01" height="48">&nbsp</td>
+	</tr>
+</table>
+<BR>
+<BR>
+
+<SCRIPT language="JavaScript">
+	    d = new dTree('d');
+		d.add(0,-1,'产品组选择');
+
+
+//d.add('t10000000',0,'奥迪品牌','javascript:clickType(\'10000000\')'); 
+
+//d.add('t10000081',0,'上海通用品牌','javascript:clickType(\'10000081\')'); 
+d.add('t10000000',0,'奥迪品牌','javascript:clickType(\'10000000\')');
+d.add('g10000001','t10000000','奥迪','javascript:clickGroup(\'10000001\')'); 
+d.add('g10000451','g10000001','奥迪A4','javascript:clickGroup(\'10000451\')'); 
+d.add('g10000452','g10000001','奥迪TT','javascript:clickGroup(\'10000452\')'); 
+d.add('g10000453','g10000451','奥迪 AUDI A4 1.8T CVT','javascript:clickGroup(\'10000453\')'); 
+d.add('g10000454','g10000452','AUDITTC2.0TFSI','javascript:clickGroup(\'10000454\')'); 
+d.add('g10000455','g10000452','AUDITTC3.2QUATTRO','javascript:clickGroup(\'10000455\')'); 
+d.add('g10000456','g10000451','奥迪 AUDI A4 1.8T CVT-特殊类型的中文标牌-53灰色内饰','javascript:clickGroup(\'g10000456\')');
+d.add('g10000457','g10000451','奥迪 AUDI A4 1.8T CVT-特殊类型的中文标牌+舒适型(PCM)-53灰色内饰','javascript:clickGroup(\'g10000457\')');
+d.add('g10000458','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-BORA R内饰','javascript:clickGroup(\'g10000458\')');
+d.add('g10000459','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-AS灰色内饰','javascript:clickGroup(\'g10000459\')');
+d.add('g10000460','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-AS灰色内饰','javascript:clickGroup(\'g10000460\')');
+d.add('g10000461','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-米色内饰','javascript:clickGroup(\'g10000461\')');
+d.add('g10000462','g10000451','奥迪 AUDI A4 1.8T CVT-特殊类型的中文标牌-艺术灰FIFTIFIVE','javascript:clickGroup(\'g10000462\')');
+d.add('g10000463','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-CZ米色内饰','javascript:clickGroup(\'g10000463\')');
+d.add('g10000464','g10000451','奥迪 AUDI A4 1.8T CVT-特殊类型的中文标牌-CZ米色内饰','javascript:clickGroup(\'g10000464\')');
+d.add('g10000465','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-JN黑色内饰','javascript:clickGroup(\'g10000465\')');
+d.add('g10000466','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-爵士灰','javascript:clickGroup(\'g10000466\')');
+d.add('g10000467','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-TG冰蓝色内饰','javascript:clickGroup(\'g10000467\')');
+d.add('g10000468','g10000451','奥迪 AUDI A4 1.8T CVT-舒适型(PCM)-TN米色内饰','javascript:clickGroup(\'g10000468\')');
+d.add('g10000469','g10000451','奥迪 AUDI A4 1.8T CVT-无','javascript:clickGroup(\'g10000469\')');
+d.add('g10000470','g10000451','奥迪 AUDI A4 1.8T CVT-无','javascript:clickGroup(\'g10000470\')');
+d.add('g10000471','g10000451','奥迪 AUDI A4 1.8T CVT非OBD-米色织物','javascript:clickGroup(\'g10000471\')');
+d.add('g10000472','g10000455','AUDITTC3.2QUATTRO-JN黑色内饰-排放标准 EU 3 CN','javascript:clickGroup(\'g10000472\')');
+d.add('g10000473','g10000455','AUDITTC3.2QUATTRO-JN黑色内饰-排放标准 EU 3 CN+8Q5','javascript:clickGroup(\'g10000473\')');
+d.add('g10000474','g10000455','AUDITTC3.2QUATTRO-JN黑色内饰-氙气大灯+电动腰部支撑+电调前排座椅+桃木内饰条+GPS导航','javascript:clickGroup(\'g10000474\')');
+d.add('g10000475','g10000455','AUDITTC3.2QUATTRO-JN黑色内饰-氙气大灯+电动腰部支撑+桃木内饰条','javascript:clickGroup(\'g10000475\')');
+d.add('g10000476','g10000455','AUDITTC3.2QUATTRO-JN黑色内饰-六碟收音机','javascript:clickGroup(\'g10000476\')');
+d.add('g10000477','g10000455','AUDITTC3.2QUATTRO-8Q5+FC1+PRY+UF1-TA冰蓝色内饰','javascript:clickGroup(\'g10000477\')');
+d.add('g10000478','g10000455','AUDITTC3.2QUATTRO-8Q5+FC1+UF2-TA冰蓝色内饰','javascript:clickGroup(\'g10000478\')');
+d.add('g10000479','g10000455','AUDITTC3.2QUATTRO-TB卢克米色内饰-氙气大灯+电动腰部支撑+电调前排座椅+桃木内饰条+GPS导航','javascript:clickGroup(\'g10000479\')');
+d.add('g10000480','g10000455','AUDITTC3.2QUATTRO-TN米色内饰-六碟收音机','javascript:clickGroup(\'g10000480\')');
+d.add('g10000481','g10000455','AUDITTC3.2QUATTRO-TP矿岩灰色内饰-排放标准 EU 3 CN','javascript:clickGroup(\'g10000481\')');
+d.add('g10000482','g10000455','AUDITTC3.2QUATTRO-TP矿岩灰色内饰-氙气大灯+电动腰部支撑+桃木内饰条','javascript:clickGroup(\'g10000482\')');
+d.add('g10000483','g10000455','AUDITTC3.2QUATTRO-TP矿岩灰色内饰-六碟收音机','javascript:clickGroup(\'g10000483\')');
+d.add('g10000484','g10000455','AUDITTC3.2QUATTRO-TQ卢克米色内饰-排放标准 EU 3 CN','javascript:clickGroup(\'g10000484\')');
+d.add('g10000485','g10000455','AUDITTC3.2QUATTRO-TQ卢克米色内饰-氙气大灯+电动腰部支撑+电调前排座椅+桃木内饰条+GPS导航','javascript:clickGroup(\'g10000485\')');
+d.add('g10000486','g10000455','AUDITTC3.2QUATTRO-TQ卢克米色内饰-六碟收音机','javascript:clickGroup(\'g10000486\')');
+d.add('g10000487','g10000455','AUDITTC3.2QUATTRO-TR岩浆红色内饰-氙气大灯+电动腰部支撑+电调前排座椅+桃木内饰条+太阳能天窗','javascript:clickGroup(\'g10000487\')');
+d.add('g10000488','g10000454','AUDITTC2.0TFSI-JN黑色内饰-无','javascript:clickGroup(\'g10000488\')');
+d.add('g10000489','g10000454','AUDITTC2.0TFSI-JN黑色内饰-排放标准 EU 3+亮条包+前座中央扶手+电动腰部支撑+前排座椅加热+真皮座椅+桃木内饰条+真皮方向盘','javascript:clickGroup(\'g10000489\')');
+d.add('g10000490','g10000454','AUDITTC2.0TFSI-JN黑色内饰-国4标准','javascript:clickGroup(\'g10000490\')');
+d.add('g10000491','g10000454','AUDITTC2.0TFSI-8RY+FC1+N3Q-TF矿岩灰色内饰','javascript:clickGroup(\'g10000491\')');
+d.add('g10000492','g10000454','AUDITTC2.0TFSI-TN米色内饰-无','javascript:clickGroup(\'g10000492\')');
+d.add('g10000493','g10000454','AUDITTC2.0TFSI-0GE+0GG+1BL+7HC-TY冰蓝色内饰','javascript:clickGroup(\'g10000493\')');
+
+
+/*d.add('g10000794','g10000473','宝来 1.8手动豪华+电动座椅+记忆功能+米内饰','javascript:clickGroup(\'10000794\')'); 
+
+d.add('g10000795','g10000472','宝来 1.8自动豪华+真皮+桃木+米内饰','javascript:clickGroup(\'10000795\')'); 
+
+d.add('g10000796','g10000472','宝来 1.8自动豪华+真皮+桃木+灰内饰','javascript:clickGroup(\'10000796\')'); 
+
+d.add('g10000797','g10000472','宝来 1.8自动豪华+真皮+桃木+灰皮内饰','javascript:clickGroup(\'10000797\')'); 
+
+d.add('g10000798','g10000472','宝来 1.8自动豪华+真皮+桃木+米皮内饰','javascript:clickGroup(\'10000798\')'); 
+
+d.add('g10000799','g10000473','宝来 1.8手动豪华+真皮+桃木+灰内饰','javascript:clickGroup(\'10000799\')'); 
+
+d.add('g10000800','g10000473','宝来 1.8手动豪华+真皮+桃木+米皮内饰','javascript:clickGroup(\'10000800\')'); 
+
+d.add('g10000801','g10000473','宝来 1.8手动豪华+真皮+桃木+灰皮内饰','javascript:clickGroup(\'10000801\')'); 
+
+d.add('g10000802','g10000473','宝来 1.8手动豪华+真皮+桃木+米内饰','javascript:clickGroup(\'10000802\')'); 
+
+d.add('g10000803','g10000456','高尔夫 1.6自动基本+天窗+米内饰','javascript:clickGroup(\'10000803\')'); 
+
+d.add('g10000804','g10000456','高尔夫 1.6自动基本+天窗+灰内饰','javascript:clickGroup(\'10000804\')'); 
+
+d.add('g10000805','g10000457','高尔夫 1.6手动基本+天窗+灰内饰','javascript:clickGroup(\'10000805\')'); 
+
+d.add('g10000806','g10000457','高尔夫 1.6手动基本+天窗+米内饰','javascript:clickGroup(\'10000806\')'); 
+
+d.add('g10000807','g10000456','高尔夫 1.6自动基本+无+米内饰','javascript:clickGroup(\'10000807\')'); 
+
+d.add('g10000808','g10000456','高尔夫 1.6自动基本+无+灰内饰','javascript:clickGroup(\'10000808\')'); 
+
+d.add('g10000809','g10000457','高尔夫 1.6手动基本+无+灰内饰','javascript:clickGroup(\'10000809\')'); 
+
+d.add('g10000810','g10000457','高尔夫 1.6手动基本+无+米内饰','javascript:clickGroup(\'10000810\')'); 
+
+d.add('g10000811','g10000458','高尔夫 1.6自动豪华+无+灰内饰','javascript:clickGroup(\'10000811\')'); 
+
+d.add('g10000812','g10000458','高尔夫 1.6自动豪华+无+米内饰','javascript:clickGroup(\'10000812\')'); 
+
+d.add('g10000813','g10000459','高尔夫 1.6手动豪华+无+灰内饰','javascript:clickGroup(\'10000813\')'); 
+
+d.add('g10000814','g10000459','高尔夫 1.6手动豪华+无+米内饰','javascript:clickGroup(\'10000814\')'); 
+
+d.add('g10000815','g10000460','高尔夫 1.8自动豪华+无+米内饰','javascript:clickGroup(\'10000815\')'); 
+
+d.add('g10000816','g10000460','高尔夫 1.8自动豪华+无+灰内饰','javascript:clickGroup(\'10000816\')'); 
+
+d.add('g10000817','g10000461','高尔夫 1.8手动豪华+无+米内饰','javascript:clickGroup(\'10000817\')'); 
+
+d.add('g10000818','g10000461','高尔夫 1.8手动豪华+无+灰内饰','javascript:clickGroup(\'10000818\')'); 
+
+d.add('g10000819','g10000462','宝来HB 1.6自动基本+无+米内饰','javascript:clickGroup(\'10000819\')'); 
+
+d.add('g10000820','g10000462','宝来HB 1.6自动基本+无+米皮内饰','javascript:clickGroup(\'10000820\')'); 
+
+d.add('g10000821','g10000462','宝来HB 1.6自动基本+无+灰皮内饰','javascript:clickGroup(\'10000821\')'); 
+
+d.add('g10000822','g10000462','宝来HB 1.6自动基本+无+灰内饰','javascript:clickGroup(\'10000822\')'); 
+
+d.add('g10000823','g10000463','宝来HB 1.6手动基本+无+灰皮内饰','javascript:clickGroup(\'10000823\')'); 
+
+d.add('g10000824','g10000463','宝来HB 1.6手动基本+无+米内饰','javascript:clickGroup(\'10000824\')'); 
+
+d.add('g10000825','g10000463','宝来HB 1.6手动基本+无+米皮内饰','javascript:clickGroup(\'10000825\')'); 
+
+d.add('g10000826','g10000463','宝来HB 1.6手动基本+无+灰内饰','javascript:clickGroup(\'10000826\')'); 
+
+d.add('g10000827','g10000464','宝来HB 1.6自动豪华+无+灰内饰','javascript:clickGroup(\'10000827\')'); 
+
+d.add('g10000828','g10000464','宝来HB 1.6自动豪华+无+米内饰','javascript:clickGroup(\'10000828\')'); 
+
+d.add('g10000829','g10000464','宝来HB 1.6自动豪华+无+米皮内饰','javascript:clickGroup(\'10000829\')'); 
+
+d.add('g10000830','g10000464','宝来HB 1.6自动豪华+无+灰皮内饰','javascript:clickGroup(\'10000830\')'); 
+
+d.add('g10000831','g10000465','宝来HB 1.6手动豪华+无+灰内饰','javascript:clickGroup(\'10000831\')'); 
+
+d.add('g10000832','g10000465','宝来HB 1.6手动豪华+无+米内饰','javascript:clickGroup(\'10000832\')'); 
+
+d.add('g10000833','g10000465','宝来HB 1.6手动豪华+无+灰皮内饰','javascript:clickGroup(\'10000833\')'); 
+
+d.add('g10000834','g10000465','宝来HB 1.6手动豪华+无+米皮内饰','javascript:clickGroup(\'10000834\')'); 
+
+d.add('g10000835','g10000466','宝来HB 1.8自动豪华+无+米皮内饰','javascript:clickGroup(\'10000835\')'); 
+
+d.add('g10000836','g10000466','宝来HB 1.8自动豪华+无+灰内饰','javascript:clickGroup(\'10000836\')'); 
+
+d.add('g10000837','g10000466','宝来HB 1.8自动豪华+无+米内饰','javascript:clickGroup(\'10000837\')'); 
+
+d.add('g10000838','g10000466','宝来HB 1.8自动豪华+无+灰皮内饰','javascript:clickGroup(\'10000838\')'); 
+
+d.add('g10000839','g10000467','宝来HB 1.8手动豪华+无+灰皮内饰','javascript:clickGroup(\'10000839\')'); 
+
+d.add('g10000840','g10000467','宝来HB 1.8手动豪华+无+米皮内饰','javascript:clickGroup(\'10000840\')'); 
+
+d.add('g10000841','g10000467','宝来HB 1.8手动豪华+无+灰内饰','javascript:clickGroup(\'10000841\')'); 
+
+d.add('g10000842','g10000467','宝来HB 1.8手动豪华+无+米内饰','javascript:clickGroup(\'10000842\')'); 
+
+d.add('g10000843','g10000468','宝来 1.6自动基本(OBD)+无+米内饰','javascript:clickGroup(\'10000843\')'); 
+
+d.add('g10000844','g10000468','宝来 1.6自动基本(OBD)+无+灰皮内饰','javascript:clickGroup(\'10000844\')'); 
+
+d.add('g10000845','g10000468','宝来 1.6自动基本(OBD)+无+米内饰','javascript:clickGroup(\'10000845\')'); 
+
+d.add('g10000846','g10000468','宝来 1.6自动基本(OBD)+无+米皮内饰','javascript:clickGroup(\'10000846\')'); 
+
+d.add('g10000847','g10000469','宝来 1.6手动基本(OBD)+无+灰皮内饰','javascript:clickGroup(\'10000847\')'); 
+
+d.add('g10000848','g10000469','宝来 1.6手动基本(OBD)+无+米皮内饰','javascript:clickGroup(\'10000848\')'); 
+
+d.add('g10000849','g10000469','宝来 1.6手动基本(OBD)+无+米内饰','javascript:clickGroup(\'10000849\')'); 
+
+d.add('g10000850','g10000469','宝来 1.6手动基本(OBD)+无+米内饰','javascript:clickGroup(\'10000850\')'); 
+
+d.add('g10000851','g10000470','宝来 1.6自动基本(非OBD)+无+米皮内饰','javascript:clickGroup(\'10000851\')'); 
+
+d.add('g10000852','g10000470','宝来 1.6自动基本(非OBD)+无+米内饰','javascript:clickGroup(\'10000852\')'); 
+
+d.add('g10000853','g10000470','宝来 1.6自动基本(非OBD)+无+灰皮内饰','javascript:clickGroup(\'10000853\')'); 
+
+d.add('g10000854','g10000470','宝来 1.6自动基本(非OBD)+无+米内饰','javascript:clickGroup(\'10000854\')'); 
+
+d.add('g10000855','g10000471','宝来 1.6手动基本(非OBD)+无+米内饰','javascript:clickGroup(\'10000855\')'); 
+
+d.add('g10000856','g10000471','宝来 1.6手动基本(非OBD)+无+灰皮内饰','javascript:clickGroup(\'10000856\')'); 
+
+d.add('g10000857','g10000471','宝来 1.6手动基本(非OBD)+无+米内饰','javascript:clickGroup(\'10000857\')'); 
+
+d.add('g10000858','g10000471','宝来 1.6手动基本(非OBD)+无+米皮内饰','javascript:clickGroup(\'10000858\')'); 
+
+d.add('g10000859','g10000472','宝来 1.8自动豪华+无+米内饰','javascript:clickGroup(\'10000859\')'); 
+
+d.add('g10000860','g10000472','宝来 1.8自动豪华+无+灰内饰','javascript:clickGroup(\'10000860\')'); 
+
+d.add('g10000861','g10000472','宝来 1.8自动豪华+无+灰皮内饰','javascript:clickGroup(\'10000861\')'); 
+
+d.add('g10000926','g10000502','速腾2.0自动挡舒适型+真皮方向盘包+米色真皮内饰','javascript:clickGroup(\'10000926\')'); 
+
+d.add('g10000927','g10000502','速腾2.0自动挡舒适型+电动包+米色真皮内饰','javascript:clickGroup(\'10000927\')'); 
+
+d.add('g10000928','g10000502','速腾2.0自动挡舒适型+冬季包+米色真皮内饰','javascript:clickGroup(\'10000928\')'); 
+
+d.add('g10000929','g10000502','速腾2.0自动挡舒适型+无+米色真皮内饰','javascript:clickGroup(\'10000929\')'); 
+
+d.add('g10000930','g10000501','速腾2.0自动挡时尚型+侧门窗镀铬亮条+米色内饰','javascript:clickGroup(\'10000930\')'); 
+
+d.add('g10000931','g10000501','速腾2.0自动挡时尚型+无+米色内饰','javascript:clickGroup(\'10000931\')'); 
+
+d.add('g10000932','g10000500','速腾2.0手动挡舒适型+电动包+米色真皮内饰','javascript:clickGroup(\'10000932\')'); 
+
+d.add('g10000933','g10000500','速腾2.0手动挡舒适型+无+米色真皮内饰','javascript:clickGroup(\'10000933\')'); 
+
+d.add('g10000934','g10000500','速腾2.0手动挡舒适型+侧门窗镀铬亮条+米色真皮内饰','javascript:clickGroup(\'10000934\')'); 
+
+d.add('g10000935','g10000500','速腾2.0手动挡舒适型+真皮方向盘包+米色真皮内饰','javascript:clickGroup(\'10000935\')'); 
+
+d.add('g10000936','g10000500','速腾2.0手动挡舒适型+冬季包+米色真皮内饰','javascript:clickGroup(\'10000936\')'); 
+
+d.add('g10000937','g10000499','速腾2.0手动挡时尚型+无+米色内饰','javascript:clickGroup(\'10000937\')'); 
+
+d.add('g10000938','g10000499','速腾2.0手动挡时尚型+侧门窗镀铬亮条+米色内饰','javascript:clickGroup(\'10000938\')'); 
+
+d.add('g10000939','g10000498','速腾1.6自动挡时尚型+倒车雷达+米色内饰','javascript:clickGroup(\'10000939\')'); 
+
+d.add('g10000940','g10000498','速腾1.6自动挡时尚型+无+米色内饰','javascript:clickGroup(\'10000940\')'); 
+
+d.add('g10000941','g10000498','速腾1.6自动挡时尚型+天窗+米色内饰','javascript:clickGroup(\'10000941\')'); 
+
+d.add('g10000942','g10000498','速腾1.6自动挡时尚型+无+灰色内饰','javascript:clickGroup(\'10000942\')'); 
+
+d.add('g10000943','g10000498','速腾1.6自动挡时尚型+侧门窗镀铬亮条+灰色内饰','javascript:clickGroup(\'10000943\')'); 
+
+d.add('g10000944','g10000498','速腾1.6自动挡时尚型+天窗+灰色内饰','javascript:clickGroup(\'10000944\')'); 
+
+d.add('g10000945','g10000498','速腾1.6自动挡时尚型+倒车雷达+灰色内饰','javascript:clickGroup(\'10000945\')'); 
+
+d.add('g10000946','g10000498','速腾1.6自动挡时尚型+侧门窗镀铬亮条+米色内饰','javascript:clickGroup(\'10000946\')'); 
+
+d.add('g10000947','g10000497','速腾1.6手动挡时尚型+无+米色内饰','javascript:clickGroup(\'10000947\')'); 
+
+d.add('g10000948','g10000497','速腾1.6手动挡时尚型+倒车雷达+灰色内饰','javascript:clickGroup(\'10000948\')'); 
+
+d.add('g10000949','g10000497','速腾1.6手动挡时尚型+侧门窗镀铬亮条+灰色内饰','javascript:clickGroup(\'10000949\')'); 
+
+d.add('g10000950','g10000497','速腾1.6手动挡时尚型+天窗+灰色内饰','javascript:clickGroup(\'10000950\')'); 
+
+d.add('g10000951','g10000497','速腾1.6手动挡时尚型+无+灰色内饰','javascript:clickGroup(\'10000951\')'); 
+
+d.add('g10000952','g10000497','速腾1.6手动挡时尚型+倒车雷达+米色内饰','javascript:clickGroup(\'10000952\')'); 
+
+d.add('g10000953','g10000497','速腾1.6手动挡时尚型+侧门窗镀铬亮条+米色内饰','javascript:clickGroup(\'10000953\')'); 
+
+d.add('g10000954','g10000497','速腾1.6手动挡时尚型+天窗+米色内饰','javascript:clickGroup(\'10000954\')'); 
+
+d.add('g10000982','t10000081','别克','javascript:clickGroup(\'10000982\')'); 
+
+d.add('g10000983','t10000081','凯迪拉克','javascript:clickGroup(\'10000983\')'); 
+
+d.add('g10000984','t10000081','雪佛兰','javascript:clickGroup(\'10000984\')'); 
+
+d.add('g10000985','g10000982','凯越','javascript:clickGroup(\'10000985\')'); 
+
+d.add('g10000986','g10000982','君威','javascript:clickGroup(\'10000986\')'); 
+
+d.add('g10000987','g10000982','君越','javascript:clickGroup(\'10000987\')'); 
+
+d.add('g10000988','g10000985','凯越1.6手排基本型','javascript:clickGroup(\'10000988\')'); 
+
+d.add('g10000989','g10000985','凯越1.8自排豪华型','javascript:clickGroup(\'10000989\')'); 
+
+d.add('g10000990','g10000986','GL','javascript:clickGroup(\'10000990\')'); 
+
+d.add('g10000991','g10000986','G','javascript:clickGroup(\'10000991\')'); 
+
+d.add('g10000992','g10000988','凯越1.6手排基本型-IES1','javascript:clickGroup(\'10000992\')'); 
+
+d.add('g10000993','g10000988','凯越1.6手排舒适型-IES1','javascript:clickGroup(\'10000993\')'); 
+
+d.add('g10000994','g10000989','凯越1.8自排豪华型-KDA1','javascript:clickGroup(\'10000994\')'); 
+
+d.add('g10000995','g10000991','君威2.5G-SDA1','javascript:clickGroup(\'10000995\')'); 
+
+d.add('g10000996','g10000991','君威2.5GL-SDA2','javascript:clickGroup(\'10000996\')'); 
+
+d.add('g10000997','g10000990','君威3.0GS-X1A1','javascript:clickGroup(\'10000997\')'); 
+
+d.add('g10000998','g10000990','君威3.0GS-X1A2','javascript:clickGroup(\'10000998\')'); 
+
+d.add('g10000862','g10000472','宝来 1.8自动豪华+无+米皮内饰','javascript:clickGroup(\'10000862\')'); 
+
+d.add('g10000863','g10000473','宝来 1.8手动豪华+无+灰内饰','javascript:clickGroup(\'10000863\')'); 
+
+d.add('g10000864','g10000473','宝来 1.8手动豪华+无+米皮内饰','javascript:clickGroup(\'10000864\')'); 
+
+d.add('g10000865','g10000473','宝来 1.8手动豪华+无+灰皮内饰','javascript:clickGroup(\'10000865\')'); 
+
+d.add('g10000866','g10000473','宝来 1.8手动豪华+无+米内饰','javascript:clickGroup(\'10000866\')'); 
+
+d.add('g10000867','g10000476','开迪1.6手动挡功能型+无+灰色内饰PVC','javascript:clickGroup(\'10000867\')'); 
+
+d.add('g10000868','g10000478','开迪1.6手动挡功能型+无+灰色内饰织物','javascript:clickGroup(\'10000868\')'); 
+
+d.add('g10000869','g10000479','开迪1.6手动挡功能型+无+灰色内饰织物','javascript:clickGroup(\'10000869\')'); 
+
+d.add('g10000870','g10000480','开迪1.6手动挡功能型+无+灰色内饰织物','javascript:clickGroup(\'10000870\')'); 
+
+d.add('g10000871','g10000481','开迪1.6手动挡功能型+无+灰色内饰织物','javascript:clickGroup(\'10000871\')'); 
+
+d.add('g10000872','g10000474','开迪1.6手动挡功能型+无+灰色内饰织物','javascript:clickGroup(\'10000872\')'); 
+
+d.add('g10000873','g10000475','开迪1.6手动挡功能型+无+灰色内饰PVC','javascript:clickGroup(\'10000873\')'); 
+
+d.add('g10000874','g10000477','开迪1.6手动挡功能型+无+灰色内饰PVC','javascript:clickGroup(\'10000874\')'); 
+
+d.add('g10000875','g10000482','开迪1.6手动挡舒适型+无+艺术灰SCALA 布料','javascript:clickGroup(\'10000875\')'); 
+
+d.add('g10000876','g10000483','开迪1.6手动挡舒适型+无+艺术灰SCALA 布料','javascript:clickGroup(\'10000876\')'); 
+
+d.add('g10000877','g10000482','开迪1.6手动挡舒适型+无+蓝灰SCALA 布料','javascript:clickGroup(\'10000877\')'); 
+
+d.add('g10000878','g10000483','开迪1.6手动挡舒适型+无+蓝灰SCALA 布料','javascript:clickGroup(\'10000878\')'); 
+
+d.add('g10000879','g10000480','开迪1.6手动挡功能型+技术包+灰色内饰织物','javascript:clickGroup(\'10000879\')'); 
+
+d.add('g10000880','g10000479','开迪1.6手动挡功能型+后备箱包+灰色内饰织物','javascript:clickGroup(\'10000880\')'); 
+
+d.add('g10000881','g10000478','开迪1.6手动挡功能型+第三排座椅+技术包+灰色内饰织物','javascript:clickGroup(\'10000881\')'); 
+
+d.add('g10000882','g10000483','开迪1.6手动挡舒适型+第三排座椅+蓝灰SCALA 布料','javascript:clickGroup(\'10000882\')'); 
+
+d.add('g10000883','g10000483','开迪1.6手动挡舒适型+第三排座椅+艺术灰SCALA 布料','javascript:clickGroup(\'10000883\')'); 
+
+d.add('g10000884','g10000477','开迪1.6手动挡功能型+PVC内饰+技术包+灰色内饰PVC','javascript:clickGroup(\'10000884\')'); 
+
+d.add('g10000885','g10000476','开迪1.6手动挡功能型+PVC内饰+第三排座椅+技术包+灰色内饰PVC','javascript:clickGroup(\'10000885\')'); 
+
+d.add('g10000886','g10000475','开迪1.6手动挡功能型+PVC内饰+灰色内饰PVC','javascript:clickGroup(\'10000886\')'); 
+
+d.add('g10000887','g10000484','捷达伙伴+三幅方向盘+司机气囊+灰色','javascript:clickGroup(\'10000887\')'); 
+
+d.add('g10000888','g10000484','捷达伙伴+无+灰色','javascript:clickGroup(\'10000888\')'); 
+
+d.add('g10000889','g10000485','春天手动档+14"铝车轮+灰色','javascript:clickGroup(\'10000889\')'); 
+
+d.add('g10000890','g10000485','春天手动档+无+灰色','javascript:clickGroup(\'10000890\')'); 
+
+d.add('g10000891','g10000486','春天自动档+14"铝车轮+灰色','javascript:clickGroup(\'10000891\')'); 
+
+d.add('g10000892','g10000486','春天自动档+无+灰色','javascript:clickGroup(\'10000892\')'); 
+
+d.add('g10000893','g10000487','柴油春天+14"铝车轮+灰色','javascript:clickGroup(\'10000893\')'); 
+
+d.add('g10000894','g10000487','柴油春天+无+灰色','javascript:clickGroup(\'10000894\')'); 
+
+d.add('g10000895','g10000488','捷达前卫+15"铝车轮+米色','javascript:clickGroup(\'10000895\')'); 
+
+d.add('g10000896','g10000488','捷达前卫+无+米色','javascript:clickGroup(\'10000896\')'); 
+
+d.add('g10000897','g10000489','一改脸汽油出租车+ABS+灰色','javascript:clickGroup(\'10000897\')'); 
+
+d.add('g10000898','g10000489','一改脸汽油出租车+无+灰色','javascript:clickGroup(\'10000898\')'); 
+
+d.add('g10000899','g10000490','一改脸CNG出租车+ABS+灰色','javascript:clickGroup(\'10000899\')'); 
+
+d.add('g10000900','g10000490','一改脸CNG出租车+无+灰色','javascript:clickGroup(\'10000900\')'); 
+
+d.add('g10000901','g10000491','一改脸LPG出租车+ABS+灰色','javascript:clickGroup(\'10000901\')'); 
+
+d.add('g10000902','g10000491','一改脸LPG出租车+无+灰色','javascript:clickGroup(\'10000902\')'); 
+
+d.add('g10000903','g10000492','二改脸汽油出租车+无+灰色','javascript:clickGroup(\'10000903\')'); 
+
+d.add('g10000904','g10000492','二改脸汽油出租车+北京出租车+灰色','javascript:clickGroup(\'10000904\')'); 
+
+d.add('g10000905','g10000492','二改脸汽油出租车+温州出租车+灰色','javascript:clickGroup(\'10000905\')'); 
+
+d.add('g10000906','g10000492','二改脸汽油出租车+ABS+灰色','javascript:clickGroup(\'10000906\')'); 
+
+d.add('g10000907','g10000493','二改脸CNG出租车+无+灰色','javascript:clickGroup(\'10000907\')'); 
+
+d.add('g10000908','g10000493','二改脸CNG出租车+青岛出租车+灰色','javascript:clickGroup(\'10000908\')'); 
+
+d.add('g10000909','g10000493','二改脸CNG出租车+ABS+灰色','javascript:clickGroup(\'10000909\')'); 
+
+d.add('g10000910','g10000494','二改脸LPG出租车+无+灰色','javascript:clickGroup(\'10000910\')'); 
+
+d.add('g10000911','g10000494','二改脸LPG出租车+ABS+灰色','javascript:clickGroup(\'10000911\')'); 
+
+d.add('g10000912','g10000495','一改脸柴油出租车+ABS+灰色','javascript:clickGroup(\'10000912\')'); 
+
+d.add('g10000913','g10000495','一改脸柴油出租车+无+灰色','javascript:clickGroup(\'10000913\')'); 
+
+d.add('g10000914','g10000496','二改脸柴油出租车+无+灰色','javascript:clickGroup(\'10000914\')'); 
+
+d.add('g10000915','g10000496','二改脸柴油出租车+ABS+灰色','javascript:clickGroup(\'10000915\')'); 
+
+d.add('g10000916','g10000496','二改脸柴油出租车+南京出租车+灰色','javascript:clickGroup(\'10000916\')'); 
+
+d.add('g10000917','g10000506','速腾1.8T自动挡豪华型+冬季包+米色真皮内饰','javascript:clickGroup(\'10000917\')'); 
+
+d.add('g10000918','g10000506','速腾1.8T自动挡豪华型+无+米色真皮内饰','javascript:clickGroup(\'10000918\')'); 
+
+d.add('g10000919','g10000506','速腾1.8T自动挡豪华型+电动包+米色真皮内饰','javascript:clickGroup(\'10000919\')'); 
+
+d.add('g10000920','g10000505','速腾1.8T自动挡时尚型+无+米色内饰','javascript:clickGroup(\'10000920\')'); 
+
+d.add('g10000921','g10000504','速腾1.8T手动挡豪华型+无+米色真皮内饰','javascript:clickGroup(\'10000921\')'); 
+
+d.add('g10000922','g10000504','速腾1.8T手动挡豪华型+电动包+米色真皮内饰','javascript:clickGroup(\'10000922\')'); 
+
+d.add('g10000923','g10000504','速腾1.8T手动挡豪华型+冬季包+米色真皮内饰','javascript:clickGroup(\'10000923\')'); 
+
+d.add('g10000924','g10000503','速腾1.8T手动挡时尚型+无+米色内饰','javascript:clickGroup(\'10000924\')'); 
+
+d.add('g10000925','g10000502','速腾2.0自动挡舒适型+侧门窗镀铬亮条+米色真皮内饰','javascript:clickGroup(\'10000925\')'); 
+
+d.add('g10000001','t10000000','一汽大众','javascript:clickGroup(\'10000001\')'); 
+
+d.add('g10000451','g10000001','宝莱','javascript:clickGroup(\'10000451\')'); 
+
+d.add('g10000452','g10000001','高尔夫','javascript:clickGroup(\'10000452\')'); 
+
+d.add('g10000453','g10000001','开迪','javascript:clickGroup(\'10000453\')'); 
+
+d.add('g10000454','g10000001','捷达','javascript:clickGroup(\'10000454\')'); 
+
+d.add('g10000455','g10000001','速腾','javascript:clickGroup(\'10000455\')'); 
+
+d.add('g10000456','g10000452','高尔夫 1.6自动基本','javascript:clickGroup(\'10000456\')'); 
+
+d.add('g10000457','g10000452','高尔夫 1.6手动基本','javascript:clickGroup(\'10000457\')'); 
+
+d.add('g10000458','g10000452','高尔夫 1.6自动豪华','javascript:clickGroup(\'10000458\')'); 
+
+d.add('g10000459','g10000452','高尔夫 1.6手动豪华','javascript:clickGroup(\'10000459\')'); 
+
+d.add('g10000460','g10000452','高尔夫 1.8自动豪华','javascript:clickGroup(\'10000460\')'); 
+
+d.add('g10000461','g10000452','高尔夫 1.8手动豪华','javascript:clickGroup(\'10000461\')'); 
+
+d.add('g10000462','g10000451','宝来HB 1.6自动基本','javascript:clickGroup(\'10000462\')'); 
+
+d.add('g10000463','g10000451','宝来HB 1.6手动基本','javascript:clickGroup(\'10000463\')'); 
+
+d.add('g10000464','g10000451','宝来HB 1.6自动豪华','javascript:clickGroup(\'10000464\')'); 
+
+d.add('g10000465','g10000451','宝来HB 1.6手动豪华','javascript:clickGroup(\'10000465\')'); 
+
+d.add('g10000466','g10000451','宝来HB 1.8自动豪华','javascript:clickGroup(\'10000466\')'); 
+
+d.add('g10000467','g10000451','宝来HB 1.8手动豪华','javascript:clickGroup(\'10000467\')'); 
+
+d.add('g10000468','g10000451','宝来 1.6自动基本(OBD)','javascript:clickGroup(\'10000468\')'); 
+
+d.add('g10000469','g10000451','宝来 1.6手动基本(OBD)','javascript:clickGroup(\'10000469\')'); 
+
+d.add('g10000470','g10000451','宝来 1.6自动基本(非OBD)','javascript:clickGroup(\'10000470\')'); 
+
+d.add('g10000471','g10000451','宝来 1.6手动基本(非OBD)','javascript:clickGroup(\'10000471\')'); 
+
+d.add('g10000472','g10000451','宝来 1.8自动豪华','javascript:clickGroup(\'10000472\')'); 
+
+d.add('g10000473','g10000451','宝来 1.8手动豪华','javascript:clickGroup(\'10000473\')'); 
+
+d.add('g10000474','g10000453','开迪1.6手动挡功能型','javascript:clickGroup(\'10000474\')'); 
+
+d.add('g10000475','g10000453','开迪1.6手动挡功能型','javascript:clickGroup(\'10000475\')'); 
+
+d.add('g10000476','g10000453','开迪1.6手动挡功能型','javascript:clickGroup(\'10000476\')'); 
+
+d.add('g10000477','g10000453','开迪1.6手动挡功能型','javascript:clickGroup(\'10000477\')'); 
+
+d.add('g10000478','g10000453','开迪1.6手动挡功能型','javascript:clickGroup(\'10000478\')'); 
+
+d.add('g10000479','g10000453','开迪1.6手动挡功能型','javascript:clickGroup(\'10000479\')'); 
+
+d.add('g10000480','g10000453','开迪1.6手动挡功能型','javascript:clickGroup(\'10000480\')'); 
+
+d.add('g10000481','g10000453','开迪1.6手动挡功能型','javascript:clickGroup(\'10000481\')'); 
+
+d.add('g10000482','g10000453','开迪1.6手动挡舒适型','javascript:clickGroup(\'10000482\')'); 
+
+d.add('g10000483','g10000453','开迪1.6手动挡舒适型','javascript:clickGroup(\'10000483\')'); 
+
+d.add('g10000484','g10000454','捷达伙伴','javascript:clickGroup(\'10000484\')'); 
+
+d.add('g10000485','g10000454','春天手动档','javascript:clickGroup(\'10000485\')'); 
+
+d.add('g10000486','g10000454','春天自动档','javascript:clickGroup(\'10000486\')'); 
+
+d.add('g10000487','g10000454','柴油春天','javascript:clickGroup(\'10000487\')'); 
+
+d.add('g10000488','g10000454','捷达前卫','javascript:clickGroup(\'10000488\')'); 
+
+d.add('g10000489','g10000454','一改脸汽油出租车','javascript:clickGroup(\'10000489\')'); 
+
+d.add('g10000490','g10000454','一改脸CNG出租车','javascript:clickGroup(\'10000490\')'); 
+
+d.add('g10000491','g10000454','一改脸LPG出租车','javascript:clickGroup(\'10000491\')'); 
+
+d.add('g10000492','g10000454','二改脸汽油出租车','javascript:clickGroup(\'10000492\')'); 
+
+d.add('g10000493','g10000454','二改脸CNG出租车','javascript:clickGroup(\'10000493\')'); 
+
+d.add('g10000494','g10000454','二改脸LPG出租车','javascript:clickGroup(\'10000494\')'); 
+
+d.add('g10000495','g10000454','一改脸柴油出租车','javascript:clickGroup(\'10000495\')'); 
+
+d.add('g10000496','g10000454','二改脸柴油出租车','javascript:clickGroup(\'10000496\')'); 
+
+d.add('g10000497','g10000455','速腾1.6手动挡时尚型','javascript:clickGroup(\'10000497\')'); 
+
+d.add('g10000498','g10000455','速腾1.6自动挡时尚型','javascript:clickGroup(\'10000498\')'); 
+
+d.add('g10000499','g10000455','速腾2.0手动挡时尚型','javascript:clickGroup(\'10000499\')'); 
+
+d.add('g10000500','g10000455','速腾2.0手动挡舒适型','javascript:clickGroup(\'10000500\')'); 
+
+d.add('g10000501','g10000455','速腾2.0自动挡时尚型','javascript:clickGroup(\'10000501\')'); 
+
+d.add('g10000502','g10000455','速腾2.0自动挡舒适型','javascript:clickGroup(\'10000502\')'); 
+
+d.add('g10000503','g10000455','速腾1.8T手动挡时尚型','javascript:clickGroup(\'10000503\')'); 
+
+d.add('g10000504','g10000455','速腾1.8T手动挡豪华型','javascript:clickGroup(\'10000504\')'); 
+
+d.add('g10000505','g10000455','速腾1.8T自动挡时尚型','javascript:clickGroup(\'10000505\')'); 
+
+d.add('g10000506','g10000455','速腾1.8T自动挡豪华型','javascript:clickGroup(\'10000506\')'); 
+
+d.add('g10000731','g10000468','宝来 1.6自动基本(OBD)+铝车轮+米内饰','javascript:clickGroup(\'10000731\')'); 
+
+d.add('g10000732','g10000468','宝来 1.6自动基本(OBD)+铝车轮+灰皮内饰','javascript:clickGroup(\'10000732\')'); 
+
+d.add('g10000733','g10000468','宝来 1.6自动基本(OBD)+铝车轮+米内饰','javascript:clickGroup(\'10000733\')'); 
+
+d.add('g10000734','g10000468','宝来 1.6自动基本(OBD)+铝车轮+米皮内饰','javascript:clickGroup(\'10000734\')'); 
+
+d.add('g10000735','g10000469','宝来 1.6手动基本(OBD)+铝车轮+灰皮内饰','javascript:clickGroup(\'10000735\')'); 
+
+d.add('g10000736','g10000469','宝来 1.6手动基本(OBD)+铝车轮+米皮内饰','javascript:clickGroup(\'10000736\')'); 
+
+d.add('g10000737','g10000469','宝来 1.6手动基本(OBD)+铝车轮+米内饰','javascript:clickGroup(\'10000737\')'); 
+
+d.add('g10000738','g10000469','宝来 1.6手动基本(OBD)+铝车轮+米内饰','javascript:clickGroup(\'10000738\')'); 
+
+d.add('g10000739','g10000470','宝来 1.6自动基本(非OBD)+铝车轮+米皮内饰','javascript:clickGroup(\'10000739\')'); 
+
+d.add('g10000740','g10000470','宝来 1.6自动基本(非OBD)+铝车轮+米内饰','javascript:clickGroup(\'10000740\')'); 
+
+d.add('g10000741','g10000470','宝来 1.6自动基本(非OBD)+铝车轮+灰皮内饰','javascript:clickGroup(\'10000741\')'); 
+
+d.add('g10000742','g10000470','宝来 1.6自动基本(非OBD)+铝车轮+米内饰','javascript:clickGroup(\'10000742\')'); 
+
+d.add('g10000743','g10000471','宝来 1.6手动基本(非OBD)+铝车轮+米内饰','javascript:clickGroup(\'10000743\')'); 
+
+d.add('g10000744','g10000471','宝来 1.6手动基本(非OBD)+铝车轮+灰皮内饰','javascript:clickGroup(\'10000744\')'); 
+
+d.add('g10000745','g10000471','宝来 1.6手动基本(非OBD)+铝车轮+米内饰','javascript:clickGroup(\'10000745\')'); 
+
+d.add('g10000746','g10000471','宝来 1.6手动基本(非OBD)+铝车轮+米皮内饰','javascript:clickGroup(\'10000746\')'); 
+
+d.add('g10000747','g10000468','宝来 1.6自动基本(OBD)+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000747\')'); 
+
+d.add('g10000748','g10000468','宝来 1.6自动基本(OBD)+天窗+倒车雷达+自动空调+灰皮内饰','javascript:clickGroup(\'10000748\')'); 
+
+d.add('g10000749','g10000468','宝来 1.6自动基本(OBD)+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000749\')'); 
+
+d.add('g10000750','g10000468','宝来 1.6自动基本(OBD)+天窗+倒车雷达+自动空调+米皮内饰','javascript:clickGroup(\'10000750\')'); 
+
+d.add('g10000751','g10000469','宝来 1.6手动基本(OBD)+天窗+倒车雷达+自动空调+灰皮内饰','javascript:clickGroup(\'10000751\')'); 
+
+d.add('g10000752','g10000469','宝来 1.6手动基本(OBD)+天窗+倒车雷达+自动空调+米皮内饰','javascript:clickGroup(\'10000752\')'); 
+
+d.add('g10000753','g10000469','宝来 1.6手动基本(OBD)+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000753\')'); 
+
+d.add('g10000754','g10000469','宝来 1.6手动基本(OBD)+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000754\')'); 
+
+d.add('g10000755','g10000470','宝来 1.6自动基本(非OBD)+天窗+倒车雷达+自动空调+米皮内饰','javascript:clickGroup(\'10000755\')'); 
+
+d.add('g10000756','g10000470','宝来 1.6自动基本(非OBD)+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000756\')'); 
+
+d.add('g10000757','g10000470','宝来 1.6自动基本(非OBD)+天窗+倒车雷达+自动空调+灰皮内饰','javascript:clickGroup(\'10000757\')'); 
+
+d.add('g10000758','g10000470','宝来 1.6自动基本(非OBD)+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000758\')'); 
+
+d.add('g10000759','g10000471','宝来 1.6手动基本(非OBD)+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000759\')'); 
+
+d.add('g10000760','g10000471','宝来 1.6手动基本(非OBD)+天窗+倒车雷达+自动空调+灰皮内饰','javascript:clickGroup(\'10000760\')'); 
+
+d.add('g10000761','g10000471','宝来 1.6手动基本(非OBD)+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000761\')'); 
+
+d.add('g10000762','g10000471','宝来 1.6手动基本(非OBD)+天窗+倒车雷达+自动空调+米皮内饰','javascript:clickGroup(\'10000762\')'); 
+
+d.add('g10000763','g10000468','宝来 1.6自动基本(OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000763\')'); 
+
+d.add('g10000764','g10000468','宝来 1.6自动基本(OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+灰皮内饰','javascript:clickGroup(\'10000764\')'); 
+
+d.add('g10000765','g10000468','宝来 1.6自动基本(OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000765\')'); 
+
+d.add('g10000766','g10000468','宝来 1.6自动基本(OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米皮内饰','javascript:clickGroup(\'10000766\')'); 
+
+d.add('g10000767','g10000470','宝来 1.6自动基本(非OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米皮内饰','javascript:clickGroup(\'10000767\')'); 
+
+d.add('g10000768','g10000470','宝来 1.6自动基本(非OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000768\')'); 
+
+d.add('g10000769','g10000470','宝来 1.6自动基本(非OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+灰皮内饰','javascript:clickGroup(\'10000769\')'); 
+
+d.add('g10000770','g10000470','宝来 1.6自动基本(非OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000770\')'); 
+
+d.add('g10000771','g10000469','宝来 1.6手动基本(OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+灰皮内饰','javascript:clickGroup(\'10000771\')'); 
+
+d.add('g10000772','g10000469','宝来 1.6手动基本(OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米皮内饰','javascript:clickGroup(\'10000772\')'); 
+
+d.add('g10000773','g10000469','宝来 1.6手动基本(OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000773\')'); 
+
+d.add('g10000774','g10000469','宝来 1.6手动基本(OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000774\')'); 
+
+d.add('g10000775','g10000471','宝来 1.6手动基本(非OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000775\')'); 
+
+d.add('g10000776','g10000471','宝来 1.6手动基本(非OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+灰皮内饰','javascript:clickGroup(\'10000776\')'); 
+
+d.add('g10000777','g10000471','宝来 1.6手动基本(非OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米内饰','javascript:clickGroup(\'10000777\')'); 
+
+d.add('g10000778','g10000471','宝来 1.6手动基本(非OBD)+铝车轮+真皮+桃木+天窗+倒车雷达+自动空调+米皮内饰','javascript:clickGroup(\'10000778\')'); 
+
+d.add('g10000779','g10000472','宝来 1.8自动豪华+天窗+米内饰','javascript:clickGroup(\'10000779\')'); 
+
+d.add('g10000780','g10000472','宝来 1.8自动豪华+天窗+灰内饰','javascript:clickGroup(\'10000780\')'); 
+
+d.add('g10000781','g10000472','宝来 1.8自动豪华+天窗+灰皮内饰','javascript:clickGroup(\'10000781\')'); 
+
+d.add('g10000782','g10000472','宝来 1.8自动豪华+天窗+米皮内饰','javascript:clickGroup(\'10000782\')'); 
+
+d.add('g10000783','g10000473','宝来 1.8手动豪华+天窗+灰内饰','javascript:clickGroup(\'10000783\')'); 
+
+d.add('g10000784','g10000473','宝来 1.8手动豪华+天窗+米皮内饰','javascript:clickGroup(\'10000784\')'); 
+
+d.add('g10000785','g10000473','宝来 1.8手动豪华+天窗+灰皮内饰','javascript:clickGroup(\'10000785\')'); 
+
+d.add('g10000786','g10000473','宝来 1.8手动豪华+天窗+米内饰','javascript:clickGroup(\'10000786\')'); 
+
+d.add('g10000787','g10000472','宝来 1.8自动豪华+电动座椅+记忆功能+米内饰','javascript:clickGroup(\'10000787\')'); 
+
+d.add('g10000788','g10000472','宝来 1.8自动豪华+电动座椅+记忆功能+灰内饰','javascript:clickGroup(\'10000788\')'); 
+
+d.add('g10000789','g10000472','宝来 1.8自动豪华+电动座椅+记忆功能+灰皮内饰','javascript:clickGroup(\'10000789\')'); 
+
+d.add('g10000790','g10000472','宝来 1.8自动豪华+电动座椅+记忆功能+米皮内饰','javascript:clickGroup(\'10000790\')'); 
+
+d.add('g10000791','g10000473','宝来 1.8手动豪华+电动座椅+记忆功能+灰内饰','javascript:clickGroup(\'10000791\')'); 
+
+d.add('g10000792','g10000473','宝来 1.8手动豪华+电动座椅+记忆功能+米皮内饰','javascript:clickGroup(\'10000792\')'); 
+
+d.add('g10000793','g10000473','宝来 1.8手动豪华+电动座椅+记忆功能+灰皮内饰','javascript:clickGroup(\'10000793\')'); 
+*/
+
+		d.closeAll();
+		document.write(d);
+</SCRIPT >
+<BR>
+</form>
+</BODY>
+</HTML>

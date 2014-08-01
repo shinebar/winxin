@@ -1,0 +1,57 @@
+<html>
+<HEAD>
+<TITLE>代理商渠道管理</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+<script language="JavaScript" src="../js/date-picker_ex.js"></script>
+<script language="JavaScript" src="../js/ut.js"></script>
+<script language="JavaScript">
+<!--
+    function selectClick(obj) {
+        for(var i =0; i<obj.dealerid.length;i++) {
+            obj.dealerid[i].checked=obj.selectAll.checked;
+        }
+    }
+-->
+</script>
+</HEAD>
+<BODY>
+<table class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="7%"></td>
+    <td class="zi01" height="48">[代理商渠道管理]</td>
+  </tr>
+</table>
+<BR><BR>
+  <FORM METHOD=POST name="FRM">
+    <table class=csstable width="85%" align=center>
+      <tr class="tabletitle">
+        <td width="3%" ><input type="checkbox" name="selectAll" onClick="selectClick(document.FRM);">      </td>
+        <td width="13%">代理商渠道代码</td>
+        <td width="11%">代理商渠道简称</td>
+        <td width="19%"  >管理业务范围代码</td>
+        <td width="54%"  >管理业务范围名称</td>
+      </tr>
+      <tr class=csstr>
+        <td><input type="checkbox" name="dealerid" value=1></td>
+        <td>FT1000</td>
+        <td>北京金玉</td>
+        <td  >8E20AH</td>
+        <td  >奥迪 AUDI A4 1.8T CVT</td>
+      </tr>
+      <tr class=csstr>
+        <td><input type="checkbox" name="dealerid" value=2></td>
+        <td>FT1001</td>
+        <td>北京顺义</td>
+        <td  > 8J302X</td>
+        <td  >AUDITTC2.0TFSI</td>
+      </tr>
+    </table>
+    <TABLE width="85%" border="0" align="center" class='tblopt'>
+    <TR >
+      <TD ><input class=button  name="submit" type="button" onClick="window.close();" value ='添加'></TD>
+    </TR>
+  </TABLE>
+</FORM>
+</BODY>
+</html>

@@ -1,0 +1,49 @@
+
+
+
+<HTML xmlns:mydbtree> 
+	<HEAD> 
+	 <?IMPORT NAMESPACE="mydbtree" IMPLEMENTATION="treeview.htc"?> 
+	 <meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<title>Dealer on line</title>
+</head>
+
+<SCRIPT language="JavaScript">
+	function selectNode(id,name){
+		//parent.document.all.orgTypeSel.value=name;
+		parent.opener.document.getElementById('orgTypeSel').value= name;
+		parent.window.close();
+	}
+</script>
+<body style='	FONT-SIZE: 12px; 
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	BACKGROUND-COLOR: #E4E4E4;
+'>
+<table width ="100%" >
+<tr>
+    <td width="100%">&nbsp;
+			<mydbtree:treeview id="menuree" systemImagesPath="../Images">
+		       <mydbtree:treenode Text="销售组织类型选择" imageurl="../images/root.gif" Expanded="true" TreeNodeSrc='<TREENODES><treenode Text="营销公司" navigateurl="javascript:selectNode(&apos;20000001&apos;,&apos;营销公司&apos;)">
+			   <treenode Text="销售分公司" navigateurl="javascript:selectNode(&apos;20000181&apos;,&apos;销售分公司&apos;)">
+			   <treenode Text="销售科" navigateurl="javascript:selectNode(&apos;20000017&apos;,&apos;售科&apos;)">
+			   <treenode Text="市场部" navigateurl="javascript:selectNode(&apos;20000116&apos;,&apos;市场部&apos;)"/></treenode></treenode>
+			   <treenode Text="信息技术部" navigateurl="javascript:selectNode(&apos;20000011&apos;,&apos;信息技术部&apos;)"/>
+			   <treenode Text="物流公司" navigateurl="javascript:selectNode(&apos;20000010&apos;,&apos;物流公司&apos;)"/>
+			   <treenode Text="客户关系部" navigateurl="javascript:selectNode(&apos;20000009&apos;,&apos;客户关系部&apos;)"/>
+			   <treenode Text="分销管理部" navigateurl="javascript:selectNode(&apos;20000008&apos;,&apos;分销管理部&apos;)"/>
+			   <treenode Text="市场管理部" navigateurl="javascript:selectNode(&apos;20000007&apos;,&apos;市场管理部&apos;)"/>
+			   <treenode Text="大客户销售分公司" navigateurl="javascript:selectNode(&apos;20000006&apos;,&apos;大客户销售分公司&apos;)">
+			   <treenode Text="组织市场区域" navigateurl="javascript:selectNode(&apos;20000166&apos;,&apos;组织市场区域-上海&apos;)"/></treenode>
+			   <treenode Text="综合管理部" navigateurl="javascript:selectNode(&apos;20000005&apos;,&apos;综合管理部&apos;)"/>
+			   <treenode Text="财务部" navigateurl="javascript:selectNode(&apos;20000004&apos;,&apos;财务计划部&apos;)"/></treenode></TREENODES>'>
+	          </mydbtree:treenode>
+		  	</mydbtree:treeview> 
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>demo</title>
+<link href="style/content.css" rel="stylesheet" type="text/css" />
+<link href="style/calendar.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body onload="loadcalendar();">
+<div class="wbox">
+	<div class="navigation"><img src="img/nav.gif" />&nbsp;当前位置：
+		<a href="#">xxxxx</a>  >
+		xxxxxx > xxxxx
+	</div>
+
+	<table class="table_query" border="0">
+	<tr>
+		<td class="table_query_label" width="8%" nowrap="nowrap">客户类型：</td>
+		<td class="table_query_input" nowrap="nowrap">
+			<input class="middle_txt" type="text"  />
+		</td>
+		<td class="table_query_label" width="3%" nowrap="nowrap">名称：</td>
+		<td class="table_query_input" nowrap="nowrap">
+			<input class="middle_txt" type="text"  />
+		</td>
+		<td class="table_query_input" nowrap="nowrap"  align="left">
+			<input class="normal_btn" type="button" value="查 询" onclick="query();"/>
+		</td>		
+	</tr>
+	</table>
+	<br />
+	<table class="table_query" border="0">
+	<tr>
+		<td class="table_query_label" width="8%" nowrap="nowrap">客户类型：</td>
+		<td class="table_query_input" nowrap="nowrap">
+			<select class="min_sel" >
+				<option value="个人">个人</option>
+				<option value="公司">公司</option>
+			</select>
+		</td>
+		<td class="table_query_label" width="3%" nowrap="nowrap">名称：</td>
+		<td class="table_query_input" nowrap="nowrap">
+			<input class="middle_txt" type="text"  />
+		</td>
+		<td class="table_query_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_query_input" nowrap="nowrap">
+			<input class="middle_txt"  type="text"  />
+		</td>
+	</tr>
+	<tr>
+		<td class="table_query_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_query_input" nowrap="nowrap">
+			<input class="middle_txt"  type="text"  />
+		</td>
+		<td class="table_query_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_query_input" nowrap="nowrap" colspan="3">
+			<input class="middle_txt"  type="text"  />&nbsp;&nbsp;
+		</td>
+	</tr>
+	<tr>
+		<td class="table_query_input" nowrap="nowrap" colspan="6" align="center">
+			<input class="normal_btn" type="button" value="查 询" onclick="query();"/>
+		</td>		
+	</tr>
+	</table>
+	
+	<br />
+	
+	<table class="table_info" border="0">
+	<th colspan="4"><img class="nav" src="img/subNav.gif" />&nbsp;客户信息</th>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+	</tr>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+	</tr>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap" >111111111111</td>
+	</tr>
+	</table>	
+	
+	<br />
+	<table class="table_info" border="0">
+	<th colspan="6"><img class="nav" src="img/subNav.gif" />&nbsp;客户信息</th>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+	</tr>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+	</tr>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap" >111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+	</tr>
+	</table>
+		
+	<br />
+	
+	<table class="table_info" border="0">
+	<th colspan="8"><img class="nav" src="img/subNav.gif" />&nbsp;客户信息</th>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+	</tr>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+	</tr>
+	<tr>
+		<td class="table_info_label" width="8%" nowrap="nowrap">手机：</td>
+		<td class="table_info_input" nowrap="nowrap">1111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">车牌号：</td>
+		<td class="table_info_input" nowrap="nowrap" >111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+		<td class="table_info_label" nowrap="nowrap" width="3%">电话：</td>
+		<td class="table_info_input" nowrap="nowrap">111111111111</td>
+	</tr>
+	</table>
+		
+	<br />
+	
+	<table class="table_list" style="border-bottom:1px solid #DAE0EE">
+	  <!--表格标题-->
+		<th>序号</th>	
+		<th>客户姓名</th>		
+		<th>性别</th>		
+		<th>联系电话</th>
+		<th>来访时间</th>
+		<th>来访方式</th>
+		<th>初步意向</th>
+		<th>处理人</th>
+		<th>操作</th>
+		<tr class="table_list_row1">
+			<td>1</td>
+			<td >高先生</td>
+			<td>男</td>
+			<td>021-62128038</td>
+			<td>2009-6-9 11:00</td>
+			<td>主动来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> 
+			<td>2</td>
+			<td >刘先生</td>
+			<td>男</td>
+			<td>021-62128038</td>
+			<td>2009-6-9 11:00</td>
+			<td>来电来店</td>
+			<td>买车</td>
+			<td>销售顾问二</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>3</td>
+			<td >张先生</td>
+			<td>男</td>
+			<td>13524884764</td>
+			<td>2009-6-9 11:00</td>
+			<td>应邀来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>4</td>
+			<td >高先生</td>
+			<td>男</td>
+			<td>021-62128038</td>
+			<td>2009-6-9 11:00</td>
+			<td>主动来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>5</td>
+			<td >刘先生</td>
+			<td>男</td>
+			<td>021-62128038</td>
+			<td>2009-6-9 11:00</td>
+			<td>来电来店</td>
+			<td>买车</td>
+			<td>销售顾问二</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>6</td>
+			<td >张先生</td>
+			<td>男</td>
+			<td>13524884764</td>
+			<td>2009-6-9 11:00</td>
+			<td>应邀来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>7</td>
+			<td >高先生</td>
+			<td>男</td>
+			<td>021-62128038</td>
+			<td>2009-6-9 11:00</td>
+			<td>主动来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>8</td>
+			<td >刘先生</td>
+			<td>男</td>
+			<td>021-62128038</td>
+			<td>2009-6-9 11:00</td>
+			<td>来电来店</td>
+			<td>买车</td>
+			<td>销售顾问二</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>9</td>
+			<td >张先生</td>
+			<td>男</td>
+			<td>13524884764</td>
+			<td>2009-6-9 11:00</td>
+			<td>应邀来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>10</td>
+			<td >张先生</td>
+			<td>男</td>
+			<td>13524884764</td>
+			<td>2009-6-9 11:00</td>
+			<td>应邀来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+	</table>
+	<br />
+	
+	<table class="table_list" style="border-bottom:1px solid #DAE0EE">
+		<tr class="table_list_th">
+			<td colspan="9"><img class="nav" src="img/subNav.gif" />&nbsp;客户信息</td>
+		</tr>		
+		<th>序号</th>	
+		<th>客户姓名</th>		
+		<th>性别</th>		
+		<th>联系电话</th>
+		<th>来访时间</th>
+		<th>来访方式</th>
+		<th>初步意向</th>
+		<th>处理人</th>
+		<th>操作</th>
+		<tr class="table_list_row1">
+			<td>1</td>
+			<td >高先生</td>
+			<td>男</td>
+			<td>021-62128038</td>
+			<td>2009-6-9 11:00</td>
+			<td>主动来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> 
+			<td>2</td>
+			<td >刘先生</td>
+			<td>男</td>
+			<td>021-62128038</td>
+			<td>2009-6-9 11:00</td>
+			<td>来电来店</td>
+			<td>买车</td>
+			<td>销售顾问二</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+		<tr class="table_list_row1"> <!--表格第一行-->
+			<td>3</td>
+			<td >张先生</td>
+			<td>男</td>
+			<td>13524884764</td>
+			<td>2009-6-9 11:00</td>
+			<td>应邀来店</td>
+			<td>卖车</td>
+			<td>评估师一</td>
+			<td><a href="editCustomerVisitation.html" target="_self">[编辑]</a></td>
+		</tr>
+	</table>	
+	<div class="page_info">
+		<b class="page_info_title">总数：200</b>
+		<a href="#">上一页</a>
+		<a href="#">1</a>	
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<a href="#">6</a>
+		<a href="#">7</a>
+		<a href="#">8</a>
+		<a href="#">9</a>
+		<a href="#">10</a>
+		<a href="#">..200</a>
+		<a href="#">下一页</a>
+		<input class="mini_txt" type="text" />
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<HEAD>
+<TITLE>角色选择</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+<script language="JavaScript" src="js/date-picker_ex.js"></script>
+<script language="JavaScript" src="js/ut.js"></script>
+</HEAD>
+
+<BODY><BR><BR>
+  <table class=csstable align=center width="85%" id="role">
+    <tr>
+      <td  align = left >角色名称<INPUT  TYPE="text" NAME="&nbsp;"> </td>
+      <td  align = left >&nbsp;</td>
+      <td align = left >      <input name="submit2" type="submit" class=button value ='查询' onClick="showTbl();">
+      </td>
+    </tr>
+  </table>
+  <BR><BR>
+  
+
+<FORM METHOD=POST name="form2">
+<table class=csstable align=center width="85%" id="role">
+    <tr class = tabletitle>
+      <td >角色列表</td>
+    </tr>
+  </table>
+  <table class=csstable align=center width="85%" id="role">
+    <tr class = tabletitle>
+      <td ><input type="checkbox" name="selectAll" onClick="selectClick(document.form2);"></td>
+      <td >角色代码</td>
+      <td >角色名称</td>
+    </tr>
+    <tr class = csstr>
+      <td  ><INPUT TYPE="checkbox" NAME="FNCTNID" value=1></td>
+      <td  >CarChange</td>
+      <td  >更改车辆匹配</td>
+    </tr>
+    <tr class = csstr>
+      <td ><INPUT TYPE="checkbox" NAME="FNCTNID" value=2></td>
+      <td >CarMatch</td>
+      <td  >车辆匹配</td>
+    </tr>
+  </table>
+  <table class=csstable align=center width="85%">
+  <tr>
+ <td width="85%" colspan="4" ><input class=button  name="submit" type="submit" onClick="window.close();" value ='添加'></td>
+  </tr>
+  </table>
+</FORM>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	document.form2.style.display='none';
+	
+	function selectClick(obj){
+			for(var i=0;i<obj.FNCTNID.length;i++){
+				obj.FNCTNID[i].checked=obj.selectAll.checked;
+			}    
+	}
+
+	function showTbl(){
+		document.form2.style.display='inline';
+	}
+
+-->
+</SCRIPT>
+</BODY>
+</html>

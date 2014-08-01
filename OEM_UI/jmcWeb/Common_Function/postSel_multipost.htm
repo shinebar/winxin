@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<title>职位维护</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+    .style1
+    {
+        height: 22px;
+    }
+    -->
+</style>
+<SCRIPT language=JavaScript>
+<!--
+
+
+	function deleterole(id)
+	{
+		if(confirm("确定要删除吗？")){
+		}
+	}
+	function CloseWindow()
+	{
+		parent.window.close();
+	}
+
+-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<div class="wbox">
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;当前位置： 系统数据管理 &gt; 权限管理 &gt;角色维护</div>
+<div id="queryResult" style="display: inline;">   
+<table class="table_query" border="0">
+	<tr>
+		<td class="table_query_3Col_label_4Letter">职位名称:  </TD>
+		<td class="table_query_3Col_input" nowrap="nowrap"><INPUT size=10 name=name class="middle_txt"> </TD>
+		<td class="table_query_3Col_label_4Letter"><INPUT class="normal_btn" type=button value="查 询" name="button3" onclick=showTbl();> 
+		</TD>
+	</TR>
+</TABLE>
+<FORM name=FRM1 method=post>
+<table class=table_list style="border-bottom:1px solid #DAE0EE">
+	<th colspan="4" align="left"><img class="nav" src="../../img/subNav.gif" />职位列表</th>
+    <tr class = tabletitle>
+      <th><input type="checkbox" name="selectAll" onClick="selectClick(document.FRM1);"></Th>
+		<Th>所属组织</Th>
+		<Th>职位名称</Th>
+		<Th>状态</Th>
+	</TR>
+	<tr class="table_list_row1"> 
+      <td  ><input type="checkbox" name="postid"></TD>
+		<TD>市场营销部</TD>
+		<TD>华东区市场专员</TD>
+		<TD>有效</TD>
+	</TR>
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>市场营销部</TD>
+	<TD>华东区市场总监助理</TD>
+	<TD>有效</TD>
+	</TR>
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>市场营销部</TD><TD>华东区市场总监</TD>
+	<TD>有效</TD>
+	</TR>
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>销售部</TD>
+	<TD>华东区销售经理</TD>
+	<TD>有效</TD>
+	</TR>
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>销售部</TD>
+	<TD>华东区销售经理助理</TD>
+	<TD>失效</TD>
+	</TR>
+	
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>市场营销部</TD>
+	<TD>西南区市场专员</TD>
+	<TD>有效</TD>
+	</TR>
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>市场营销部</TD>
+	<TD>西南区市场总监助理</TD>
+	<TD>有效</TD>
+	</TR>
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>市场营销部</TD>
+	<TD>西南区市场总监</TD>
+	<TD>有效</TD>
+	</TR>
+	
+	
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>销售部</TD>
+	<TD>西南区销售经理</TD>
+	<TD>有效</TD>
+	</TR>
+	<TR class=csstr>
+	<TD><input type="checkbox" name="postid"></TD>
+	<TD>销售部</TD>
+	<TD>西南区销售经理助理</TD>
+	<TD>失效</TD>
+	</TR>
+</TABLE>
+  <table class="table_info" border="0">
+	  <tr>
+		<td align="center" colspan="4" ><input class="normal_btn" name="submit" type="submit" onClick="window.close();" value ='添 加'></td>
+	  </tr>
+  </table>
+</FORM>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.FRM1.style.display='none';
+
+	function showTbl()
+	{
+		document.FRM1.style.display='inline';
+	}
+
+	 function selectClick(obj) {
+        for(var i =0; i<obj.postid.length;i++) {
+            obj.postid[i].checked=obj.selectAll.checked;
+        }
+    }
+
+!-->
+</SCRIPT>
+
+
+</BODY>
+</html>

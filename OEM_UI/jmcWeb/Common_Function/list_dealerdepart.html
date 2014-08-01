@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Dealer on Line</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+</head>
+<script language="javascript">
+function Windclose(dealer){
+	parent.opener.document.getElementById('dealer').value= dealer;
+	window.close();
+}
+</script>
+<body >
+<BR><BR>
+  <TABLE class=csstable width="90%" align=center border=0>
+    <tr>
+      <TD width="40%">代理商公司代码: 
+	    <input type="text" name="cmpcode" size="8">
+	  </TD>
+      <TD width="40%" >代理商公司简称: 
+        <input type="text" name="cmpname" size="8">
+	  </TD>
+      <TD width="20%" >
+          <input class=BUTTON type="button" value="查询" name="button3" onClick="showTbl();" >
+      </TD>
+    </TR>
+  </TABLE>
+
+<BR>
+
+<form name="FRM">
+ <table class="csstable" align=center width="90%" border="0" cellspacing="0" cellpadding="0">
+	<tr class=tabletitle>
+	   <td colspan="4"  valign="middle" height="20">代理商公司列表</td>
+    </tr>
+</table>
+ <table class="csstable" align=center width="90%" border="0">
+	<tr class="tabletitle">
+	  <td width="10%" align="left">选择</td>
+		<td width="40%"  align="left">代理商公司代码</td>
+		<td width="40%" align="left">代理商公司简称</td>
+		<td width="10%"  align="left">状态</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left"><input type="radio" name="dealer" onClick="Windclose('宝鸡广乐汽销（欧）');"></td>
+		<td width="20%" >1001C00247</td>
+		<td width="32%" >宝鸡广乐汽销（欧）</td>
+		<td width="15%" >有效</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left"><input type="radio" name="dealer" onClick="Windclose('榆林新大新（欧）');"></td>
+		<td width="20%" >1001C00186</td>
+		<td width="32%" >榆林新大新（欧）</td>
+		<td width="15%" >有效</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left"><input type="radio" name="dealer" onClick="Windclose('陕西跨越（欧）');"></td>
+		<td width="20%" >1001C00284</td>
+		<td width="32%" >陕西跨越（欧）</td>
+		<td width="15%" >有效</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left">			      
+		<input type="radio" name="dealer"onClick="Windclose('延安元丰工贸（欧）');"></td>
+		<td width="20%" >1001C00185</td>
+		<td width="32%" >延安元丰工贸（欧）</td>
+		<td width="15%" >有效</td>
+	</tr>
+	<tr class="csstr">
+	  <td align="left"><input type="radio" name="dealer" onClick="Windclose('乌海紫维（欧）');"></td>
+		<td width="20%" >1001C00087</td>
+		<td width="32%" >乌海紫维（欧）</td>
+		<td width="15%" >失效</td>
+	</tr>
+ </table>
+</FRM>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.FRM.style.display='none';
+
+	function showTbl()
+	{
+		document.FRM.style.display='inline';
+	}
+!-->
+</SCRIPT>
+
+</body>
+</html>

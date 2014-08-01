@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<title>角色维护</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+    .style1
+    {
+        height: 22px;
+    }
+    -->
+</style>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+	function OpenWindowFunction(){
+	window.open("../Common_Function/list_function.html", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+
+	function OpenWindowPosition(){
+	window.open("../Common_Function/postSel_multipost.htm", "", "width=600px,height=420px,left=100,top=80,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no maximum=yes");
+	}
+-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<div class="wbox">
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;当前位置： 系统数据管理 &gt; 权限管理 &gt;角色维护</div>
+<div id="queryResult" style="display: inline;">
+<table class="table_edit" border="0" id="myinfo">
+	  <th colspan="6"><img class="nav" src="../../img/subNav.gif" /> 角色基本信息</th>
+  	<tr> 
+      <td class="table_query_2Col_label_5Letter">角色代码：</td>
+      <td class="table_edit_2Col_input"  nowrap="nowrap"> 
+        <input type="text" name="author_code" class="middle_txt" value="DealerMaintain"><font class=font_notnull>*</font>
+      </td>
+	  <td class="table_query_2Col_label_5Letter"  nowrap="nowrap">
+			角色名称：</td>
+		<td class="table_edit_2Col_input"  nowrap="nowrap">
+			<input type="text" name="author_name" class="middle_txt" value="公司维护">
+          <font class=font_notnull>*</font>
+		</td>
+    </tr>
+    <TR>
+      <td class="table_query_2Col_label_5Letter">角色类别：</td>
+      <td class="table_edit_2Col_input"><select name="select" class="short_sel" style="width: 130px;">
+        <option selected="selected">车厂</option>
+        <option>代理商</option>
+      </select></td>
+      <td class="table_query_2Col_label_5Letter">角色状态：</td>
+      <td class="table_edit_2Col_input"> 
+		<SELECT NAME="" class="short_sel" style="width: 130px;">
+			<option> 有效</option>      
+			<option> 失效</option>      
+		</SELECT>
+		&nbsp;
+      </td>
+    </TR>
+    <tr> 
+        <td class="table_query_input" nowrap="nowrap" colspan="4" align="center">
+         <input class="normal_btn" type="button" name="Submit3" value="确定" onClick="location='rolemantain.html';">&nbsp;
+         <input class="normal_btn" name="button2" type="button" onClick="location='rolemantain.html';" value="返回"></td>
+    </tr>
+</table>
+<br />
+<table class="table_info" border="0" id="myinfo">
+	<th colspan="6"><img class="nav" src="../../img/subNav.gif" /><a href="#" onclick="showw()">功能列表</a></th>
+</table>
+<form name="FRM2">
+	<table class=table_list style="border-bottom:1px solid #DAE0EE">
+        <tr class = tabletitle>
+	      <th ><input type="checkbox" name="selectAll" onClick="selectClick(document.FRM2);">全选</th>
+          <th >功能代码</th>
+          <th >功能名称</th>
+        </tr>
+        <tr class="table_list_row1">
+          <td><input type="checkbox" name="funid" value=1>
+          </td>
+          <td  >OrderUpload</td>
+          <td  >订单上传</td>
+        </tr>
+        <tr class="table_list_row1">
+          <td><input type="checkbox" name="funid" value=2>
+          </td>
+          <td >OrderWithdraw</td>
+          <td  >订单退回</td>
+        </tr>
+        <tr class="table_list_row1">
+          <td><input type="checkbox" name="funid" value=3>
+          </td>
+          <td >OrderApprove</td>
+          <td  >订单确认</td>
+        </tr>
+        <TR class="table_list_row1">
+		 <td></td>
+         <td nowrap="nowrap" align="center"> 
+            <input class="normal_btn"  name="submit" type="button"onClick="OpenWindowFunction();" value ='新增功能'>
+            &nbsp;<input class="normal_btn" type="button" name="Submit" value="删除功能"></TD>
+		<td></td>
+        </TR>
+	</table>
+	</form>
+	<br />
+	<table class="table_info" border="0" id="myinfo">
+		<th colspan="6"><img class="nav" src="../../img/subNav.gif" /><a href="#" onclick="showww()">职位列表</a></th>
+	</table>
+	<form name="FRM3">
+	<table class=table_list style="border-bottom:1px solid #DAE0EE">
+        <tr class = tabletitle>
+	      <th ><input type="checkbox" name="selectAll" onClick="selectClick1(document.FRM3);"> 全选</th>
+          <th >所属组织</th>
+          <th >职位名称</th>
+        </tr>
+        <tr class="table_list_row1">
+          <td><input type="checkbox" name="posid" value=1></td>
+          <td  >营销部</td>
+          <td  >市场专员</td>
+        </tr>
+        <tr class="table_list_row1">
+          <td><input type="checkbox" name="posid" value=2></td>
+          <td  >营销部</td>
+          <td  >市场经理</td>
+        </tr>
+        <TR  class="table_list_row1">
+		<td></td>
+         <td nowrap="nowrap" align="center"> 
+          <input class="normal_btn"  name="submit" type="BUTTON"onClick="OpenWindowPosition();" value ='新增职位'>
+          &nbsp;<input class="normal_btn" type="button" name="Submit" value=" 删除职位"></TD>
+		 <td></td>
+        </TR>
+    </TABLE>
+    </FORM> 
+	</div>
+</div>
+<script language="JavaScript">
+<!--
+	document.FRM2.style.display = "none";
+    document.FRM3.style.display = "none";
+   
+    function selectClick(obj) {
+        for(var i =0; i<obj.funid.length;i++) {
+            obj.funid[i].checked=obj.selectAll.checked;
+        }
+    }
+
+    function selectClick1(obj) {
+        for(var i =0; i<obj.posid.length;i++) {
+            obj.posid[i].checked=obj.selectAll.checked;
+        }
+    }
+
+    function showw() {
+		if(document.FRM2.style.display=="inline")
+        	document.FRM2.style.display="none";
+        else
+			document.FRM2.style.display="inline";
+
+    }
+    function showww() {
+        if(document.FRM3.style.display=="inline")
+        	document.FRM3.style.display="none";
+        else
+			document.FRM3.style.display="inline";
+    }
+    -->
+</script>
+</BODY>
+</html>

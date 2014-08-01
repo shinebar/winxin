@@ -1,0 +1,432 @@
+	/* CSS Document */
+	
+		*{	padding:0px; margin:0px; }
+		
+		
+		body{
+			font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+			font-size:12px;
+			color:#252525;
+			background-color:#FFFFFF;
+			margin:5px 15px 10px 5px;
+		}
+		
+		a {
+			text-decoration:none;
+		}
+		a:hover, a:active {
+			text-decoration:underline;
+		}
+		a:link, a:visited {
+			color:#08327e;
+		}
+	
+	/* ---------------- form 部分 --------------------------------------*/
+		b{
+			font-weight: normal;
+		}
+		span.star{
+			color: #FD6536;	
+		}
+		textarea{
+			font-size:12px;
+			border:1px solid #5E7692;
+		}
+		
+		input{/*--*/
+			font-size:12px;
+			padding:2px 0px 0px 0px;
+		}
+		
+		select{/*--*/
+			font-size:12px;
+		}
+		
+		/*-------------文本框 类型------------*/
+		input.mini_txt{width:20px; height:15px;border:1px solid #a6b2c8;}
+		input.short_txt{ width:65px;height:14px;border:1px solid #a6b2c8;}
+		input.middle_txt{ width:150px;height:14px;border:1px solid #a6b2c8;}
+		input.long_txt{ width:190px;height:14px;border:1px solid #a6b2c8;}
+		input.no_border{width:147px;height:14px;border:1px solid #FFF;}
+		input.bottom_line{width:80px; border:1px solid #F3F4F8;border-bottom:1px solid #A6B2C8;background-color:#F3F4F8;}
+		/*-------------电话 类型------------*/
+		input.area_start_txt{width:35px;border:1px solid #a6b2c8;}
+		input.area_end_txt{width:98px;border:1px solid #a6b2c8;}
+		
+		/*-------------下拉框 类型------------*/
+		.min_sel{width:75px;}
+		.short_sel{width:150px;}
+		.long_sel{width:192px;}
+		
+		/*-------------按钮 类型-------------*/
+		input.normal_btn,input.long_btn{ 
+			width:60px; 
+			height:16px;	/*为了文本框高度对齐*/
+			line-height:10px;
+			background-color:#EEF0FC;
+			border:1px solid #5E7692;
+			color:#1E3988;
+		}
+		input.long_btn{ 
+			width:100px; 
+			color:#1E3988;
+		}
+
+	/*------------------------------ 容器 ---------------------------------------*/
+		.wbox{
+
+		}
+	
+	/*------------------------------ 导航栏 ---------------------------------------*/
+		div.navigation{
+			padding:2px;
+			background-color:#F5F5F5;
+			margin-bottom:12px;
+		}
+		
+		div.navigation img,.nav{
+			border: none;
+			padding: 2px 0px 0px 0px;
+		}
+	/* =================================查询===================================== */
+		table.table_query,table.table_query_line{
+			border-collapse:collapse;
+			width:100%;
+			background-color:#F3F4F8;
+		}
+		table.table_query th, .table_last td{
+			background-color:#f8f8f8;
+			font-weight:normal;
+			padding:5px 0px 3px 0px;
+			text-indent:10px;
+		}
+		.table_query th{
+			background-color:#DAE0EE;
+			text-align: left;
+			color:#08327e;
+		}
+		table.table_query td{
+			padding:5px 0px 3px 0px;
+			text-indent:10px;
+			background-color:#F0F7F2;
+		}
+		
+		td.table_query_label {
+			color:#252525;
+		}
+		
+		td.table_query_input {	
+			color:#252525;
+		}
+		
+		td.table_query_last {
+			padding:10px 0px 10px 0px;
+		}
+		/*--有线条风格--*/
+		
+		table.table_query_line th,table.table_query_line td{
+			padding:1px;
+			text-indent:2px;
+			border:1px solid #EEE;	
+		}
+		
+		tr.table_query_line_label td{
+			background-color:#F0F7F2;
+			border:1px solid #EEE;	
+		}
+		
+		tr.table_query_line_input td{
+			background-color:#FFFFFF;
+			color:#5b7693;
+			border:1px solid #EEE;
+		}		
+		
+		.underline{
+			border-bottom:1px dashed #DDD;
+		}
+	/* =================================数据集 ===================================== */
+		.table_list{
+			width:100%;
+			border-collapse:collapse;
+			text-align:center;
+			margin-top:20px;
+		}
+		.table_list td{
+			line-height:1.8em;
+		}
+		
+		.table_list th{
+			background-color:#DAE0EE;
+			font-weight:normal;
+			color:#416C9B;
+			padding:2px;
+			line-height:1.5em;
+		}
+		
+		.table_list_row1 td{
+			background-color:#FFFFFF;
+			border-left:1px solid #DAE0EE;
+			border-right:1px solid #DAE0EE;
+		}
+		
+		.table_list_row2 td{
+			border-left:1px solid #DAE0EE;
+		}
+		.table_list_row3 td{
+			border-left:1px solid #DAE0EE;
+			text-align:left;
+			text-indent:10px;
+		}	
+		.table_list_row4 td{
+			border-left:1px solid #DAE0EE;
+			border-bottom:1px solid #DAE0EE;
+		}	
+		.table_list_row5 td{
+			border:1px solid #DAE0EE;
+			background-color: #F3F4F8;
+		}	
+		.table_list_row1 a{
+			color:#08327E;
+		}
+		.table_list_th td{
+			text-align: left;
+			border:1px solid #DAE0EE;
+			padding:2px;
+		}
+		/* =================================翻页================================= */	
+		div.page_info{
+			/*border:1px solid #C9D0E0;*/
+			margin-top:10px;
+			float:right;
+			font-size:12px;
+		}
+		
+		.page_info_title,div.page_info a,.page_info_input{
+			border:1px solid #ccc;
+			display:block;
+			float:left;
+			height:18px;
+			line-height:18px;
+			margin-right:4px;
+			padding:0 5px;
+		}	
+		
+		div.page_info a:hover{
+			background-color:#F0F0F0;
+			color:#FF9900;
+			text-decoration:none;
+		}
+		div.page_info a:visited{
+			color:252525;
+			text-decoration:none;
+		}	
+		/*span.page_info_left{
+			float:left; 
+			padding-left:10px; 
+			margin-top:2px;
+		}
+		span.page_info_right{
+			float:right; 
+			padding-right:10px;
+		}*/
+
+	/* =================================信息框===================================== */
+		table.table_info,table.table_info_line{
+			border-collapse:collapse;
+			width:100%;
+			background-color:#F3F4F8;
+		}
+	
+		table.table_info th,table.table_info td{
+			padding:5px 0px 3px 0px;
+			text-indent:10px;
+			font-weight:normal;
+		}
+		.table_info th{
+			background-color:#DAE0EE;
+			text-align: left;
+			color:#08327e;
+		}
+		td.table_info_label {
+			color:#252525;
+		}
+		
+		td.table_info_input {
+			color:#5b7693;
+		}	
+		
+		/*----------------------------------回访 待销售 容器-----------------------------*/
+		div.box{
+			background-color:#fff;
+		}
+		div.box_head{
+			font-weight:bold;
+			padding:2px 2px 2px 1em;
+			background-color:#F7F7F7;
+			border:1px solid #666;
+			height:20px;
+			line-height:20px;
+		}
+		div.box_head span.left{	
+			float:left;
+			color:#666666;
+		}
+		div.box_head span.right{
+			float:right;
+			font-weight:normal;
+			margin-right:10px;
+		}
+		div.box_content{
+			padding:2px;	
+			border:1px solid #666;border-top:none;
+		}
+		div.box_head span a.roll {
+			padding-left:5px;
+			color:#0066CC;
+			text-decoration:none;
+			background:transparent url(../img/menu-arrow-blue.gif) no-repeat scroll left top;
+		}
+		
+		div.box_content a{ text-decoration:none; display:block;}
+
+/*----------------------消息 table-------------------*/	
+	   table.tb_list{	
+			border-collapse:collapse;		
+			border:1px solid #CCC;
+			width:100%;
+		}
+			
+		.tb_list_row1 td{ font-weight:bold; border-bottom:1px solid #CCC;}
+		
+		.tb_list_row2 td{	
+			text-indent:10px;
+		}
+		
+		.tb_list_row3 td{	
+	
+			padding:2px;
+			border-bottom:1px dashed #CCC;
+			background-repeat:no-repeat;
+		}
+		.tb_list a{
+			text-decoration:none;
+			color:#333;
+			display:block;
+			padding:2px;
+		}
+		.tb_list a:hover{
+			color:#666;
+			background-color:#E7EBF3;
+		}
+		
+		div.quick_link_box{
+			margin:1px 5px 1px 2px;
+			overflow:hidden;
+			border-top:1px solid #EEE;
+		}
+
+		
+		/*================================列表 出现滚动条效果=================================*/
+		div.list_box{
+			overflow-y:scroll;
+		}
+		
+		div.list_box ul{
+			list-style-type:none;
+		}
+		
+		div.list_box li{
+			text-align:left;
+			text-indent:20px;
+			height:12px;
+		}
+		
+		div.list_box li a{
+			display:block;
+			text-decoration:underline;
+		}
+		div.list_box li a:hover{
+			text-decoration:none;
+		}
+
+		/*=================================列表 无滚动条效果=================================*/
+		div.list_box2{}		
+		div.list_box ul, div.list_box2 ul{
+			list-style-type:none;
+		}
+		
+		div.list_box2 li{
+			text-align:left;
+			text-indent:20px;
+			height:12px;
+			padding-top:1px;
+		}
+		
+		div.list_box2 li a{
+			display:block;
+			text-decoration:none;
+			color:#8d593a;
+		}
+		div.list_box2 li a:hover{
+			text-decoration:underline;
+		}
+		
+		/*===================================汽车图片============================================*/
+		img.car{
+			border:none;
+			width:250px;
+			height:140px;
+		}
+		.limg{
+			overflow:hidden;	
+		}
+		.simg{
+			width:90px;
+			height:68px;
+		}
+		img{
+			border:1px dashed #CCC;
+		}
+		.bimg{
+			width:400px;
+			height:280px;		
+		}
+
+	/*=======================================缩略图 部分===========================================*/
+		table.pic_list{
+			width:100%;
+			border-collapse:collapse;	
+		}
+		
+		table.pic_list td{
+			padding:8px;
+		}
+		table.pic_list th{
+			padding:3px;
+			border-bottom:1px dashed #CCC;
+		}
+		
+	/* =================================特殊 框架==================================== */
+		.table_list_line{
+			width:100%;
+			border-collapse:collapse;
+			text-align:center;
+		}
+		.table_list_line td, .table_list_line th{
+			line-height:1.5em;
+			border:1px solid #CCC;
+		}
+		
+		.table_list_line th{
+			font-weight:normal;
+			color:#08327e;
+		}
+		
+		.table_list_line_row1 td{
+			text-align:left;
+			text-indent:5px;
+		}
+
+
+		
+	

@@ -1,0 +1,75 @@
+<html>
+<HEAD>
+<TITLE>整车产品组类别维护</TITLE>
+
+<link href="../css/style.css" type="text/css" rel="stylesheet">
+
+</HEAD>
+<script language="javascript">
+
+	function selectConfirm(id,name){
+		parent.opener.document.getElementById('upmtlgrpname').value= name;
+		parent.window.close();
+	}
+</script><BODY>
+<table class="cssTitle" width="103%" border="0" cellspacing="0"
+	cellpadding="0">
+	<tr>
+		<td width="7%"></td>
+		<td class="zi01" height="48">[产品组树型选择]</td>
+	</tr>
+</table>
+<BR>
+<BR>
+<form method="post" name = "FRM">
+	<TABLE class=csstable width="85%" align=center>
+		<TR align=left class=csstable>
+			<TD nowrap>产品代码 <input type='text'  name='code'  id='977801'  size='16'  maxlength='10' >
+			产品名称
+			<input type='text'  name='name'  id='326032'  size='16'  maxlength='10' >
+
+			<input type="button" class=button onClick="ShowTbl();" name="Submit4"  value="查询">
+		</TD>
+      </TR>
+	</TABLE>
+</form>
+
+<form name="vafrm">
+<TABLE class=csstable width="85%" align=center>
+	<tr class="tabletitle">
+		<td width="5%"></td>
+		<td width="35%">产品组代码</td>
+		<td width="60%">产品组名称</td>
+
+	</tr>
+	
+		<TR class="csstr">
+			<td>
+				<input type="radio" name="groupId" onClick="selectConfirm('10000471','名爵TF 1.8 手动标准版')">
+			</td>
+			<td>8E20AH--US-7A34</td>
+			<TD>名爵TF 1.8 手动标准版</TD>
+		</TR>
+	
+		<TR class="csstr">
+			<td>
+				<input type="radio" name="groupId" onClick="selectConfirm('10000468','名爵TF 1.8 手动标准版-舒适型(PCM)-AS灰色内饰')">
+			</td>
+			<td>8E20AH--TN-8A70</td>
+			<TD>名爵TF 1.8 手动标准版-舒适型(PCM)-AS灰色内饰</TD>
+		</TR>
+	
+</TABLE>
+</form>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+	document.vafrm.style.display='none';
+	function ShowTbl(){
+		document.vafrm.style.display='inline';
+	}
+</SCRIPT>
+
+</BODY>
+</html>
+

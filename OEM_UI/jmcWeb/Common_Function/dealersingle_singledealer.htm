@@ -1,0 +1,403 @@
+<html>
+<head>
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+</head>
+<script language="javascript">
+
+function clearNull(dpt){
+    parent.window.close();
+}
+
+function selectDealer(dealerId,dealerName){
+	parent.window.close();
+}
+</script>
+<body ><BR>
+<FORM METHOD=POSTname="frm1" target=_self>
+<table class="csstable" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	  <td>&nbsp;</td><td class="tabletitle" valign="middle" height="20">按照代理商代码选择</td>
+  	</tr>
+	<tr>
+	  <td>&nbsp;</td><td nowrap>
+	  <input name="dealerCode" id=dealer_code onBlur="vinToUpper(this)" value="">
+	  <input name="submit" type="submit" class=cssbutton value="确定">
+	  <!--刘亚军添加-->
+	  &nbsp;<input class=cssbutton type="button" name="ok3" value="清空" onClick="clearNull(0);">
+
+	  </td>
+	</tr>
+</table>
+</FORM>
+
+<FORM METHOD=POST ACTION="" name="frm">
+  <table class="csstable" width="100%" border="0">
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001304"   onclick="selectDealer('30001304','宝鸡广乐汽销（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00247">
+	  	<input type="hidden" name="dealerNameStr" value="宝鸡广乐汽销（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可西安市场部">	  </td>
+		<td width="12%" nowrap class="tabletitle">代理商代码</td>
+		<td width="38%" nowrap class="tabletitle">代理商名称</td>
+		<td nowrap align="left" width="12%">代理商类型</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000800"   onclick="selectDealer('30000800','榆林新大新（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00186">
+	  	<input type="hidden" name="dealerNameStr" value="榆林新大新（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可西安市场部">	  </td>
+		<td height="18" width="151">11000003</td>
+		<td width="331">江西江铃进出口有限责任公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001584"   onclick="selectDealer('30001584','陕西跨越（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00284">
+	  	<input type="hidden" name="dealerNameStr" value="陕西跨越（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可西安市场部">	  </td>
+		<td height="18">1405101A</td>
+		<td>辽宁全顺江铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000799"   onclick="selectDealer('30000799','延安元丰工贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00185">
+	  	<input type="hidden" name="dealerNameStr" value="延安元丰工贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可西安市场部">	  </td>
+		<td height="18">1405202A</td>
+		<td>大连立扬汽车销售有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001309"   onclick="selectDealer('30001309','呼和浩特畅溢（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00244">
+	  	<input type="hidden" name="dealerNameStr" value="呼和浩特畅溢（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可银川市场部">	  </td>
+		<td height="18">1406102A</td>
+		<td>大连立扬汽车销售有限公司长春分公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001303"   onclick="selectDealer('30001303','宁夏银顺汽贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00246">
+	  	<input type="hidden" name="dealerNameStr" value="宁夏银顺汽贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可银川市场部">	  </td>
+		<td height="18">1407102A</td>
+		<td>大庆江福汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001302"   onclick="selectDealer('30001302','包头剑达汽贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00245">
+	  	<input type="hidden" name="dealerNameStr" value="包头剑达汽贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可银川市场部">	  </td>
+		<td height="18">1407103A</td>
+		<td>黑龙江省天拓恒丰汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000702"   onclick="selectDealer('30000702','乌兰察布利丰（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00088">
+	  	<input type="hidden" name="dealerNameStr" value="乌兰察布利丰（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可银川市场部">	  </td>
+		<td height="18">1511101A</td>
+		<td>安徽江铃汽车销售有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000701"   onclick="selectDealer('30000701','乌海紫维（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00087">
+	  	<input type="hidden" name="dealerNameStr" value="乌海紫维（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可银川市场部">	  </td>
+		<td height="18">1511102A</td>
+		<td>安徽省宏顺汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000700"   onclick="selectDealer('30000700','宁夏春喜汽贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00086">
+	  	<input type="hidden" name="dealerNameStr" value="宁夏春喜汽贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可银川市场部">	  </td>
+		<td height="18">1514101A</td>
+		<td>山东江铃全顺汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000699"   onclick="selectDealer('30000699','内蒙古泰捷（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00085">
+	  	<input type="hidden" name="dealerNameStr" value="内蒙古泰捷（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可银川市场部">	  </td>
+		<td height="18">1514103A</td>
+		<td>潍坊金源江铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000698"   onclick="selectDealer('30000698','鄂尔多斯鑫安（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00084">
+	  	<input type="hidden" name="dealerNameStr" value="鄂尔多斯鑫安（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可银川市场部">	  </td>
+		<td height="18">1514107A</td>
+		<td>淄博鲁中江铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001326"   onclick="selectDealer('30001326','新疆博天翔（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00263">
+	  	<input type="hidden" name="dealerNameStr" value="新疆博天翔（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可乌鲁木齐市场部">	  </td>
+		<td height="18">1514108A</td>
+		<td>青岛六和汽车销售有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001325"   onclick="selectDealer('30001325','巴州富田（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00262">
+	  	<input type="hidden" name="dealerNameStr" value="巴州富田（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可乌鲁木齐市场部">	  </td>
+		<td height="18">1514109A</td>
+		<td>济宁江铃全顺汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000793"   onclick="selectDealer('30000793','新疆亚中机电（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00179">
+	  	<input type="hidden" name="dealerNameStr" value="新疆亚中机电（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可乌鲁木齐市场部">	  </td>
+		<td height="18">1514109B</td>
+		<td>东营市善能商贸有限责任公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001742"   onclick="selectDealer('30001742','遵义宇腾（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00287">
+	  	<input type="hidden" name="dealerNameStr" value="遵义宇腾（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可贵阳市场部">	  </td>
+		<td height="18">1514110A</td>
+		<td>烟台江铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000658"   onclick="selectDealer('30000658','重庆华成汽销（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00044">
+	  	<input type="hidden" name="dealerNameStr" value="重庆华成汽销（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可贵阳市场部">	  </td>
+		<td height="18">1514113A</td>
+		<td>临沂宝铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000657"   onclick="selectDealer('30000657','贵阳易发汽贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00043">
+	  	<input type="hidden" name="dealerNameStr" value="贵阳易发汽贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可贵阳市场部">	  </td>
+		<td height="18">1108101A</td>
+		<td>上海江铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001319"   onclick="selectDealer('30001319','芜湖中澳汽贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00256">
+	  	<input type="hidden" name="dealerNameStr" value="芜湖中澳汽贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1108102A</td>
+		<td>上海科达汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30002063"   onclick="selectDealer('30002063','安徽海马（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00297">
+	  	<input type="hidden" name="dealerNameStr" value="安徽海马（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1108202A</td>
+		<td>上海九华汽车实业有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001277"   onclick="selectDealer('30001277','滁州广通汽贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00217">
+	  	<input type="hidden" name="dealerNameStr" value="滁州广通汽贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1108203D</td>
+		<td>上海雄威汽车销售有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001275"   onclick="selectDealer('30001275','阜阳华星汽车（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00216">
+	  	<input type="hidden" name="dealerNameStr" value="阜阳华星汽车（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1109101A</td>
+		<td>南京钟山江铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001274"   onclick="selectDealer('30001274','安徽徽商欧代（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00215">
+	  	<input type="hidden" name="dealerNameStr" value="安徽徽商欧代（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1109102A</td>
+		<td>上海科达汽车销售服务有限公司徐州分公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001273"   onclick="selectDealer('30001273','安徽春雨汽车（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00214">
+	  	<input type="hidden" name="dealerNameStr" value="安徽春雨汽车（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1109103A</td>
+		<td>无锡市江铃汽车销售有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000686"   onclick="selectDealer('30000686','阜阳裕安（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00072">
+	  	<input type="hidden" name="dealerNameStr" value="阜阳裕安（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1109104A</td>
+		<td>南通市江铃汽车销售有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000685"   onclick="selectDealer('30000685','芜湖中奥汽贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00071">
+	  	<input type="hidden" name="dealerNameStr" value="芜湖中奥汽贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1109105A</td>
+		<td>扬州顺铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000684"   onclick="selectDealer('30000684','合肥易通汽贸（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00070">
+	  	<input type="hidden" name="dealerNameStr" value="合肥易通汽贸（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可合肥市场部">	  </td>
+		<td height="18">1109106A</td>
+		<td>常熟贺骏汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30002090"   onclick="selectDealer('30002090','南昌鑫亚达（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00300">
+	  	<input type="hidden" name="dealerNameStr" value="南昌鑫亚达（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可南昌市场部">	  </td>
+		<td height="18">1109204A</td>
+		<td>苏州贺骏汽车贸易有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30001661"   onclick="selectDealer('30001661','南昌赣丰(欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00286">
+	  	<input type="hidden" name="dealerNameStr" value="南昌赣丰(欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可南昌市场部">	  </td>
+		<td height="18">1109205A</td>
+		<td>常州江铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000705"   onclick="selectDealer('30000705','江西新华夏（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00091">
+	  	<input type="hidden" name="dealerNameStr" value="江西新华夏（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可南昌市场部">	  </td>
+		<td height="18">1109207A</td>
+		<td>昆山贺骏汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+	
+	<tr class="csstr" onmouseover='javascript:bgColor="#E8E8EA";' onmouseout='javascript:bgColor="#ffffff";'>
+	  <td align="center" width="4%">
+	  	<input type="radio" name="dealerIDStr"  value="30000704"   onclick="selectDealer('30000704','赣州五菱汽车（欧）')">
+	  	<input type="hidden" name="dealerCodeStr"  value="1001C00090">
+	  	<input type="hidden" name="dealerNameStr" value="赣州五菱汽车（欧）">
+	  	<input type="hidden" name="orgNameStr"     value="欧马可南昌市场部">	  </td>
+		<td height="18">1110100A</td>
+		<td>宁波江铃汽车销售服务有限公司</td>
+		<td nowrap align="left" width="12%">代理商</td>
+	</tr>
+</table>
+
+<table class="tblopt" width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr class=tabletitle>
+	   <!--<td colspan="4"  valign="middle" height="20">选择代理商</td>-->   
+	   <td  align="left" nowrap width="95%" valign=middle>
+&nbsp;      <input class=cssbutton type="button" name="ok3" value="清空" onClick="clearNull(0);"></td>
+    </tr>
+</table>
+
+</FORM>
+<script>
+<!--
+//验证代理商代码输入框是否为空
+function check_code() {
+		var codeOrName = document.frm1.dealerCode.value;
+
+		if(codeOrName == null || codeOrName.trim() == "") {
+			alert("代理商代码或简称不能为空");
+			return false;
+		}
+
+		codeOrName = codeOrName.replace(/\，/g, ",").trim();
+		document.frm1.dealerCode.value = codeOrName;
+}
+</script> 
+</body>
+</html>

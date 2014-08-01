@@ -1,0 +1,205 @@
+
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	html,body{
+		height:100%;
+		overflow:hidden;
+		color:#333;
+		text-align:center;
+		font-size:12px;
+		font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	}
+	.main_container{
+		margin:0px auto;
+		width:100%;	
+	}
+	.global_head{
+		width:100%;
+		height:40px;
+		background-color:#3B5998;
+		
+	}
+	#sideBar{
+		width:160px;
+	}
+	.global_welcome{
+		background-color:#D0BFA1;
+		width:163px;
+		height:30px;
+		line-height:30px;
+		color:#08327E;
+		margin-right:1px;
+	}
+
+/*=================================== 横向菜单 部分 ================================*/	
+	.global_logo{
+		width:150px;
+		height:37px;
+		overflow:hidden;
+		/*background-color:#D0BFA1;*/
+		background-image:url(../img/logo.jpg);
+	}
+	.global_logo img {
+		margin:2px;
+		height:37px;
+		border:0 none;
+	}
+	.global_info{
+		width:600px;
+		margin-left:15px;
+	}
+	.global_menu{
+		height:30px;
+		line-height:18px;
+		width:780px; /*防止自适应变形*/
+	}
+	.global_menu a{
+		float:left;
+		display:block;
+		padding:6px 10px 6px 10px;
+		color:#FFF;
+		text-decoration:none;
+	}
+
+	.global_menu a:hover{
+		color:#ffffff;
+		text-decoration:none;
+		background-color:#D0BFA1;display:block;
+	}
+
+	/*------------------顶部菜单部分--设置 退出 -部分----------*/
+
+	.global_set{
+		float:right;
+		border:1px solid #CCC;
+		border-bottom:none;
+		padding:1px;
+		margin-top:7px;
+	}	
+	.global_set ul,.global_mail ul{
+		float:left;
+		padding-left:10px;
+		margin-top:7px;
+	}	
+	.global_set li,.global_mail li{
+		float:left;
+		list-style-type:none;
+		margin-right:8px;
+	}
+	.global_set li a,.global_mail li a{
+		float:left;
+		display:block;
+		text-decoration:none;
+		padding-left:4px;
+	}
+	.global_set	a:link,.global_set a:visited{
+		color:#333;	
+	}
+	.global_set a:hover,.global_set	a:active{
+		text-decoration:underline;
+	}
+	.global_set strong{ 
+		color:#0066CC;
+		font-weight:normal;
+	}
+	.global_set img{
+		float:left;
+	}
+	/*----------------------------------回访 待销售 容器-----------------------------*/
+	div.box{
+		background-color:#fff;
+	}
+	div.box_head{
+		font-weight:bold;
+		padding:2px 2px 2px 1em;
+		background-color:#F7F7F7;
+		border:1px solid #666;
+		height:20px;
+		line-height:20px;
+	}
+	div.box_head span.left{	
+		float:left;
+		color:#666666;
+	}
+	div.box_head span.right{
+		float:right;
+		font-weight:normal;
+		margin-top:3px;
+		margin-bottom:-3px;
+	}
+	div.box_content{
+		padding:2px;	
+		border:1px solid #666;border-top:none;
+	}
+	div.box_head span a.roll {
+		padding-right:10px;
+		color:#0066CC;
+		text-decoration:none;
+		background:transparent url(../img/close.gif);
+		background-repeat: no-repeat;
+	}
+	
+	div.box_content a{ text-decoration:none; display:block;}
+	
+/*----------------------消息 table-------------------*/	
+   table.tb_list{	
+		border-collapse:collapse;		
+		border:1px solid #CCC;
+		width:100%;
+	}
+        
+	.tb_list_row1 td{ font-weight:bold; border-bottom:1px solid #CCC;}
+	
+	.tb_list_row2 td{	
+		text-indent:10px;
+	}
+	
+	.tb_list_row3 td{	
+
+		padding:5px;
+		border-bottom:1px dashed #CCC;
+		background-repeat:no-repeat;
+	}
+	.tb_list a{
+		text-decoration:none;
+		color:#333;
+		display:block;
+		padding:5px;
+	}
+	.tb_list a:hover{
+		color:#666;
+		background-color:#E7EBF3;
+	}
+	
+	div.quick_link_box{
+		height:150px;
+		margin:1px 5px 1px 2px;
+		overflow:hidden;
+		border-top:1px solid #CCC;
+	}
+
+/*----------------------快速 链接-------------------*/		
+	div.quick_link_box a{
+		display:block;
+		padding:5px;
+		color:#AA895A;
+		text-decoration:none;
+	}
+	div.quick_link_box a:hover{
+		color:#603526;
+		text-decoration:underline;
+	}
+	input{/*--*/
+		font-size:12px;
+		padding:2px 0px 0px 0px;
+	}	
+	.spc_btn{
+		width:25px;
+		height:14px;
+		line-height:14px;
+		border:0px solid #FFF;
+		cursor:pointer;
+		margin-left:5px;
+	}

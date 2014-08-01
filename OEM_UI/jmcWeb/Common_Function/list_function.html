@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../style/content.css" rel="stylesheet" type="text/css" />
+<link href="../../style/calendar.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jslib/prototype.js"></script>
+<script type="text/javascript" src="../../js/jslib/mootools.js"></script>
+<script type="text/javascript" src="../../js/jslib/calendar.js"></script>
+<title>功能清单列表</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+    .style1
+    {
+        height: 22px;
+    }
+    -->
+</style>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+	function goSearch(curpage){
+		form.action='MainServlet?action=TM_RoleMaintain_RoleSearchFunction&pageinfo.currentPage='+curpage;
+		form.submit();
+	}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<div class="wbox">
+<div class="navigation"><img src="../../img/nav.gif" />&nbsp;当前位置： 系统数据管理 &gt; 权限管理 &gt;角色维护</div>
+<div id="queryResult" style="display: inline;">   
+<table class="table_query" border="0">
+	<tr>
+		<td class="table_query_3Col_label_4Letter">功能名称： </TD>
+		<td class="table_query_3Col_input" nowrap="nowrap"><input type='text'  class="middle_txt" name='FUNCTION_CODE'  id='1787490'  size='10'  maxlength='60' ></td> 
+		<td class="table_query_3Col_label_4Letter"> <input name="submit2"  class="normal_btn" type="button" value ='查 询' onclick=showTbl();>
+      </td>     
+	</tr>
+</table>
+<FORM METHOD=POST name="form2">
+<table class=table_list style="border-bottom:1px solid #DAE0EE">
+	<th colspan="4" align="left"><img class="nav" src="../../img/subNav.gif" />功能列表</th>
+    <tr class = tabletitle>
+      <th><input type="checkbox" name="selectAll" onClick="selectClick(document.form2);">全选</th>
+      <th>功能代码</th>
+      <th>功能名称</th>
+      <th>功能类别</th>
+    </tr>
+    <tr class="table_list_row1"> 
+      <td  ><INPUT TYPE="checkbox" NAME="FNCTNID" value=1></td>
+      <td  >ROLEADD</td>
+      <td  >角色新增</td>
+      <td  >销售公司</td>
+    </tr>
+    <tr class="table_list_row1"> 
+      <td ><INPUT TYPE="checkbox" NAME="FNCTNID" value=2></td>
+      <td >ROLEMODIFY</td>
+      <td  >角色修改</td>
+      <td  >销售公司</td>
+    </tr>
+  </table>
+  <table class="table_info" border="0">
+	  <tr>
+		<td align="center" colspan="4" ><input class="normal_btn" name="submit" type="submit" onClick="window.close();" value ='添 加'></td>
+	  </tr>
+  </table>
+</FORM>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	document.form2.style.display='none';
+	
+	function selectClick(obj){
+			for(var i=0;i<obj.FNCTNID.length;i++){
+				obj.FNCTNID[i].checked=obj.selectAll.checked;
+			}    
+	}
+
+	function showTbl(){
+		document.form2.style.display='inline';
+	}
+
+-->
+</SCRIPT>
+</BODY>
+</html>

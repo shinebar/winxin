@@ -1,0 +1,109 @@
+
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"> 
+<title> : 江铃代理商信息系统[总公司用户] - 发往地查询</title>
+</head>  
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+ 
+  
+<body> 
+
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[收车地址维护]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE>
+<BR><BR>
+
+  <TABLE class='csstable' width="95%" align='center' border=0>
+		<tr> 	
+			<td ALIGN="right" nowrap>请选择发往地类型: 
+			
+			 <select size="1" name="shiptoid" >
+				<option VALUE=all>全部</option>
+				<option VALUE=1 >常用</option>
+				<option VALUE=2 >不常用</option>  
+			</select>	 
+			</td>  
+			<td align=left width="50%">	
+				<input class="cssbutton" type="submit"  value="查询"  onclick='showTable()'>
+                <input  class="cssbutton" type="reset"  value="重置" >		
+		     <INPUT type=button value="添 加" name=Add id=buttoninsert  class="cssbutton"
+						onClick="location.href='receive_address_add.htm'" >	
+
+	
+			</td>
+		</tr> 
+
+ </table>
+
+<br>
+<form name='form2' method='post'>
+  <TABLE class=csstable width="95%" align=center border=0>
+	<tr class=tabletitle> 
+		<td> 序号  </td>
+		<td> 代码  </td>
+		<td> 收发往地点名称  </td>
+		<td> 联系人  </td>
+		<td > 电话  </td>
+		<td > 传真/电传  </td> 
+		<td > 地址  </td>
+		<td > 邮政编码  </td>
+		<td > 是否常用  </td>
+		<td > 维护名称  </td>
+		<td > 角色名称  </td>
+		<td > 操作 </td>
+	</tr>
+<tr   class='csstr' >
+	<td  >1 &nbsp;</td>
+	<td >TKC00005 </td>
+	<td >四川 </td>
+	<td >联系人 </td> 
+	<td >电话1 </td>   
+	<td >&nbsp; </td>  
+	<td >地址 </td>  
+	<td >430070 </td>  
+	
+		<td align='left'><b>不常用</b></td>
+	
+	<td >朱松林 </td>  
+	<td >专营代理 </td>  	
+        <td>		     <INPUT type=button value="修 改" name=Add id=buttoninsert  class="cssbutton"
+						onClick="location.href='receive_address_update.htm'" ></td>	
+</tr>	 
+
+<tr   class='csstr' >
+	<td  >2 &nbsp;</td>
+	<td >TKC00007 </td>
+	<td >上海 </td>
+	<td >联系人 </td> 
+	<td >12333333333 </td>   
+	<td >&nbsp; </td>  
+	<td >地址 </td>  
+	<td >439999 </td>  
+	
+		<td align='left'><b>不常用</b></td>
+	
+	<td >朱松林 </td>  
+	<td >专营代理 </td>  	
+        <td>		     <INPUT type=button value="修 改" name=Add id=buttoninsert  class="cssbutton"
+						onClick="location.href='receive_address_update.htm'" ></td>	
+</tr>	 
+ </table>
+</form>
+  <SCRIPT LANGUAGE="JavaScript">
+<!--
+	document.form2.style.visibility = "hidden";
+
+	function showTable(){
+		document.form2.style.visibility = "visible";
+	}
+//-->
+</SCRIPT>
+
+</body>
+
+</html>

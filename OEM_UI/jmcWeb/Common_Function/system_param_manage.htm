@@ -1,0 +1,178 @@
+
+<HTML>
+<HEAD>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+</HEAD>
+<BODY >
+
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+var sPrimaryCode  = ""
+var sPrimaryCode1 = ""
+var sPrimaryCode2 = ""
+
+function RadioClick(sRadioId){
+	//var sTotal, sPart;
+	
+	Object = eval(sRadioId);
+	sTotal = Object.value;
+	if((pos = sTotal.indexOf(",")) > 0){
+		sPrimaryCode = sTotal.substring(0, pos);
+		sPart = sTotal.substring(pos+1);
+		if((pos = sPart.indexOf(",")) > 0){
+			sPrimaryCode1 = sPart.substring(0, pos);
+			sPart = sPart.substring(pos+1);			
+			if((pos = sPart.indexOf(",")) > 0){
+				sPrimaryCode2 = sPart.substring(0, pos);				
+			}
+		}
+		//sPrimaryCode = sTotal.SubString(pos+1, pos);
+	}	
+	//alert(sPrimaryCode);
+}
+//-->
+</SCRIPT> 
+
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[系统参数管理]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE> 
+<BR>
+<TABLE BORDER=0 width='95%' class='csstable' align='center'>
+
+	<TR>	
+		<td align="right">
+			参数值：
+			<input type="text" name="fix_code" size="10">
+		</td>
+		<TD align=center>
+			参数类型：
+			<select>
+				<option>全部</option>
+				<option>SVO状态</option>
+				<option>订单状态</option>				
+			</select>
+		</TD>	
+		<TD align=center>
+			<INPUT type="submit" class='cssbutton' value='查 询' id=submit1 name=submit1>
+			<INPUT type="reset" class='cssbutton' value='新 增' id=reset1 onClick="location.href='system_param_add.htm'" >
+		</TD>
+	</TR>
+</TABLE>
+<br>
+ <TABLE BORDER=0   align='center' width='95%'  class='csstable'>
+<TR class='tabletitle'>
+<TD align=center height=20 nowrap>参数值</TD>
+<TD align=center height=20 nowrap>参数说明</TD>
+<TD align=center height=20 nowrap>参数类型</TD>
+<TD align=center height=20 nowrap>类型描述</TD>
+<TD align=center height=20 nowrap>操作</TD>
+</TR>
+<TR height='24' class='csstr'>
+
+<TD height=24>9071</TD>
+<TD height=24>正常车</TD>
+<TD height=24>VHCL_TYPE</TD>
+<TD height=24>车辆类型</TD>
+<td><input type='button' value='修改' class='cssbutton' onClick="location.href='system_param_add.htm'"  />  </td>
+</TR>
+<TR height='24'  class='csstr'>
+
+<TD height=24>9072</TD>
+<TD height=24>特殊车辆</TD>
+<TD height=24>VHCL_TYPE</TD>
+<TD height=24>车辆类型</TD>
+<td><input type='button' value='修改' class='cssbutton' onClick="location.href='system_param_add.htm'"  />  </td></TR>
+<TR height='24' class='csstr'>
+  <TD height=24>9080</TD>
+  <TD height=24>正常订单</TD>
+  <TD height=24>ORDER_TYPE</TD>
+  <TD height=24>订单类型</TD>
+  <td><input type='button' value='修改' class='cssbutton' onClick="location.href='system_param_add.htm'"  />  </td></TR>
+<TR height='24'  class='csstr'>
+  <TD height=24>9081</TD>
+  <TD height=24>SVO订单</TD>
+  <TD height=24>ORDER_TYPE</TD>
+  <TD height=24>订单类型</TD>
+  <td><input type='button' value='修改' class='cssbutton' onClick="location.href='system_param_add.htm'"  />  </td></TR><TR height='24' class="csstr" >
+    <TD height=24>9082</TD>
+    <TD height=24>项目用车订单</TD>
+    <TD height=24>ORDER_TYPE</TD>
+    <TD height=24>订单类型</TD>
+    <td><input type='button' value='修改' class='cssbutton' onClick="location.href='system_param_add.htm'"  />  </td></TR></TABLE></CENTER>
+  <table class=csstable width="95%" align="center" border=0>
+    <tr>
+    <td width="59%"><font class=frontpage>第 1 页 / 共 10 页</font></td>
+    <td width="28%"><font class=frontpage>
+        <a href="#">首 页</a>|
+        <a href="#">上一页</a>|
+        <a href="#">下一页</a>|
+        <a href="#">尾 页</a></font></td>
+    <td width="13%" align="left"><font class=frontpage>
+      <input type="text" value="" size="3"> <a href="#">GO</a></td>
+    </tr>
+</table>
+
+
+
+</BODY>
+</HTML>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+function ButtonClick(sFlag){
+	var sLink
+	
+	if(sFlag == "Look"){
+		if(sPrimaryCode == ""){
+			alert("请选择要查看的记录");
+			return true;
+		}
+		window.open("SystemConent.asp?Flag=Look&ID=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		//alert("UserConent.asp?Flag=Look&GroupCode=" + sPrimaryCode);		
+	}
+	else if(sFlag == "Add"){
+		window.open("SystemConent.asp?Flag=Add&ID=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		return true;
+	}
+	else if(sFlag == "Update"){
+		if(sPrimaryCode == ""){
+			alert("请选择要修改的记录");
+			return false;
+		}
+		window.open("SystemConent.asp?Flag=Update&ID=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		return true;
+	}
+	else if(sFlag == "Delete"){
+		if(sPrimaryCode == ""){
+			alert("请选择要删除的记录");
+			return false;
+		}
+		if(window.confirm("真的要删除选中的记录吗?") == false){
+			return false;
+		}
+		sLink = "/jlxsgs/xtgl/SystemResult.asp" + "?Flag=Delete&ID=" + sPrimaryCode + "&PageNum=" + "1";
+		//alert(sLink);
+		window.navigate(sLink);
+		return true;
+	}
+	else if(sFlag == "Exit"){
+		if(window.confirm("你真的不想修改用户吗?")){			
+			window.parent.close();
+		}
+		return true;
+	}
+	else{
+		alert("请不要乱点好吗?");
+	}
+}
+//-->
+</SCRIPT>

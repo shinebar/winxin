@@ -1,0 +1,17 @@
+
+Button
+{
+	skin: Embed(skinClass="Button_skin");
+}
+ComboBox
+{
+	editableSkin: Embed(skinClass="ComboBox_editableSkin");
+	skin: Embed(skinClass="ComboBox_skin");
+}
+
+ToolTip
+{
+	fontSize: 12;
+	backgroundnotexported: Embed(skinClass="ToolTip_backgroundnotexported");
+	borderSkin: Embed(skinClass="ToolTip_borderSkin");
+}

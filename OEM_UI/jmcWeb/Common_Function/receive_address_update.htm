@@ -1,0 +1,299 @@
+ 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title> : 江铃代理商信息系统[总公司用户] - 发往地输入</title>
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+ 
+  <SCRIPT language="JavaScript">
+<!--  
+function window_onload(){ 
+window.moveTo(0,0);
+window.resizeTo(window.screen.width,window.screen.height);  
+}
+
+//-->
+</SCRIPT>
+
+<script language=javascript>
+
+top.window.moveTo(0,0);
+if (document.all) {
+	top.window.resizeTo(screen.availWidth,screen.availHeight);
+}
+else if (document.layers||document.getElementById) {
+if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+top.window.outerHeight = screen.availHeight;
+top.window.outerWidth = screen.availWidth;
+}
+}
+</script> 
+
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--  
+
+function area_onchange() {
+	len  = document.all.city.length;
+	for(i=0;i<len;i++) {
+		document.all.city.options[0] = null;
+	}
+	
+	len  = document.all.county.length;
+	for(i=0;i<len;i++) {
+		document.all.county.options[0] = null;
+	}
+ 	// 用隐藏页面来控制车型系列改变引起的页面变化
+	oOption = document.createElement("OPTION");
+	oOption.text = "数据载入中...";
+	oOption.value = "";
+	document.dealer.city.options[0] = oOption;
+	document.dealer.city.selectedIndex = 0;
+	//window.open ( "../function/hy_onlistchange.asp?action=ccity&param="+document.all.Province.value)
+	ifrmHid.location = "../function/hy_onlistchange.asp?action=ccity&param="+document.all.Province.value;
+	} 
+
+function city_onchange() {
+	len  = document.all.county.length;
+	for(i=0;i<len;i++) {
+		document.all.county.options[0] = null;
+	}
+
+ 	// 用隐藏页面来控制车型系列改变引起的页面变化
+	oOption = document.createElement("OPTION");
+	oOption.text = "数据载入中...";
+	oOption.value = "";
+	document.dealer.county.options[0] = oOption;
+	document.dealer.county.selectedIndex = 0;
+	ifrmHid.location = "../function/hy_onlistchange.asp?action=ccounty&param="+document.all.city.value;
+	//window.open ( "../function/hy_onlistchange.asp?action=ccounty&param="+document.all.city.value);
+	
+	} 
+
+function Checkid_OnSubmit() 
+{
+     
+     if (document.dealer.username.value == "")
+     {
+	alert("\名称不能为空!!");
+	document.dealer.username.focus();
+	return(false);
+     }
+     if (document.dealer.Province.value == "")
+     {
+	alert("\省份不能为空!!");
+	document.dealer.Province.focus();
+	return(false);
+     }
+     if (document.dealer.city.value == "")
+     {
+		alert("\市县区不能为空!!");
+		document.dealer.city.focus();
+		return(false);
+     }   
+     
+     if (document.dealer.SalesContact.value == "")
+     {
+	alert("\联系人1不能为空!!");
+	document.dealer.SalesContact.focus();
+	return(false);
+     }
+     if (document.dealer.phone.value == "")
+     {
+	alert("\电话1不能为空!!");
+	document.dealer.phone.focus();
+	return(false);
+     }
+     if (document.dealer.PinCode.value == "")
+     {
+	alert("\邮编不能为空!!");
+	document.dealer.PinCode.focus();
+	return(false);
+     }
+     if (document.dealer.StreetAddress.value == "")
+     {
+	alert("\地址不能为空!!");
+	document.dealer.StreetAddress.focus();
+	return(false);
+     }  
+}
+
+function btn_OnSubmit()
+{
+  if(Checkid_OnSubmit())
+  { 
+	//dealer.submit();
+   
+   return window.confirm("真的要提交数据吗？")
+  }
+}
+function addOption(strText, strValue, iPos, oSelect)
+{// 因为IE5.0的一个BUG使不能在另一个帧里添加这里的SELECT的option所以写这个函数来解决
+	var oOption = document.createElement('OPTION');
+	oOption.text = strText;
+	oOption.value = strValue;
+	oSelect.options[iPos] = oOption;
+}
+//--> 
+</script> 
+</HEAD>
+<BODY >  
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[收车地址维护]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE>
+<BR><BR>
+
+<table class="csstable" width='95%' border='0' align="center">
+	<tr >
+		<th scope="col"><font color=blue><b>名称：</b></font></th>
+		 <td colspan="2"> 
+			<input type=text id = "username" name="username" size=28 maxlength=28>
+		  </td> 
+	</tr> 	
+	<tr >
+		<th scope="col"><font color=blue><b>市县区选择：</b></font></th>
+		<td colspan=2> 
+		
+		
+			<select name=Province SIZE=1  style="width:180px" name="Province" LANGUAGE="javascript" onChange="return area_onchange()">
+				<option value=""></option> 
+				
+				<option value="11">北京市</option> 
+				
+				<option value="12">天津市</option> 
+				
+				<option value="13">河北省</option> 
+				
+				<option value="14">山西省</option> 
+				
+				<option value="15">内蒙古自治区</option> 
+				
+				<option value="21">辽宁省</option> 
+				
+				<option value="22">吉林省</option> 
+				
+				<option value="23">黑龙江省</option> 
+				
+				<option value="31">上海市</option> 
+				
+				<option value="32">江苏省</option> 
+				
+				<option value="33">浙江省</option> 
+				
+				<option value="34">安徽省</option> 
+				
+				<option value="35">福建省</option> 
+				
+				<option value="36">江西省</option> 
+				
+				<option value="37">山东省</option> 
+				
+				<option value="41">河南省</option> 
+				
+				<option value="42">湖北省</option> 
+				
+				<option value="43">湖南省</option> 
+				
+				<option value="44">广东省</option> 
+				
+				<option value="45">广西壮族自治区</option> 
+				
+				<option value="46">海南省</option> 
+				
+				<option value="50">重庆市</option> 
+				
+				<option value="51">四川省</option> 
+				
+				<option value="52">贵州省</option> 
+				
+				<option value="53">云南省</option> 
+				
+				<option value="54">西藏自治区</option> 
+				
+				<option value="61">陕西省</option> 
+				
+				<option value="62">甘肃省</option> 
+				
+				<option value="63">青海省</option> 
+				
+				<option value="64">宁夏回族自治区</option> 
+				
+				<option value="65">新疆维吾尔自治区</option> 
+				
+				<option value="71">台湾省</option> 
+				
+				<option value="81">香港特别行政区</option> 
+				
+				<option value="92">海外</option> 
+				
+			</select>省&nbsp;
+        <SELECT id="city" name="city" LANGUAGE="javascript" onChange="return city_onchange()"></SELECT>市&nbsp;&nbsp;<SELECT id="county" name="county"></SELECT>县
+      </td> 
+	</tr> 	
+	<tr>
+		<th scope="col"><font color=blue><b>联系人1：</b></font></th>
+		 <td><input type=text name="SalesContact" size=16 maxlength=16>  </td>
+		 <td><font color=blue>电话1：</font><input type=text name="phone" size=16 maxlength=16>
+				手机号1：<input type=text name="mobile" size=16 maxlength=16> 
+		    </td> 
+	</tr> 	
+	<tr >
+		<th scope="col"><b>联系人2：</b></th>
+		<td><input type=text name="SalesContact1" size=16 maxlength=16>  </td>
+      <td>电话2：<input type=text name="phone1" size=16 maxlength=16>
+		手机号2：<input type=text name="mobile1" size=16 maxlength=16>
+		    </td> 
+	</tr> 	
+	<tr>
+		<th scope="col"><b>传真：</b></th> 
+		<td><input type=text name="fax" size=16 maxlength=16></td>
+		<td>Email地址：<input type=text name="Email" size=30 maxlength=30>
+      </td> 
+    </tr> 	
+	<tr>
+		<th scope="col"><font color=blue><b>邮政编码：</b></font></th>
+		<td><input type=text name="PinCode" size=6 maxlength=6></td>
+		<td><font color=blue>地址：</font><input type=text name="StreetAddress" size=50 maxlength=50></td> 
+		</tr> 	
+	<tr >
+		<th scope="col"><b>是否常用：</b></th>
+		 <td colspan="2"> 
+		<select name=flag id=flag>
+			<option value=1 selected>常用</option>
+			<option value=0>不常用</option>
+		</select>
+      </td>  
+	</tr>  
+		<tr ><td colspan=3>&nbsp;</td></tr>
+	
+	<tr >
+		<td colspan=3  align=center>
+		 <input type="submit" name=register class='cssbutton' value="保  存" border="0" onclick='history.back(-1)'   >   &nbsp;
+		 </td>
+	</tr>
+	
+  </table>
+
+ 
+
+<P>
+
+[注]：
+<font color=blue>表中蓝色项目为必填项</font><br>
+发往地代码由8个数字组成，（行如：0000000A 如果收车地点是代理商本部地址，直接填入代理商的编码），其中:<br>
+第一位为送车地点性质(A-常设送车分地点,B-临时送车地点).<br>
+第二位表示所属省份区域：<br>
+江西、浙江、上海为1；<br>
+广东、海南、福建、湖南为2；<br>
+陕西、甘肃、宁夏、青海、新疆、四川、重庆、贵州、云南、广西、西藏为3；<br>
+黑龙江、吉林、辽宁、北京、天津、河北、内蒙、山西为4；<br>
+湖北、江苏、山东、安徽、河南为5。<br>
+第三，四，五，六位由货物发往所在地的邮政编码前四位组成.<br>
+第七，八位为流水号。  
+</body> 
+
+</html>
+

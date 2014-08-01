@@ -1,0 +1,111 @@
+<html>
+<HEAD>
+<TITLE>角色维护－角色明细</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<link href="../css/style.css"   type="text/css" rel="stylesheet">
+<script language="JavaScript" src="../js/date-picker_ex.js"></script>
+<script language="JavaScript" src="../js/ut.js"></script>
+</HEAD>
+
+<BODY>
+<table width="103%" border="0" cellspacing="0" cellpadding="0" class="cssTitle">
+      <tr> 
+        <td width="7%"></td><td height="48" class="zi01">[角色维护－角色资料]</td>
+      </tr>
+</table><BR><BR>
+
+<form name="FRM" method="post" action="rolemantain.html">
+  <BR>
+  <table class=csstable width="85%" align=center>
+  	<tr> 
+      <td class=datatitle valign="top" width="16%" >角色代码：</td>
+      <td class=datadetail valign="top" width="16%">OrderConfirm</td>
+    </tr>
+  <tr> 
+      <td class=datatitle valign="top" width="16%" >角色名称：</td>
+      <td class=datadetail valign="top" width="16%">订单维护</td>
+    </tr>
+    <TR>
+      <td class=datatitle valign="top" width="16%" >角色类别：</td>
+      <td class=datadetail valign="top" width="16%">代理商</td>
+    </TR>
+    <TR> 
+      <td class=datatitle valign="top" width="16%">角色状态：</td>
+      <td class=datadetail valign="top" width="16%">有效</td>
+      <td align="center" width="48%">
+		<input class=button  name="submit" type="button"onClick="location='rolemodify.html';" value ='修改资料'>&nbsp;
+        <input class=button  name="submit" type="button"onClick="location='rolemantain.html';" value ='删除'>&nbsp; 
+		<input class=button name="button2" type="button" onClick="location='rolemantain.html';" value="返回">
+      </td>
+    </TR>
+</table>  
+
+</form>
+
+<table align=center width="85%" id="role" style='background-color:transparent;'>
+ <tr >
+    <td class= tabletitle align = "left" width="10%" onMouseOver="this.bgColor='#ffffff';" onMouseOut="this.bgColor='#CBDAE4';"><a href="javascript:showFunction();">功能列表</a></td>
+    <td  class= tabletitle width="10%" align = "left"  onMouseOver="this.bgColor='#ffffff';" onMouseOut="this.bgColor='#CBDAE4';"><a href="javascript:showPosition();">职位列表</a></td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+<div id="fun">
+  <table class=csstable align=center width="85%" id="funcition">
+    <tr class= tabletitle>
+      <td  colspan="3" align = left > 功能列表 </td>
+    </tr>
+  </table>
+  <table class=csstable align=center width="85%" id="functionlist">
+    <tr class = tabletitle>
+      <td width="50%">功能代码</td>
+      <td >功能名称</td>
+    </tr>
+    <tr class = csstr>
+      <td  >OrderUpload</td>
+      <td  >订单上传</td>
+    </tr>
+    <tr class = csstr>
+      <td >OrderApprove</td>
+      <td  >订单确认</td>
+    </tr>
+     <tr class = csstr>
+      <td >OrderWithdraw</td>
+      <td  >订单退回</td>
+    </tr>
+ </table>
+ </div>
+ <div id="pos">
+ <table class=csstable align=center width="85%" id="position">
+    <tr class= tabletitle>
+      <td align = left >职位列表 </td>
+      <td  colspan="3" align = left >&nbsp; </td>
+    </tr>
+  </table>
+  <table class=csstable align=center width="85%" id="positionlist">
+    <tr class = tabletitle>
+      <td >所属组织</td>
+      <td >职位名称</td>
+    </tr>
+    <tr class = csstr>
+      <td  >营销部</td>
+      <td  > 市场专员</td>
+    </tr>
+ </table>
+ </div>
+
+<script language="javascript">
+    pos.style.display="none";
+
+    function showFunction() {
+        fun.style.display="inline";
+        pos.style.display="none";
+
+    }
+    function showPosition() {
+        fun.style.display="none";
+        pos.style.display="inline";
+    }
+
+</script>
+</BODY>
+</html>

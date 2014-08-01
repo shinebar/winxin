@@ -1,0 +1,590 @@
+
+<HTML>
+<HEAD>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="../css/STYLE.css" type="text/css" rel="stylesheet">
+<script language=javascript>
+
+top.window.moveTo(0,0);
+if (document.all) {
+	top.window.resizeTo(screen.availWidth,screen.availHeight);
+}
+else if (document.layers||document.getElementById) {
+if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+top.window.outerHeight = screen.availHeight;
+top.window.outerWidth = screen.availWidth;
+}
+}
+</script>
+<script language=javascript>
+var global_string ;
+var global_sourceobj;
+var global_targetobj;
+var global_method;
+var sElement = new Array()	
+
+function comboboxfindvalue(obj,value1){
+	len  = obj.length;
+	
+	for(i=0;i<len;i++) {
+		if (obj.options[i].value == value1){
+			return true;
+		}
+	}
+	return false;
+
+}
+
+function comboboxsetvalue(obj,value1)
+{
+	
+	len  = obj.length;
+	//alert(value1+"99"+len);
+	//alert(value1)
+	for(i=0;i<len;i++) {
+		if (obj.options[i].value == value1){
+			obj.options[i].selected=true;
+		}
+	}	  	
+}
+
+function Trim(x){
+    while((x.length>0) && (x.charAt(0)==' '))	
+        x = x.substring(1 , x.length);
+    while((x.length>0) && (x.charAt(x.length-1)==' '))
+        x = x.substring(0, x.length-1);
+    return x;
+} 
+
+function geteachelement(sourcestr){
+	//alert("sou="+sourcestr)
+	
+	for (i=0;i < sElement.length-1;i++){
+		sElement[i]="";		
+	}
+	
+	sTotal = sourcestr;
+	//alert("a"+sourcestr+"b")
+	k = 0;
+	sPart = sTotal;
+	do 
+	 {
+	  pos=sPart.indexOf(":")
+	  if( pos > 0)
+	   {
+		sElement[k] = Trim(sPart.substring(0, pos));
+		sPart = sPart.substring(pos+1);
+	   // alert(sPrimaryCode[k]);
+	    k= k+1;
+	    }
+	  }  
+	while (sPart.indexOf(":") > 0 )
+}
+
+function smartpopup(sort,method,sourceobj,targetobj)
+/*               序号、方式、源对象、目标对象
+方式：--------列表框------填充各元素----listbox
+	  --------文本--------赋值----------editbox
+
+
+*/
+{
+	if (sort!="a"){
+		global_sourceobj=sourceobj;
+		global_targetobj=targetobj;
+		global_method=method;
+		sElement.length=0;
+
+
+		if ((method=="listbox")||(method=="listbox1")) {
+			len=targetobj.length;
+			for(i=0;i<len;i++) {
+				targetobj.options[0] = null;
+			}
+			
+			 onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank","toolbar=0,menubar=0,location=0,status=1,top=5000,left=5000,width=100,height=100,scrollbars=0");
+		     //onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank");
+			onewwindow.ooldwindow=window;				
+		}else if (method=="multi-fill") {
+			clearold();
+			
+			//window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank");
+			
+			onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank","toolbar=0,menubar=0,location=0,status=1,top=5000,left=5000,width=100,height=100,scrollbars=0");
+			
+			//onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank");
+			onewwindow.ooldwindow=window;							
+		}else if (method=="multi-text") {
+			//clearold1();
+			//alert("flag="+sort+"&sourcevalue="+sourceobj.value);			
+			onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank","toolbar=0,menubar=0,location=0,status=1,top=5000,left=5000,width=100,height=100,scrollbars=0");
+			//onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank");
+			onewwindow.ooldwindow=window;	
+		}else if (method=="textbox1"){
+			targetobj.value="";
+			//alert("../include/hidewind.asp?flag="+sort);
+			onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank","toolbar=0,menubar=0,location=0,status=1,top=5000,left=5000,width=100,height=100,scrollbars=0");
+			//onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value,"_blank");
+			//alert(onewwindow);
+			onewwindow.ooldwindow=window;		
+			//return;				
+		
+		}else if (method=="multi-source") {
+			clearold();
+			onewwindow=window.open("../include/hidewind.asp?flag="+sort+"&sourcevalue="+sourceobj.value+":"+targetobj.value+":","_blank","toolbar=0,menubar=0,location=0,status=1,top=5000,left=5000,width=100,height=100,scrollbars=0");
+			onewwindow.ooldwindow=window;							
+		}
+		
+	}else{
+			
+		if ((global_method=="listbox")){
+			
+			var my_array = new Array(2);
+			car_name_str=global_string;
+			position = car_name_str.indexOf(";");               
+			i = 1;
+			while ( position > 0 ){
+     
+			    t = 0 ;
+			    one_unity = car_name_str.substring(0,position);               
+			    pos_upright = one_unity.indexOf(":");
+			    while ( pos_upright > 0 ){                                 
+			        my_array[t] = Trim(one_unity.substring(0 ,pos_upright));    
+			        one_unity = one_unity.substring ( pos_upright + 1 ); 
+			        pos_upright = one_unity.indexOf(":");
+			        t = t + 1;
+			    }
+			    my_array[t] = Trim(one_unity);  
+				
+						    
+				var oOption = document.createElement("OPTION");
+				oOption.text = my_array[1] ;  //+ "[" + my_array[0] + "]";			
+				oOption.value =  my_array[0] ;
+				global_targetobj.options[i] = oOption;
+
+				i = i + 1;
+					
+			    
+
+			    car_name_str = car_name_str.substring( position +1 );      
+			    position = car_name_str.indexOf(";");                
+			}		
+		}else if (global_method=="multi-fill"){
+			geteachelement(global_string);							
+			fillnew();
+		
+		}else if (global_method=="textbox1"){
+			global_targetobj.value=Trim(global_string);
+			
+		}else if (global_method=="multi-text"){
+//		        alert(global_string);
+			geteachelement(global_string);						
+			fillnew1();
+		
+		}else if (global_method=="multi-source"){
+			geteachelement(global_string);						
+			fillnew();
+		
+		}else if (global_method=="listbox1"){
+			
+			geteachelement(global_string);	
+			j=1
+			for (i=0;i<sElement.length;i++){
+				if (sElement[i]!=""){
+					var oOption = document.createElement("OPTION");
+					oOption.text = sElement[i] ;  //+ "[" + my_array[0] + "]";			
+					oOption.value =  sElement[i] ;
+					global_targetobj.options[j] = oOption;
+					j++;	
+				
+				}
+			}
+		
+		}
+	}
+}
+
+</script>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+</HEAD>
+<BODY>
+
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+var sPrimaryCode  = ""
+var sPrimaryCode1 = ""
+var sPrimaryCode2 = ""
+
+function RadioClick(sRadioId){
+	//var sTotal, sPart;
+	
+	Object = eval(sRadioId);
+	sTotal = Object.value;
+	if((pos = sTotal.indexOf(",")) > 0){
+		sPrimaryCode = sTotal.substring(0, pos);
+		sPart = sTotal.substring(pos+1);
+		if((pos = sPart.indexOf(",")) > 0){
+			sPrimaryCode1 = sPart.substring(0, pos);
+			sPart = sPart.substring(pos+1);			
+			if((pos = sPart.indexOf(",")) > 0){
+				sPrimaryCode2 = sPart.substring(0, pos);				
+			}
+		}
+		//sPrimaryCode = sTotal.SubString(pos+1, pos);
+	}	
+	//alert(sPrimaryCode);
+}
+//-->
+</SCRIPT> 
+<TABLE class="cssTitle" width="103%" border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+	<td width="5%" background="../Images/bj_8.jpg"></td>
+	<td width="95%" height="30" background="../Images/bj_8.jpg" class=tabletitle>[用户日志管理]</td>
+	<td width="63%" background="../Images/bj_10.jpg" class=tabletitle><img src="../Images/bj_9.jpg" width="51" height="30"></td>
+    </tr>
+</TABLE>
+<BR><BR>
+<TABLE BORDER=0 CELLSPACING=1 CELLPADDING=1 width='95%' class='csstable' align='center'>
+	<FORM id=form1 name=form1 action=LogResult_admin.asp?first=first method=get>
+	<TR>		
+		<TD>请选择用户名</TD>
+		<TD><SELECT id=select1 name=UserID style="HEIGHT: 22px; WIDTH: 100px">
+				<OPTION value="ALL" selected>全部</OPTION>
+<OPTION value='YDQX'>YDQX</OPTION><OPTION value='admin'>admin</OPTION><OPTION value='ahhs'>ahhs</OPTION><OPTION value='ahjl'>ahjl</OPTION><OPTION value='ahwst'>ahwst</OPTION><OPTION value='aqzhang'>aqzhang</OPTION><OPTION value='aygan'>aygan</OPTION><OPTION value='bd165'>bd165</OPTION><OPTION value='bd63'>bd63</OPTION><OPTION value='bd65'>bd65</OPTION><OPTION value='bd67'>bd67</OPTION><OPTION value='bd68'>bd68</OPTION><OPTION value='bd79'>bd79</OPTION><OPTION value='bd82'>bd82</OPTION><OPTION value='bd88'>bd88</OPTION><OPTION value='bd96'>bd96</OPTION><OPTION value='bdys'>bdys</OPTION><OPTION value='bjjl'>bjjl</OPTION><OPTION value='bjjlfx001'>bjjlfx001</OPTION><OPTION value='bjjls'>bjjls</OPTION><OPTION value='bjjt'>bjjt</OPTION><OPTION value='bjqsjl'>bjqsjl</OPTION><OPTION value='bjsfl'>bjsfl</OPTION><OPTION value='bjzjs'>bjzjs</OPTION><OPTION value='boliu'>boliu</OPTION><OPTION value='btjl'>btjl</OPTION><OPTION value='chhuang'>chhuang</OPTION><OPTION value='clzong'>clzong</OPTION><OPTION value='cmdx'>cmdx</OPTION><OPTION value='cmmao'>cmmao</OPTION><OPTION value='cqjg'>cqjg</OPTION><OPTION value='cqjl'>cqjl</OPTION><OPTION value='cshj'>cshj</OPTION><OPTION value='cwbsvo'>cwbsvo</OPTION><OPTION value='cwylan'>cwylan</OPTION><OPTION value='cwzh'>cwzh</OPTION><OPTION value='cx'>cx</OPTION><OPTION value='cxiong'>cxiong</OPTION><OPTION value='czjl'>czjl</OPTION><OPTION value='czsjl'>czsjl</OPTION><OPTION value='dbbhu'>dbbhu</OPTION><OPTION value='dbccao'>dbccao</OPTION><OPTION value='dbcyang'>dbcyang</OPTION><OPTION value='dbdwei'>dbdwei</OPTION><OPTION value='dbgzhao'>dbgzhao</OPTION><OPTION value='dbhliu12'>dbhliu12</OPTION><OPTION value='dbjwu'>dbjwu</OPTION><OPTION value='dbjyin'>dbjyin</OPTION><OPTION value='dbjyin'>dbjyin</OPTION><OPTION value='dbldeng'>dbldeng</OPTION><OPTION value='dblpeng'>dblpeng</OPTION><OPTION value='dblwei'>dblwei</OPTION><OPTION value='dbmliao'>dbmliao</OPTION><OPTION value='dbpliu'>dbpliu</OPTION><OPTION value='dbqliu'>dbqliu</OPTION><OPTION value='dbqqin'>dbqqin</OPTION><OPTION value='dbtsun'>dbtsun</OPTION><OPTION value='dbwdeng'>dbwdeng</OPTION><OPTION value='dbwshi'>dbwshi</OPTION><OPTION value='dbwwu'>dbwwu</OPTION><OPTION value='dbwxu'>dbwxu</OPTION><OPTION value='dbxliu'>dbxliu</OPTION><OPTION value='dbxliu1'>dbxliu1</OPTION><OPTION value='dbytu'>dbytu</OPTION><OPTION value='dbzdeng'>dbzdeng</OPTION><OPTION value='dhhk'>dhhk</OPTION><OPTION value='dlyy'>dlyy</OPTION><OPTION value='dqqp'>dqqp</OPTION><OPTION value='dwjl'>dwjl</OPTION><OPTION value='dysl'>dysl</OPTION><OPTION value='fczhao'>fczhao</OPTION><OPTION value='fqjl'>fqjl</OPTION><OPTION value='fscx'>fscx</OPTION><OPTION value='ftzg'>ftzg</OPTION><OPTION value='fwycai'>fwycai</OPTION><OPTION value='fwyzou'>fwyzou</OPTION><OPTION value='fxaskx'>fxaskx</OPTION><OPTION value='fxbjjl001'>fxbjjl001</OPTION><OPTION value='fxcxyb'>fxcxyb</OPTION><OPTION value='fxczjl'>fxczjl</OPTION><OPTION value='fxdtjl'>fxdtjl</OPTION><OPTION value='fxdwqs'>fxdwqs</OPTION><OPTION value='fxftjl'>fxftjl</OPTION><OPTION value='fxgzjl'>fxgzjl</OPTION><OPTION value='fxgzlf'>fxgzlf</OPTION><OPTION value='fxgzys'>fxgzys</OPTION><OPTION value='fxhyhx'>fxhyhx</OPTION><OPTION value='fxhyjl'>fxhyjl</OPTION><OPTION value='fxjajl'>fxjajl</OPTION><OPTION value='fxjnjl'>fxjnjl</OPTION><OPTION value='fxjxtk'>fxjxtk</OPTION><OPTION value='fxjyjl'>fxjyjl</OPTION><OPTION value='fxjyjl'>fxjyjl</OPTION><OPTION value='fxjzhy'>fxjzhy</OPTION><OPTION value='fxkel'>fxkel</OPTION><OPTION value='fxklmy'>fxklmy</OPTION><OPTION value='fxlyjl'>fxlyjl</OPTION><OPTION value='fxlyjt'>fxlyjt</OPTION><OPTION value='fxncjl'>fxncjl</OPTION><OPTION value='fxnxjl'>fxnxjl</OPTION><OPTION value='fxpjxz'>fxpjxz</OPTION><OPTION value='fxqdqs'>fxqdqs</OPTION><OPTION value='fxqdsl'>fxqdsl</OPTION><OPTION value='fxshhy'>fxshhy</OPTION><OPTION value='fxshqs'>fxshqs</OPTION><OPTION value='fxsrjl'>fxsrjl</OPTION><OPTION value='fxsxjl'>fxsxjl</OPTION><OPTION value='fxwhjl'>fxwhjl</OPTION><OPTION value='fxxfwh'>fxxfwh</OPTION><OPTION value='fxxjjl'>fxxjjl</OPTION><OPTION value='fxxsjl'>fxxsjl</OPTION><OPTION value='fxxzjl'>fxxzjl</OPTION><OPTION value='fxycjl'>fxycjl</OPTION><OPTION value='fxycwh'>fxycwh</OPTION><OPTION value='fxykkl'>fxykkl</OPTION><OPTION value='fxykxb'>fxykxb</OPTION><OPTION value='fxzjjl'>fxzjjl</OPTION><OPTION value='fzqs'>fzqs</OPTION><OPTION value='fztl'>fztl</OPTION><OPTION value='gab012'>gab012</OPTION><OPTION value='ganxjl'>ganxjl</OPTION><OPTION value='ganzjl'>ganzjl</OPTION><OPTION value='gdbjl'>gdbjl</OPTION><OPTION value='gfjchen'>gfjchen</OPTION><OPTION value='gjcg'>gjcg</OPTION><OPTION value='gjchj'>gjchj</OPTION><OPTION value='gjjs'>gjjs</OPTION><OPTION value='gongzh'>gongzh</OPTION><OPTION value='gpyu'>gpyu</OPTION><OPTION value='gsjl'>gsjl</OPTION><OPTION value='guizjl'>guizjl</OPTION><OPTION value='gxjl'>gxjl</OPTION><OPTION value='gxwst'>gxwst</OPTION><OPTION value='gyutest'>gyutest</OPTION><OPTION value='gzftjl'>gzftjl</OPTION><OPTION value='gzjl'>gzjl</OPTION><OPTION value='gzkl'>gzkl</OPTION><OPTION value='gzsfl'>gzsfl</OPTION><OPTION value='gzxb'>gzxb</OPTION><OPTION value='hbqs'>hbqs</OPTION><OPTION value='hbwst'>hbwst</OPTION><OPTION value='hbys'>hbys</OPTION><OPTION value='hebjl'>hebjl</OPTION><OPTION value='henjl'>henjl</OPTION><OPTION value='hgwan'>hgwan</OPTION><OPTION value='hgzb'>hgzb</OPTION><OPTION value='hgzs'>hgzs</OPTION><OPTION value='hjbh'>hjbh</OPTION><OPTION value='hlbr'>hlbr</OPTION><OPTION value='hljjl'>hljjl</OPTION><OPTION value='hncz'>hncz</OPTION><OPTION value='hnjl'>hnjl</OPTION><OPTION value='hnqs'>hnqs</OPTION><OPTION value='hnwst'>hnwst</OPTION><OPTION value='hpyang'>hpyang</OPTION><OPTION value='htpeng'>htpeng</OPTION><OPTION value='huangq'>huangq</OPTION><OPTION value='hubwst'>hubwst</OPTION><OPTION value='hunjl'>hunjl</OPTION><OPTION value='hunwst'>hunwst</OPTION><OPTION value='huyang'>huyang</OPTION><OPTION value='hxm13'>hxm13</OPTION><OPTION value='hyzhang'>hyzhang</OPTION><OPTION value='hzjl'>hzjl</OPTION><OPTION value='hzsh'>hzsh</OPTION><OPTION value='info01'>info01</OPTION><OPTION value='jcjl'>jcjl</OPTION><OPTION value='jhqz'>jhqz</OPTION><OPTION value='jhsl'>jhsl</OPTION><OPTION value='jhwu'>jhwu</OPTION><OPTION value='jintao'>jintao</OPTION><OPTION value='jizhou'>jizhou</OPTION><OPTION value='jlcyang'>jlcyang</OPTION><OPTION value='jlgz'>jlgz</OPTION><OPTION value='jlhhu'>jlhhu</OPTION><OPTION value='jljck'>jljck</OPTION><OPTION value='jljl'>jljl</OPTION><OPTION value='jljliu'>jljliu</OPTION><OPTION value='jlluo'>jlluo</OPTION><OPTION value='jlns'>jlns</OPTION><OPTION value='jlqtu'>jlqtu</OPTION><OPTION value='jlspeng'>jlspeng</OPTION><OPTION value='jlwtu'>jlwtu</OPTION><OPTION value='jlyhu'>jlyhu</OPTION><OPTION value='jlyliu'>jlyliu</OPTION><OPTION value='jlywq'>jlywq</OPTION><OPTION value='jlyzou'>jlyzou</OPTION><OPTION value='jlzgs'>jlzgs</OPTION><OPTION value='jmjl'>jmjl</OPTION><OPTION value='jmyu'>jmyu</OPTION><OPTION value='jnjl'>jnjl</OPTION><OPTION value='jnkge'>jnkge</OPTION><OPTION value='jrli'>jrli</OPTION><OPTION value='jsdl'>jsdl</OPTION><OPTION value='jshan'>jshan</OPTION><OPTION value='jxjl'>jxjl</OPTION><OPTION value='jxqs'>jxqs</OPTION><OPTION value='jxwst'>jxwst</OPTION><OPTION value='jxzj'>jxzj</OPTION><OPTION value='jyluo'>jyluo</OPTION><OPTION value='jyong'>jyong</OPTION><OPTION value='jyu13'>jyu13</OPTION><OPTION value='jyzhang'>jyzhang</OPTION><OPTION value='jzgjl'>jzgjl</OPTION><OPTION value='kelhdqs'>kelhdqs</OPTION><OPTION value='kfzx'>kfzx</OPTION><OPTION value='kjliu'>kjliu</OPTION><OPTION value='kshj'>kshj</OPTION><OPTION value='lbkd'>lbkd</OPTION><OPTION value='lfcheng'>lfcheng</OPTION><OPTION value='lfjl'>lfjl</OPTION><OPTION value='lhhu'>lhhu</OPTION><OPTION value='limho'>limho</OPTION><OPTION value='liucunb'>liucunb</OPTION><OPTION value='ljdeng'>ljdeng</OPTION><OPTION value='ljpei'>ljpei</OPTION><OPTION value='lljt'>lljt</OPTION><OPTION value='lnjl'>lnjl</OPTION><OPTION value='lrp'>lrp</OPTION><OPTION value='ltye'>ltye</OPTION><OPTION value='lxzhai'>lxzhai</OPTION><OPTION value='lybl'>lybl</OPTION><OPTION value='lycc'>lycc</OPTION><OPTION value='lyshen'>lyshen</OPTION><OPTION value='lysl'>lysl</OPTION><OPTION value='lzheng5'>lzheng5</OPTION><OPTION value='mlsjcy'>mlsjcy</OPTION><OPTION value='myeh1'>myeh1</OPTION><OPTION value='myjl'>myjl</OPTION><OPTION value='mznj'>mznj</OPTION><OPTION value='nahuang'>nahuang</OPTION><OPTION value='naqin'>naqin</OPTION><OPTION value='nbfeng'>nbfeng</OPTION><OPTION value='nbfs'>nbfs</OPTION><OPTION value='nbhu'>nbhu</OPTION><OPTION value='nbjl'>nbjl</OPTION><OPTION value='nbliu'>nbliu</OPTION><OPTION value='nbojl'>nbojl</OPTION><OPTION value='nbsh'>nbsh</OPTION><OPTION value='nbwan'>nbwan</OPTION><OPTION value='nccheng'>nccheng</OPTION><OPTION value='ncfzhu'>ncfzhu</OPTION><OPTION value='ncgs'>ncgs</OPTION><OPTION value='ncjl'>ncjl</OPTION><OPTION value='ncli1'>ncli1</OPTION><OPTION value='ncyu'>ncyu</OPTION><OPTION value='nczhu'>nczhu</OPTION><OPTION value='nczhu1'>nczhu1</OPTION><OPTION value='nczhu2'>nczhu2</OPTION><OPTION value='ndjian'>ndjian</OPTION><OPTION value='nfgao'>nfgao</OPTION><OPTION value='nfwan4'>nfwan4</OPTION><OPTION value='nfzhang'>nfzhang</OPTION><OPTION value='nfzhao'>nfzhao</OPTION><OPTION value='ngli'>ngli</OPTION><OPTION value='ngwang'>ngwang</OPTION><OPTION value='ngwang2'>ngwang2</OPTION><OPTION value='ngwdeng'>ngwdeng</OPTION><OPTION value='ngzou'>ngzou</OPTION><OPTION value='nhfeng1'>nhfeng1</OPTION><OPTION value='nhfu'>nhfu</OPTION><OPTION value='nhgao'>nhgao</OPTION><OPTION value='nhhe1'>nhhe1</OPTION><OPTION value='nhliao'>nhliao</OPTION><OPTION value='nhliu'>nhliu</OPTION><OPTION value='nhliu1'>nhliu1</OPTION><OPTION value='nhliu1'>nhliu1</OPTION><OPTION value='nhluo2'>nhluo2</OPTION><OPTION value='nhpi'>nhpi</OPTION><OPTION value='nhshi'>nhshi</OPTION><OPTION value='nhtong'>nhtong</OPTION><OPTION value='nhwan1'>nhwan1</OPTION><OPTION value='nhwang'>nhwang</OPTION><OPTION value='nhwu'>nhwu</OPTION><OPTION value='nhxie'>nhxie</OPTION><OPTION value='nhxiong'>nhxiong</OPTION><OPTION value='nhyang4'>nhyang4</OPTION><OPTION value='nhye'>nhye</OPTION><OPTION value='nhzhang'>nhzhang</OPTION><OPTION value='nhzhang1'>nhzhang1</OPTION><OPTION value='nhzhang14'>nhzhang14</OPTION><OPTION value='njchen'>njchen</OPTION><OPTION value='njhan'>njhan</OPTION><OPTION value='njhou'>njhou</OPTION><OPTION value='njhu11'>njhu11</OPTION><OPTION value='njhuang13'>njhuang13</OPTION><OPTION value='njlai'>njlai</OPTION><OPTION value='njli'>njli</OPTION><OPTION value='njliu'>njliu</OPTION><OPTION value='njlong'>njlong</OPTION><OPTION value='njluo'>njluo</OPTION><OPTION value='njmao'>njmao</OPTION><OPTION value='njwang'>njwang</OPTION><OPTION value='njwang6'>njwang6</OPTION><OPTION value='njxu'>njxu</OPTION><OPTION value='njxu6'>njxu6</OPTION><OPTION value='njyang'>njyang</OPTION><OPTION value='njyang'>njyang</OPTION><OPTION value='njyang'>njyang</OPTION><OPTION value='njye'>njye</OPTION><OPTION value='njye'>njye</OPTION><OPTION value='njyin'>njyin</OPTION><OPTION value='njzhang'>njzhang</OPTION><OPTION value='njzs'>njzs</OPTION><OPTION value='nkwang'>nkwang</OPTION><OPTION value='nkxiao'>nkxiao</OPTION><OPTION value='nkyang'>nkyang</OPTION><OPTION value='nlcai3'>nlcai3</OPTION><OPTION value='nldeng4'>nldeng4</OPTION><OPTION value='nlding'>nlding</OPTION><OPTION value='nlgong4'>nlgong4</OPTION><OPTION value='nlgong5'>nlgong5</OPTION><OPTION value='nlpeng'>nlpeng</OPTION><OPTION value='nltang'>nltang</OPTION><OPTION value='nlwan'>nlwan</OPTION><OPTION value='nlwang'>nlwang</OPTION><OPTION value='nlxu'>nlxu</OPTION><OPTION value='nlxu'>nlxu</OPTION><OPTION value='nlyuan'>nlyuan</OPTION><OPTION value='nlzhai'>nlzhai</OPTION><OPTION value='nlzhang'>nlzhang</OPTION><OPTION value='nlzheng'>nlzheng</OPTION><OPTION value='nmhuang2'>nmhuang2</OPTION><OPTION value='nmjq'>nmjq</OPTION><OPTION value='nmjsw'>nmjsw</OPTION><OPTION value='nmlf'>nmlf</OPTION><OPTION value='nmli'>nmli</OPTION><OPTION value='nmliao'>nmliao</OPTION><OPTION value='nmliu9'>nmliu9</OPTION><OPTION value='nmluo'>nmluo</OPTION><OPTION value='nmsh'>nmsh</OPTION><OPTION value='nnli'>nnli</OPTION><OPTION value='nnliu'>nnliu</OPTION><OPTION value='nnyang'>nnyang</OPTION><OPTION value='nnyi'>nnyi</OPTION><OPTION value='npcao'>npcao</OPTION><OPTION value='npdai'>npdai</OPTION><OPTION value='nphuang'>nphuang</OPTION><OPTION value='npjyang'>npjyang</OPTION><OPTION value='npliu'>npliu</OPTION><OPTION value='npsun'>npsun</OPTION><OPTION value='npsun'>npsun</OPTION><OPTION value='npwang'>npwang</OPTION><OPTION value='npwang1'>npwang1</OPTION><OPTION value='npzhang'>npzhang</OPTION><OPTION value='npzhang'>npzhang</OPTION><OPTION value='nqliang'>nqliang</OPTION><OPTION value='nqma'>nqma</OPTION><OPTION value='nqwen'>nqwen</OPTION><OPTION value='nqyan'>nqyan</OPTION><OPTION value='nqzhao'>nqzhao</OPTION><OPTION value='nrhe'>nrhe</OPTION><OPTION value='nrhe1'>nrhe1</OPTION><OPTION value='nrhu'>nrhu</OPTION><OPTION value='nscheng'>nscheng</OPTION><OPTION value='nsdeng'>nsdeng</OPTION><OPTION value='nsli'>nsli</OPTION><OPTION value='nsli8'>nsli8</OPTION><OPTION value='nsliu'>nsliu</OPTION><OPTION value='nswang'>nswang</OPTION><OPTION value='nsxu1'>nsxu1</OPTION><OPTION value='nsyang4'>nsyang4</OPTION><OPTION value='ntjin'>ntjin</OPTION><OPTION value='ntjl'>ntjl</OPTION><OPTION value='ntwang'>ntwang</OPTION><OPTION value='ntxiong'>ntxiong</OPTION><OPTION value='ntzhang'>ntzhang</OPTION><OPTION value='nwcai'>nwcai</OPTION><OPTION value='nwchen'>nwchen</OPTION><OPTION value='nwgong'>nwgong</OPTION><OPTION value='nwli'>nwli</OPTION><OPTION value='nwshi1'>nwshi1</OPTION><OPTION value='nwtu'>nwtu</OPTION><OPTION value='nwtu5'>nwtu5</OPTION><OPTION value='nwxiao'>nwxiao</OPTION><OPTION value='nwyan1'>nwyan1</OPTION><OPTION value='nwycai'>nwycai</OPTION><OPTION value='nwzhang13'>nwzhang13</OPTION><OPTION value='nwzhou'>nwzhou</OPTION><OPTION value='nwzhou1'>nwzhou1</OPTION><OPTION value='nwzhu'>nwzhu</OPTION><OPTION value='nxcai'>nxcai</OPTION><OPTION value='nxli13'>nxli13</OPTION><OPTION value='nxli4'>nxli4</OPTION><OPTION value='nxliu'>nxliu</OPTION><OPTION value='nxlu'>nxlu</OPTION><OPTION value='nxniu'>nxniu</OPTION><OPTION value='nxshi'>nxshi</OPTION><OPTION value='nxsl'>nxsl</OPTION><OPTION value='nxtan'>nxtan</OPTION><OPTION value='nxwang9'>nxwang9</OPTION><OPTION value='nxwu'>nxwu</OPTION><OPTION value='nxxu'>nxxu</OPTION><OPTION value='nxzg'>nxzg</OPTION><OPTION value='nxzhang'>nxzhang</OPTION><OPTION value='nxzheng'>nxzheng</OPTION><OPTION value='nxzhu'>nxzhu</OPTION><OPTION value='nyao'>nyao</OPTION><OPTION value='nybgj'>nybgj</OPTION><OPTION value='nygong'>nygong</OPTION><OPTION value='nyhliu'>nyhliu</OPTION><OPTION value='nyhuang'>nyhuang</OPTION><OPTION value='nyjiang4'>nyjiang4</OPTION><OPTION value='nyli'>nyli</OPTION><OPTION value='nyli21'>nyli21</OPTION><OPTION value='nyliao'>nyliao</OPTION><OPTION value='nylou4'>nylou4</OPTION><OPTION value='nypeng'>nypeng</OPTION><OPTION value='nyxiong2'>nyxiong2</OPTION><OPTION value='nyyan'>nyyan</OPTION><OPTION value='nyzhao'>nyzhao</OPTION><OPTION value='nyzhou4'>nyzhou4</OPTION><OPTION value='nyzhu'>nyzhu</OPTION><OPTION value='nzcao'>nzcao</OPTION><OPTION value='nzhu3'>nzhu3</OPTION><OPTION value='nzli'>nzli</OPTION><OPTION value='nzliu'>nzliu</OPTION><OPTION value='nzluo2'>nzluo2</OPTION><OPTION value='nzlv'>nzlv</OPTION><OPTION value='nzmei1'>nzmei1</OPTION><OPTION value='nzzheng'>nzzheng</OPTION><OPTION value='panxx'>panxx</OPTION><OPTION value='pjing1'>pjing1</OPTION><OPTION value='qdlh'>qdlh</OPTION><OPTION value='qdqs'>qdqs</OPTION><OPTION value='qhzj'>qhzj</OPTION><OPTION value='qzjl'>qzjl</OPTION><OPTION value='qzqs'>qzqs</OPTION><OPTION value='rccs'>rccs</OPTION><OPTION value='rpliu'>rpliu</OPTION><OPTION value='rsbx'>rsbx</OPTION><OPTION value='saxu'>saxu</OPTION><OPTION value='saxu1'>saxu1</OPTION><OPTION value='sbhuang'>sbhuang</OPTION><OPTION value='sbwan'>sbwan</OPTION><OPTION value='sbyu'>sbyu</OPTION><OPTION value='sbzhang'>sbzhang</OPTION><OPTION value='scdy'>scdy</OPTION><OPTION value='scjl'>scjl</OPTION><OPTION value='scshi'>scshi</OPTION><OPTION value='sctang'>sctang</OPTION><OPTION value='scxu'>scxu</OPTION><OPTION value='sddy'>sddy</OPTION><OPTION value='sdhu'>sdhu</OPTION><OPTION value='sdjl'>sdjl</OPTION><OPTION value='sdwang2'>sdwang2</OPTION><OPTION value='sdzhang4'>sdzhang4</OPTION><OPTION value='sftu'>sftu</OPTION><OPTION value='sfwan1'>sfwan1</OPTION><OPTION value='sfxiong'>sfxiong</OPTION><OPTION value='sfzhong'>sfzhong</OPTION><OPTION value='sgchen1'>sgchen1</OPTION><OPTION value='sgchen3'>sgchen3</OPTION><OPTION value='sgfcen'>sgfcen</OPTION><OPTION value='sghu'>sghu</OPTION><OPTION value='sgma'>sgma</OPTION><OPTION value='sgqin'>sgqin</OPTION><OPTION value='sgsong'>sgsong</OPTION><OPTION value='sgxu2'>sgxu2</OPTION><OPTION value='shandjl'>shandjl</OPTION><OPTION value='shanxjl'>shanxjl</OPTION><OPTION value='shdai'>shdai</OPTION><OPTION value='shduan'>shduan</OPTION><OPTION value='shguan'>shguan</OPTION><OPTION value='shhu'>shhu</OPTION><OPTION value='shjh'>shjh</OPTION><OPTION value='shjl'>shjl</OPTION><OPTION value='shkd'>shkd</OPTION><OPTION value='shli'>shli</OPTION><OPTION value='shli12'>shli12</OPTION><OPTION value='shliu'>shliu</OPTION><OPTION value='shlong'>shlong</OPTION><OPTION value='shlu1'>shlu1</OPTION><OPTION value='shpeng'>shpeng</OPTION><OPTION value='shtan'>shtan</OPTION><OPTION value='shwang4'>shwang4</OPTION><OPTION value='shwz'>shwz</OPTION><OPTION value='shxw'>shxw</OPTION><OPTION value='shyin'>shyin</OPTION><OPTION value='shzeng'>shzeng</OPTION><OPTION value='shzhang1'>shzhang1</OPTION><OPTION value='shzhang9'>shzhang9</OPTION><OPTION value='shzheng4'>shzheng4</OPTION><OPTION value='sjai'>sjai</OPTION><OPTION value='sjchen'>sjchen</OPTION><OPTION value='sjchen6'>sjchen6</OPTION><OPTION value='sjfan'>sjfan</OPTION><OPTION value='sjfang'>sjfang</OPTION><OPTION value='sjfcen'>sjfcen</OPTION><OPTION value='sjfeng1'>sjfeng1</OPTION><OPTION value='sjgong1'>sjgong1</OPTION><OPTION value='sjhu5'>sjhu5</OPTION><OPTION value='sjjxu'>sjjxu</OPTION><OPTION value='sjli1'>sjli1</OPTION><OPTION value='sjli12'>sjli12</OPTION><OPTION value='sjli24'>sjli24</OPTION><OPTION value='sjliu'>sjliu</OPTION><OPTION value='sjliu1'>sjliu1</OPTION><OPTION value='sjlzhu'>sjlzhu</OPTION><OPTION value='sjmchen1'>sjmchen1</OPTION><OPTION value='sjpang'>sjpang</OPTION><OPTION value='sjrao1'>sjrao1</OPTION><OPTION value='sjwan5'>sjwan5</OPTION><OPTION value='sjwang'>sjwang</OPTION><OPTION value='sjwei'>sjwei</OPTION><OPTION value='sjwen'>sjwen</OPTION><OPTION value='sjwen1'>sjwen1</OPTION><OPTION value='sjxie'>sjxie</OPTION><OPTION value='sjye3'>sjye3</OPTION><OPTION value='sjye4'>sjye4</OPTION><OPTION value='sjyxu8'>sjyxu8</OPTION><OPTION value='sjyyu1'>sjyyu1</OPTION><OPTION value='sjyzhang'>sjyzhang</OPTION><OPTION value='sjzhang6'>sjzhang6</OPTION><OPTION value='sjzhou'>sjzhou</OPTION><OPTION value='sjzwang'>sjzwang</OPTION><OPTION value='slchen'>slchen</OPTION><OPTION value='slduan'>slduan</OPTION><OPTION value='slgong2'>slgong2</OPTION><OPTION value='slhu2'>slhu2</OPTION><OPTION value='sllan'>sllan</OPTION><OPTION value='sllin'>sllin</OPTION><OPTION value='slluo'>slluo</OPTION><OPTION value='slpeng'>slpeng</OPTION><OPTION value='slse'>slse</OPTION><OPTION value='sltang'>sltang</OPTION><OPTION value='slwan5'>slwan5</OPTION><OPTION value='slwang'>slwang</OPTION><OPTION value='slwang6'>slwang6</OPTION><OPTION value='slyao'>slyao</OPTION><OPTION value='slyu2'>slyu2</OPTION><OPTION value='slzhang2'>slzhang2</OPTION><OPTION value='slzhang3'>slzhang3</OPTION><OPTION value='slzhu3'>slzhu3</OPTION><OPTION value='slzuo1'>slzuo1</OPTION><OPTION value='smchen1'>smchen1</OPTION><OPTION value='smfang'>smfang</OPTION><OPTION value='smfeng'>smfeng</OPTION><OPTION value='smgao'>smgao</OPTION><OPTION value='smhan'>smhan</OPTION><OPTION value='smluo1'>smluo1</OPTION><OPTION value='smxu3'>smxu3</OPTION><OPTION value='smzhang'>smzhang</OPTION><OPTION value='smzhao'>smzhao</OPTION><OPTION value='snding'>snding</OPTION><OPTION value='snliu1'>snliu1</OPTION><OPTION value='snliu4'>snliu4</OPTION><OPTION value='snyan1'>snyan1</OPTION><OPTION value='spdai'>spdai</OPTION><OPTION value='spliao'>spliao</OPTION><OPTION value='spzhang'>spzhang</OPTION><OPTION value='sqh'>sqh</OPTION><OPTION value='sqhe1'>sqhe1</OPTION><OPTION value='sqhuang'>sqhuang</OPTION><OPTION value='sqhuang4'>sqhuang4</OPTION><OPTION value='sqli'>sqli</OPTION><OPTION value='sqli6'>sqli6</OPTION><OPTION value='sqluo1'>sqluo1</OPTION><OPTION value='sqlyu2'>sqlyu2</OPTION><OPTION value='sqlzhu'>sqlzhu</OPTION><OPTION value='sqxie'>sqxie</OPTION><OPTION value='sqxiong'>sqxiong</OPTION><OPTION value='sqyxu8'>sqyxu8</OPTION><OPTION value='sqyzhang'>sqyzhang</OPTION><OPTION value='sqzhang'>sqzhang</OPTION><OPTION value='sqzhuang'>sqzhuang</OPTION><OPTION value='sqzwang'>sqzwang</OPTION><OPTION value='sqzzhao'>sqzzhao</OPTION><OPTION value='srdzhang'>srdzhang</OPTION><OPTION value='srfu'>srfu</OPTION><OPTION value='srjiang'>srjiang</OPTION><OPTION value='srli1'>srli1</OPTION><OPTION value='srrao'>srrao</OPTION><OPTION value='srwan2'>srwan2</OPTION><OPTION value='srzhang3'>srzhang3</OPTION><OPTION value='ssfu'>ssfu</OPTION><OPTION value='ssliu2'>ssliu2</OPTION><OPTION value='ssliu7'>ssliu7</OPTION><OPTION value='ssxiao1'>ssxiao1</OPTION><OPTION value='ssxu'>ssxu</OPTION><OPTION value='ssyang'>ssyang</OPTION><OPTION value='stjl'>stjl</OPTION><OPTION value='stwu1'>stwu1</OPTION><OPTION value='stzy'>stzy</OPTION><OPTION value='swcai'>swcai</OPTION><OPTION value='swgong1'>swgong1</OPTION><OPTION value='swhuang'>swhuang</OPTION><OPTION value='swhuang1'>swhuang1</OPTION><OPTION value='swjin'>swjin</OPTION><OPTION value='swmin'>swmin</OPTION><OPTION value='swteng1'>swteng1</OPTION><OPTION value='swwang2'>swwang2</OPTION><OPTION value='swxie'>swxie</OPTION><OPTION value='swxiong1'>swxiong1</OPTION><OPTION value='swyu1'>swyu1</OPTION><OPTION value='swzhang5'>swzhang5</OPTION><OPTION value='swzheng1'>swzheng1</OPTION><OPTION value='swzhou4'>swzhou4</OPTION><OPTION value='sxchen'>sxchen</OPTION><OPTION value='sxchen11'>sxchen11</OPTION><OPTION value='sxchen2'>sxchen2</OPTION><OPTION value='sxcheng'>sxcheng</OPTION><OPTION value='sxdiao'>sxdiao</OPTION><OPTION value='sxfgs'>sxfgs</OPTION><OPTION value='sxjl'>sxjl</OPTION><OPTION value='sxjwu'>sxjwu</OPTION><OPTION value='sxliao1'>sxliao1</OPTION><OPTION value='sxliu11'>sxliu11</OPTION><OPTION value='sxluo2'>sxluo2</OPTION><OPTION value='sxwan2'>sxwan2</OPTION><OPTION value='sxwst'>sxwst</OPTION><OPTION value='sxwu7'>sxwu7</OPTION><OPTION value='sxzheng'>sxzheng</OPTION><OPTION value='sychen2'>sychen2</OPTION><OPTION value='sydu'>sydu</OPTION><OPTION value='syhu1'>syhu1</OPTION><OPTION value='syhu4'>syhu4</OPTION><OPTION value='syhuang2'>syhuang2</OPTION><OPTION value='sykong'>sykong</OPTION><OPTION value='syli2'>syli2</OPTION><OPTION value='syliu'>syliu</OPTION><OPTION value='syliu23'>syliu23</OPTION><OPTION value='sypeng'>sypeng</OPTION><OPTION value='sypeng4'>sypeng4</OPTION><OPTION value='syshao'>syshao</OPTION><OPTION value='sytang'>sytang</OPTION><OPTION value='sywan11'>sywan11</OPTION><OPTION value='syxiong'>syxiong</OPTION><OPTION value='syyang2'>syyang2</OPTION><OPTION value='syyin'>syyin</OPTION><OPTION value='syym'>syym</OPTION><OPTION value='syyu1'>syyu1</OPTION><OPTION value='syzeng1'>syzeng1</OPTION><OPTION value='syzeng3'>syzeng3</OPTION><OPTION value='syzhang9'>syzhang9</OPTION><OPTION value='syzhou'>syzhou</OPTION><OPTION value='szb'>szb</OPTION><OPTION value='szcao'>szcao</OPTION><OPTION value='szdu'>szdu</OPTION><OPTION value='szfj'>szfj</OPTION><OPTION value='szgs'>szgs</OPTION><OPTION value='szguo'>szguo</OPTION><OPTION value='szhan'>szhan</OPTION><OPTION value='szhuang2'>szhuang2</OPTION><OPTION value='szhxjl'>szhxjl</OPTION><OPTION value='szjl'>szjl</OPTION><OPTION value='szliao'>szliao</OPTION><OPTION value='szlin'>szlin</OPTION><OPTION value='szliu1'>szliu1</OPTION><OPTION value='szlu'>szlu</OPTION><OPTION value='szscjl'>szscjl</OPTION><OPTION value='szwang2'>szwang2</OPTION><OPTION value='szwei1'>szwei1</OPTION><OPTION value='szxiong5'>szxiong5</OPTION><OPTION value='szxu3'>szxu3</OPTION><OPTION value='szyang'>szyang</OPTION><OPTION value='szyang4'>szyang4</OPTION><OPTION value='szyang5'>szyang5</OPTION><OPTION value='szyao1'>szyao1</OPTION><OPTION value='szyu2'>szyu2</OPTION><OPTION value='szzhao'>szzhao</OPTION><OPTION value='szzhou'>szzhou</OPTION><OPTION value='test'>test</OPTION><OPTION value='tjjl'>tjjl</OPTION><OPTION value='tjkld'>tjkld</OPTION><OPTION value='tjqs'>tjqs</OPTION><OPTION value='tsws'>tsws</OPTION><OPTION value='tyjx'>tyjx</OPTION><OPTION value='tzjl'>tzjl</OPTION><OPTION value='tzqs'>tzqs</OPTION><OPTION value='warren'>warren</OPTION><OPTION value='weiwu'>weiwu</OPTION><OPTION value='wfjy'>wfjy</OPTION><OPTION value='whjl'>whjl</OPTION><OPTION value='whwh'>whwh</OPTION><OPTION value='wjbf'>wjbf</OPTION><OPTION value='wjezd'>wjezd</OPTION><OPTION value='wjzd'>wjzd</OPTION><OPTION value='wlli'>wlli</OPTION><OPTION value='wqzhou'>wqzhou</OPTION><OPTION value='wwj'>wwj</OPTION><OPTION value='wxjl'>wxjl</OPTION><OPTION value='wyan2'>wyan2</OPTION><OPTION value='wzsh'>wzsh</OPTION><OPTION value='xbjl'>xbjl</OPTION><OPTION value='xfwh'>xfwh</OPTION><OPTION value='xiongjl'>xiongjl</OPTION><OPTION value='xjjl'>xjjl</OPTION><OPTION value='xjli'>xjli</OPTION><OPTION value='xjliu'>xjliu</OPTION><OPTION value='xjqs'>xjqs</OPTION><OPTION value='xjwsj'>xjwsj</OPTION><OPTION value='xliu8828'>xliu8828</OPTION><OPTION value='xlliu'>xlliu</OPTION><OPTION value='xmjl'>xmjl</OPTION><OPTION value='xmqs'>xmqs</OPTION><OPTION value='xmxie'>xmxie</OPTION><OPTION value='xsfgs'>xsfgs</OPTION><OPTION value='xteng1'>xteng1</OPTION><OPTION value='xxiao'>xxiao</OPTION><OPTION value='xzfgs'>xzfgs</OPTION><OPTION value='xzjl'>xzjl</OPTION><OPTION value='xzqs'>xzqs</OPTION><OPTION value='yanghu'>yanghu</OPTION><OPTION value='ycjl'>ycjl</OPTION><OPTION value='ycsfl'>ycsfl</OPTION><OPTION value='yctd'>yctd</OPTION><OPTION value='ycwh'>ycwh</OPTION><OPTION value='yfgong'>yfgong</OPTION><OPTION value='yfyu'>yfyu</OPTION><OPTION value='ykf666'>ykf666</OPTION><OPTION value='ynjl'>ynjl</OPTION><OPTION value='ynzj'>ynzj</OPTION><OPTION value='ysdwxh'>ysdwxh</OPTION><OPTION value='ytjl'>ytjl</OPTION><OPTION value='ywjl'>ywjl</OPTION><OPTION value='yzhang16'>yzhang16</OPTION><OPTION value='yzsl'>yzsl</OPTION><OPTION value='zbjl'>zbjl</OPTION><OPTION value='zcjyj'>zcjyj</OPTION><OPTION value='zdxu'>zdxu</OPTION><OPTION value='zgxll'>zgxll</OPTION><OPTION value='zgyz'>zgyz</OPTION><OPTION value='zgzqq'>zgzqq</OPTION><OPTION value='zhanglan'>zhanglan</OPTION><OPTION value='zhangxl'>zhangxl</OPTION><OPTION value='zhjl'>zhjl</OPTION><OPTION value='zhongrui'>zhongrui</OPTION><OPTION value='zjhx'>zjhx</OPTION><OPTION value='zjhz'>zjhz</OPTION><OPTION value='zjhzjl'>zjhzjl</OPTION><OPTION value='zjjh'>zjjh</OPTION><OPTION value='zjjl'>zjjl</OPTION><OPTION value='zjjlqm'>zjjlqm</OPTION><OPTION value='zjjxjl'>zjjxjl</OPTION><OPTION value='zjks'>zjks</OPTION><OPTION value='zjsl'>zjsl</OPTION><OPTION value='zjsx'>zjsx</OPTION><OPTION value='zjwu'>zjwu</OPTION><OPTION value='zjxs'>zjxs</OPTION><OPTION value='zllpeng'>zllpeng</OPTION><OPTION value='zlqliu'>zlqliu</OPTION><OPTION value='zpchen'>zpchen</OPTION><OPTION value='zqli'>zqli</OPTION><OPTION value='zsjl'>zsjl</OPTION><OPTION value='zsyys'>zsyys</OPTION><OPTION value='ztdq'>ztdq</OPTION><OPTION value='zwchen'>zwchen</OPTION><OPTION value='zwxiong'>zwxiong</OPTION><OPTION value='zxiong1'>zxiong1</OPTION><OPTION value='zxwu'>zxwu</OPTION><OPTION value='zyhu'>zyhu</OPTION><OPTION value='zywang'>zywang</OPTION><OPTION value='zzheng1'>zzheng1</OPTION><OPTION value='zzhq'>zzhq</OPTION><OPTION value='zzlz'>zzlz</OPTION><OPTION value='zzzzz'>zzzzz</OPTION>
+			</SELECT></TD>		
+		<TD></TD>
+		<INPUT type="hidden" value="ALL" id=LogType name=LogType>		
+		<TD>	
+        </TD></TR>
+
+		<SCRIPT LANGUAGE=javascript>
+		<!--
+			var sMidType, sSmallType;
+			
+			sMidType = "";
+			sSmallType = "";
+		//-->
+		</SCRIPT>
+	<tr ALIGN="middle">	
+		<td>日志类型：
+		<td align=left><input name=logid value="" size=8>
+	<tr ALIGN="middle">		
+	    <td><FONT face=宋体>查&nbsp;询&nbsp;时&nbsp;间</FONT></td>
+	    <td colspan="3"  align = "left" nowrap>
+			<select id=visit_year name=visit_year>
+				<option> </option>
+					
+					<option  value="2008">2008</option>
+					
+					<option  selected  value="2009">2009</option>
+					
+					<option  value="2010">2010</option>
+					
+					<option  value="2011">2011</option>
+					
+					<option  value="2012">2012</option>
+					
+					<option  value="2013">2013</option>
+					
+					<option  value="2014">2014</option>
+					
+			</select>年 
+			<select id=visit_month name=visit_month> 
+				<option> </option> 
+					 
+					<option    value="01">01</option> 
+					 
+					<option    value="02">02</option> 
+					 
+					<option    value="03">03</option> 
+					 
+					<option    value="04">04</option> 
+					 
+					<option    value="05">05</option> 
+					 
+					<option    value="06">06</option> 
+					 
+					<option    value="07">07</option> 
+					 
+					<option    value="08">08</option> 
+					 
+					<option   selected   value="09">09</option> 
+					 
+					<option    value="10">10</option> 
+					 
+					<option    value="11">11</option> 
+					 
+					<option    value="12">12</option> 
+					 
+			</select>月 
+			<select id=visit_day name=visit_day> 
+				<option> </option> 
+			  		 
+					<option  value="01" >01</option> 
+					 
+					<option  value="02" >02</option> 
+					 
+					<option  value="03" >03</option> 
+					 
+					<option  value="04" >04</option> 
+					 
+					<option  value="05" >05</option> 
+					 
+					<option  value="06" >06</option> 
+					 
+					<option  value="07" >07</option> 
+					 
+					<option  value="08" >08</option> 
+					 
+					<option  value="09" >09</option> 
+					 
+					<option  value="10" >10</option> 
+					 
+					<option  value="11" >11</option> 
+					 
+					<option  value="12" >12</option> 
+					 
+					<option  value="13" >13</option> 
+					 
+					<option  value="14" >14</option> 
+					 
+					<option  selected  value="15" >15</option> 
+					 
+					<option  value="16" >16</option> 
+					 
+					<option  value="17" >17</option> 
+					 
+					<option  value="18" >18</option> 
+					 
+					<option  value="19" >19</option> 
+					 
+					<option  value="20" >20</option> 
+					 
+					<option  value="21" >21</option> 
+					 
+					<option  value="22" >22</option> 
+					 
+					<option  value="23" >23</option> 
+					 
+					<option  value="24" >24</option> 
+					 
+					<option  value="25" >25</option> 
+					 
+					<option  value="26" >26</option> 
+					 
+					<option  value="27" >27</option> 
+					 
+					<option  value="28" >28</option> 
+					 
+					<option  value="29" >29</option> 
+					 
+					<option  value="30" >30</option> 
+					 
+					<option  value="31" >31</option> 
+					 
+			</select>日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到	  
+		  
+				<select id="year2" name="year2">  
+					  
+			  
+					  
+					<option  value="2008">2008</option>  
+					  
+					<option selected value="2009">2009</option>  
+					  
+					<option  value="2010">2010</option>  
+					  
+					<option  value="2011">2011</option>  
+					  
+					<option  value="2012">2012</option>  
+					  
+					<option  value="2013">2013</option>  
+					  
+					<option  value="2014">2014</option>  
+					  
+				</select>年  
+				<select id="month2" name="month2">  
+					  
+					  
+					<option  value="01">01</option>  
+					  
+					<option  value="02">02</option>  
+					  
+					<option  value="03">03</option>  
+					  
+					<option  value="04">04</option>  
+					  
+					<option  value="05">05</option>  
+					  
+					<option  value="06">06</option>  
+					  
+					<option  value="07">07</option>  
+					  
+					<option  value="08">08</option>  
+					  
+					<option selected value="09">09</option>  
+					  
+					<option  value="10">10</option>  
+					  
+					<option  value="11">11</option>  
+					  
+					<option  value="12">12</option>  
+							    
+				</select>月   
+				<select id="day2" name="day2">  
+				   
+					  
+					<option  value="01">01</option>  
+					  
+					<option  value="02">02</option>  
+					  
+					<option  value="03">03</option>  
+					  
+					<option  value="04">04</option>  
+					  
+					<option  value="05">05</option>  
+					  
+					<option  value="06">06</option>  
+					  
+					<option  value="07">07</option>  
+					  
+					<option  value="08">08</option>  
+					  
+					<option  value="09">09</option>  
+					  
+					<option  value="10">10</option>  
+					  
+					<option  value="11">11</option>  
+					  
+					<option  value="12">12</option>  
+					  
+					<option  value="13">13</option>  
+					  
+					<option  value="14">14</option>  
+					  
+					<option selected value="15">15</option>  
+					  
+					<option  value="16">16</option>  
+					  
+					<option  value="17">17</option>  
+					  
+					<option  value="18">18</option>  
+					  
+					<option  value="19">19</option>  
+					  
+					<option  value="20">20</option>  
+					  
+					<option  value="21">21</option>  
+					  
+					<option  value="22">22</option>  
+					  
+					<option  value="23">23</option>  
+					  
+					<option  value="24">24</option>  
+					  
+					<option  value="25">25</option>  
+					  
+					<option  value="26">26</option>  
+					  
+					<option  value="27">27</option>  
+					  
+					<option  value="28">28</option>  
+					  
+					<option  value="29">29</option>  
+					  
+					<option  value="30">30</option>  
+					  
+					<option  value="31">31</option>  
+					  
+				</select>日		  
+ 
+	    </td></tr>			 
+	     
+	     
+	<TR>				 
+		<TD align=center colspan=4> 
+			<INPUT type="submit" value=查询 id=submit class='cssbutton'  name=submit LANGUAGE=javascript> 
+			<INPUT type="reset" value=取消 id=reset1 class='cssbutton'  name=reset1> 
+			<INPUT type="submit" value="删除历史日志" class='cssbutton'  id=submit2  
+				name=submit1 LANGUAGE=javascript  
+				onclick="return submit2_onclick()"></TD></TR> 
+				 
+	   
+	</FORM> 
+</TABLE>
+
+<br>
+<CENTER><TABLE BORDER=0 cellPadding='' CLASS='csstable' cellSpacing='1' width='95%'  >
+<TR BGCOLOR='#c7e5ff' height=20>
+<TR class = tabletitle height=20><TD align=center nowrap>选择</TD><TD align=center height=20 nowrap>记录时间</TD><TD align=center height=20 nowrap>用户ID</TD><TD align=center height=20 nowrap>日志名称</TD><TD align=center height=20 nowrap>补充说明</TD></TR><TR height='24' class=csstr><TD height=24><INPUT id=radio1 name=radio type=radio onclick=RadioClick('radio1') value='2009-09-15 16:45:35,slzhu3, ,'></TD><TD height=24>2009-09-15 16:45:35</TD><TD height=24>slzhu3</TD><TD height=24>&nbsp;  </TD><TD height=24>用户[slzhu3]成功进入本站[IP]：193.28.202.113</TD></tr></TABLE></CENTER><CENTER>
+
+  <table class=csstable width="95%" align="center" border=0>
+    <tr>
+    <td width="59%"><font class=frontpage>第 1 页 / 共 10 页</font></td>
+    <td width="28%"><font class=frontpage>
+        <a href="#">首 页</a>|
+        <a href="#">上一页</a>|
+        <a href="#">下一页</a>|
+        <a href="#">尾 页</a></font></td>
+    <td width="13%" align="left"><font class=frontpage>
+      <input type="text" value="" size="3"> <a href="#">GO</a></td>
+    </tr>
+</table></CENTER>
+
+
+
+</BODY>
+</HTML>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+function ButtonClick(sFlag){
+	var sLink
+	
+	if(sFlag == "Look"){
+		if(sPrimaryCode == ""){
+			alert("请选择要查看的记录");
+			return true;
+		}
+		//alert(sPrimaryCode);
+		window.open("LogConent.asp?Flag=Look&UserID=" + "ALL" + "&WriteTime=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		//alert("UserConent.asp?Flag=Look&GroupCode=" + sPrimaryCode);		
+	}
+	else if(sFlag == "Add"){
+		window.open("LogConent.asp?Flag=Add&UserID=" + "ALL" + "&WriteTime=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		return true;
+	}
+	else if(sFlag == "Update"){
+		if(sPrimaryCode == ""){
+			alert("请选择要修改的记录");
+			return false;
+		}
+		window.open("LogConent.asp?Flag=Update&UserID=" + "ALL" + "&WriteTime=" + sPrimaryCode, "",  'toolbar=0,menubar=1,location=0,status=1,top=0,left=0,width=790,height=478,scrollbars=1,resizable=1 ');
+		return true;
+	}
+	else if(sFlag == "Delete"){
+		if(sPrimaryCode == ""){
+			alert("请选择要删除的记录");
+			return false;
+		}
+		if(window.confirm("真的要删除选中的记录吗?") == false){
+			return false;
+		}			
+		sLink = "/jlxsgs/xtgl/LogResult_admin.asp" + "?Flag=Delete&LogCode=" + sPrimaryCode + "&UserID=" + "ALL" + "&LogID=" + "" + "&LogType=" + "ALL" + "&PageNum=" + "1";
+		//alert(sLink);
+		window.navigate(sLink);
+		return true;
+	}
+	else if(sFlag == "Exit"){
+		if(window.confirm("你真的不想修改用户吗?")){			
+			window.parent.close();
+		}
+		return true;
+	}
+	else{
+		alert("请不要乱点好吗?");
+	}
+}
+//-->
+</SCRIPT>
